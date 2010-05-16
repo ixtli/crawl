@@ -15,11 +15,11 @@
 
 @interface ipadAppDelegate : NSObject <UIApplicationDelegate> {
     
-    NSManagedObjectModel *managedObjectModel;
-    NSManagedObjectContext *managedObjectContext;	    
-    NSPersistentStoreCoordinator *persistentStoreCoordinator;
+	NSManagedObjectModel *managedObjectModel;
+	NSManagedObjectContext *managedObjectContext;	    
+	NSPersistentStoreCoordinator *persistentStoreCoordinator;
 	
-    UIWindow *window;
+	UIWindow *window;
 
 	UISplitViewController *splitViewController;
 

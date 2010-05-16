@@ -31,13 +31,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
-    // Override point for customization after app launch    
-    rootViewController.managedObjectContext = self.managedObjectContext;
+	// Override point for customization after app launch    
+	rootViewController.managedObjectContext = self.managedObjectContext;
 
     
 	// Add the split view controller's view to the window and display.
 	[window addSubview:splitViewController.view];
-    [window makeKeyAndVisible];
+	[window makeKeyAndVisible];
 	
 	return YES;
 }
@@ -90,12 +90,12 @@
  If the model doesn't already exist, it is created by merging all of the models found in the application bundle.
  */
 - (NSManagedObjectModel *)managedObjectModel {
-	
-    if (managedObjectModel != nil) {
-        return managedObjectModel;
-    }
-    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];    
-    return managedObjectModel;
+
+	if (managedObjectModel != nil) {
+		return managedObjectModel;
+	}
+	managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];    
+	return managedObjectModel;
 }
 
 
@@ -105,15 +105,15 @@
  */
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
 	
-    if (persistentStoreCoordinator != nil) {
-        return persistentStoreCoordinator;
-    }
+	if (persistentStoreCoordinator != nil) {
+		return persistentStoreCoordinator;
+	}
 	
-    NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"ipad.sqlite"]];
+	NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"ipad.sqlite"]];
 	
 	NSError *error = nil;
-    persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
+	persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+	if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.
          

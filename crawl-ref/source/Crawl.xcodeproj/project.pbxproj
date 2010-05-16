@@ -569,7 +569,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B0C9CF45108DF1AF00E7FA35 /* tilegen */;
+			remoteGlobalIDString = B0C9CF45108DF1AF00E7FA35;
 			remoteInfo = tilegen;
 		};
 		B032D520106C019C0002D70D /* PBXContainerItemProxy */ = {
