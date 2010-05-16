@@ -263,6 +263,11 @@
 		A3ACC5A5119FC603000FE789 /* levcomp.ypp in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC5A3119FC603000FE789 /* levcomp.ypp */; };
 		A3ACC5B6119FC81D000FE789 /* levcomp.lex.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC5B3119FC81D000FE789 /* levcomp.lex.cc */; };
 		A3ACC5B7119FC81D000FE789 /* levcomp.tab.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC5B4119FC81D000FE789 /* levcomp.tab.cc */; };
+		A3AD960A119FD223000E5C94 /* tiledef-dngn.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3AD9605119FD223000E5C94 /* tiledef-dngn.cc */; };
+		A3AD960B119FD223000E5C94 /* tiledef-gui.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3AD9606119FD223000E5C94 /* tiledef-gui.cc */; };
+		A3AD960C119FD223000E5C94 /* tiledef-main.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3AD9607119FD223000E5C94 /* tiledef-main.cc */; };
+		A3AD960D119FD223000E5C94 /* tiledef-player.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3AD9608119FD223000E5C94 /* tiledef-player.cc */; };
+		A3AD960E119FD223000E5C94 /* tiledef-unrand.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3AD9609119FD223000E5C94 /* tiledef-unrand.cc */; };
 		A3F1BE93119EFAD70017F016 /* lapi.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F1BE5C119EFAD70017F016 /* lapi.h */; };
 		A3F1BE94119EFAD70017F016 /* lauxlib.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F1BE5D119EFAD70017F016 /* lauxlib.h */; };
 		A3F1BE95119EFAD70017F016 /* lcode.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F1BE5E119EFAD70017F016 /* lcode.h */; };
@@ -854,6 +859,17 @@
 		A3ACC5B3119FC81D000FE789 /* levcomp.lex.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = levcomp.lex.cc; path = ../util/levcomp.lex.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC5B4119FC81D000FE789 /* levcomp.tab.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = levcomp.tab.cc; path = ../util/levcomp.tab.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC5B5119FC81D000FE789 /* levcomp.tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = levcomp.tab.h; path = ../util/levcomp.tab.h; sourceTree = SOURCE_ROOT; };
+		A3AD95FD119FD1E8000E5C94 /* tiledef_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiledef_defines.h; path = ../rltiles/tiledef_defines.h; sourceTree = SOURCE_ROOT; };
+		A3AD9600119FD208000E5C94 /* tiledef-dngn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tiledef-dngn.h"; path = "../rltiles/tiledef-dngn.h"; sourceTree = SOURCE_ROOT; };
+		A3AD9601119FD208000E5C94 /* tiledef-gui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tiledef-gui.h"; path = "../rltiles/tiledef-gui.h"; sourceTree = SOURCE_ROOT; };
+		A3AD9602119FD208000E5C94 /* tiledef-main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tiledef-main.h"; path = "../rltiles/tiledef-main.h"; sourceTree = SOURCE_ROOT; };
+		A3AD9603119FD208000E5C94 /* tiledef-player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tiledef-player.h"; path = "../rltiles/tiledef-player.h"; sourceTree = SOURCE_ROOT; };
+		A3AD9604119FD208000E5C94 /* tiledef-unrand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tiledef-unrand.h"; path = "../rltiles/tiledef-unrand.h"; sourceTree = SOURCE_ROOT; };
+		A3AD9605119FD223000E5C94 /* tiledef-dngn.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tiledef-dngn.cc"; path = "../rltiles/tiledef-dngn.cc"; sourceTree = SOURCE_ROOT; };
+		A3AD9606119FD223000E5C94 /* tiledef-gui.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tiledef-gui.cc"; path = "../rltiles/tiledef-gui.cc"; sourceTree = SOURCE_ROOT; };
+		A3AD9607119FD223000E5C94 /* tiledef-main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tiledef-main.cc"; path = "../rltiles/tiledef-main.cc"; sourceTree = SOURCE_ROOT; };
+		A3AD9608119FD223000E5C94 /* tiledef-player.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tiledef-player.cc"; path = "../rltiles/tiledef-player.cc"; sourceTree = SOURCE_ROOT; };
+		A3AD9609119FD223000E5C94 /* tiledef-unrand.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tiledef-unrand.cc"; path = "../rltiles/tiledef-unrand.cc"; sourceTree = SOURCE_ROOT; };
 		A3F1BD9A119EF5DD0017F016 /* liblua.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblua.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F1BE5C119EFAD70017F016 /* lapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lapi.h; path = ../contrib/lua/src/lapi.h; sourceTree = SOURCE_ROOT; };
 		A3F1BE5D119EFAD70017F016 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lauxlib.h; path = ../contrib/lua/src/lauxlib.h; sourceTree = SOURCE_ROOT; };
@@ -1507,6 +1523,17 @@
 		A3ACC5A6119FC618000FE789 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A3AD9605119FD223000E5C94 /* tiledef-dngn.cc */,
+				A3AD9606119FD223000E5C94 /* tiledef-gui.cc */,
+				A3AD9607119FD223000E5C94 /* tiledef-main.cc */,
+				A3AD9608119FD223000E5C94 /* tiledef-player.cc */,
+				A3AD9609119FD223000E5C94 /* tiledef-unrand.cc */,
+				A3AD9600119FD208000E5C94 /* tiledef-dngn.h */,
+				A3AD9601119FD208000E5C94 /* tiledef-gui.h */,
+				A3AD9602119FD208000E5C94 /* tiledef-main.h */,
+				A3AD9603119FD208000E5C94 /* tiledef-player.h */,
+				A3AD9604119FD208000E5C94 /* tiledef-unrand.h */,
+				A3AD95FD119FD1E8000E5C94 /* tiledef_defines.h */,
 				A3ACC437119FC5CD000FE789 /* mapdef.cc */,
 				A3ACC333119FC5CD000FE789 /* mapdef.h */,
 			);
@@ -1953,6 +1980,11 @@
 				A3ACC5A5119FC603000FE789 /* levcomp.ypp in Sources */,
 				A3ACC5B6119FC81D000FE789 /* levcomp.lex.cc in Sources */,
 				A3ACC5B7119FC81D000FE789 /* levcomp.tab.cc in Sources */,
+				A3AD960A119FD223000E5C94 /* tiledef-dngn.cc in Sources */,
+				A3AD960B119FD223000E5C94 /* tiledef-gui.cc in Sources */,
+				A3AD960C119FD223000E5C94 /* tiledef-main.cc in Sources */,
+				A3AD960D119FD223000E5C94 /* tiledef-player.cc in Sources */,
+				A3AD960E119FD223000E5C94 /* tiledef-unrand.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2015,6 +2047,17 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ipad_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					USE_GLES,
+					USE_CTOUCH,
+					USE_TILE,
+					CLUA_BINDINGS,
+					OSX,
+					DEBUG_ITEM_SCAN,
+					FULLDEBUG,
+					WIZARD,
+					DEBUG,
+				);
 				INFOPLIST_FILE = "ipad-Info.plist";
 				PRODUCT_NAME = ipad;
 			};
@@ -2027,6 +2070,13 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ipad_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					CLUA_BINDINGS,
+					USE_GLES,
+					USE_CTOUCH,
+					USE_TILE,
+					OSX,
+				);
 				INFOPLIST_FILE = "ipad-Info.plist";
 				PRODUCT_NAME = ipad;
 				VALIDATE_PRODUCT = YES;
