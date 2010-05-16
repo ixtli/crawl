@@ -18,6 +18,254 @@
 		2819300E112F7FA900ECF9B4 /* ipad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2819300D112F7FA900ECF9B4 /* ipad.xcdatamodeld */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		A3ACC2B0119FC46D000FE789 /* dat in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2AF119FC46D000FE789 /* dat */; };
+		A3ACC2B2119FC48A000FE789 /* docs in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B1119FC48A000FE789 /* docs */; };
+		A3ACC2B4119FC494000FE789 /* settings in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B3119FC494000FE789 /* settings */; };
+		A3ACC2BD119FC515000FE789 /* gui.png in Copy Dungeon Tiles */ = {isa = PBXBuildFile; fileRef = A3ACC2BA119FC4DF000FE789 /* gui.png */; };
+		A3ACC2BE119FC515000FE789 /* main.png in Copy Dungeon Tiles */ = {isa = PBXBuildFile; fileRef = A3ACC2BB119FC4DF000FE789 /* main.png */; };
+		A3ACC2BF119FC515000FE789 /* player.png in Copy Dungeon Tiles */ = {isa = PBXBuildFile; fileRef = A3ACC2BC119FC4DF000FE789 /* player.png */; };
+		A3ACC2C0119FC515000FE789 /* dngn.png in Copy Dungeon Tiles */ = {isa = PBXBuildFile; fileRef = A3ACC2B5119FC4BE000FE789 /* dngn.png */; };
+		A3ACC4B0119FC5CD000FE789 /* abl-show.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3C0119FC5CD000FE789 /* abl-show.cc */; };
+		A3ACC4B1119FC5CD000FE789 /* abyss.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3C1119FC5CD000FE789 /* abyss.cc */; };
+		A3ACC4B2119FC5CD000FE789 /* act-iter.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3C2119FC5CD000FE789 /* act-iter.cc */; };
+		A3ACC4B3119FC5CD000FE789 /* actor-los.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3C3119FC5CD000FE789 /* actor-los.cc */; };
+		A3ACC4B4119FC5CD000FE789 /* actor.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3C4119FC5CD000FE789 /* actor.cc */; };
+		A3ACC4B5119FC5CD000FE789 /* AppHdr.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3C5119FC5CD000FE789 /* AppHdr.cc */; };
+		A3ACC4B6119FC5CD000FE789 /* areas.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3C6119FC5CD000FE789 /* areas.cc */; };
+		A3ACC4B7119FC5CD000FE789 /* arena.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3C7119FC5CD000FE789 /* arena.cc */; };
+		A3ACC4B8119FC5CD000FE789 /* artefact.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3C8119FC5CD000FE789 /* artefact.cc */; };
+		A3ACC4B9119FC5CD000FE789 /* attitude-change.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3C9119FC5CD000FE789 /* attitude-change.cc */; };
+		A3ACC4BA119FC5CD000FE789 /* beam.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3CA119FC5CD000FE789 /* beam.cc */; };
+		A3ACC4BB119FC5CD000FE789 /* behold.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3CB119FC5CD000FE789 /* behold.cc */; };
+		A3ACC4BC119FC5CD000FE789 /* bitary.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3CC119FC5CD000FE789 /* bitary.cc */; };
+		A3ACC4BD119FC5CD000FE789 /* branch.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3CD119FC5CD000FE789 /* branch.cc */; };
+		A3ACC4BE119FC5CD000FE789 /* chardump.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3CE119FC5CD000FE789 /* chardump.cc */; };
+		A3ACC4BF119FC5CD000FE789 /* cio.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3CF119FC5CD000FE789 /* cio.cc */; };
+		A3ACC4C0119FC5CD000FE789 /* cloud.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D0119FC5CD000FE789 /* cloud.cc */; };
+		A3ACC4C1119FC5CD000FE789 /* clua.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D1119FC5CD000FE789 /* clua.cc */; };
+		A3ACC4C2119FC5CD000FE789 /* cluautil.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D2119FC5CD000FE789 /* cluautil.cc */; };
+		A3ACC4C3119FC5CD000FE789 /* colour.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D3119FC5CD000FE789 /* colour.cc */; };
+		A3ACC4C4119FC5CD000FE789 /* command.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D4119FC5CD000FE789 /* command.cc */; };
+		A3ACC4C5119FC5CD000FE789 /* coord-circle.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D5119FC5CD000FE789 /* coord-circle.cc */; };
+		A3ACC4C6119FC5CD000FE789 /* coord.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D6119FC5CD000FE789 /* coord.cc */; };
+		A3ACC4C7119FC5CD000FE789 /* coordit.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D7119FC5CD000FE789 /* coordit.cc */; };
+		A3ACC4C8119FC5CD000FE789 /* crash-d.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D8119FC5CD000FE789 /* crash-d.cc */; };
+		A3ACC4C9119FC5CD000FE789 /* crash-u.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D9119FC5CD000FE789 /* crash-u.cc */; };
+		A3ACC4CA119FC5CD000FE789 /* crash-w.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3DA119FC5CD000FE789 /* crash-w.cc */; };
+		A3ACC4CB119FC5CD000FE789 /* ctest.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3DB119FC5CD000FE789 /* ctest.cc */; };
+		A3ACC4CC119FC5CD000FE789 /* database.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3DC119FC5CD000FE789 /* database.cc */; };
+		A3ACC4CD119FC5CD000FE789 /* dbg-asrt.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3DD119FC5CD000FE789 /* dbg-asrt.cc */; };
+		A3ACC4CE119FC5CD000FE789 /* dbg-maps.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3DE119FC5CD000FE789 /* dbg-maps.cc */; };
+		A3ACC4CF119FC5CD000FE789 /* dbg-scan.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3DF119FC5CD000FE789 /* dbg-scan.cc */; };
+		A3ACC4D0119FC5CD000FE789 /* dbg-util.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3E0119FC5CD000FE789 /* dbg-util.cc */; };
+		A3ACC4D1119FC5CD000FE789 /* decks.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3E1119FC5CD000FE789 /* decks.cc */; };
+		A3ACC4D2119FC5CD000FE789 /* delay.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3E2119FC5CD000FE789 /* delay.cc */; };
+		A3ACC4D3119FC5CD000FE789 /* describe.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3E3119FC5CD000FE789 /* describe.cc */; };
+		A3ACC4D4119FC5CD000FE789 /* dgl-message.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3E4119FC5CD000FE789 /* dgl-message.cc */; };
+		A3ACC4D5119FC5CD000FE789 /* dgn-height.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3E5119FC5CD000FE789 /* dgn-height.cc */; };
+		A3ACC4D6119FC5CD000FE789 /* dgn-overview.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3E6119FC5CD000FE789 /* dgn-overview.cc */; };
+		A3ACC4D7119FC5CD000FE789 /* dgn-shoals.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3E7119FC5CD000FE789 /* dgn-shoals.cc */; };
+		A3ACC4D8119FC5CD000FE789 /* dgn-swamp.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3E8119FC5CD000FE789 /* dgn-swamp.cc */; };
+		A3ACC4D9119FC5CD000FE789 /* dgnevent.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3E9119FC5CD000FE789 /* dgnevent.cc */; };
+		A3ACC4DA119FC5CD000FE789 /* directn.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3EA119FC5CD000FE789 /* directn.cc */; };
+		A3ACC4DB119FC5CD000FE789 /* dlua.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3EB119FC5CD000FE789 /* dlua.cc */; };
+		A3ACC4DC119FC5CD000FE789 /* dungeon.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3EC119FC5CD000FE789 /* dungeon.cc */; };
+		A3ACC4DD119FC5CD000FE789 /* effects.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3ED119FC5CD000FE789 /* effects.cc */; };
+		A3ACC4DE119FC5CD000FE789 /* exclude.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3EE119FC5CD000FE789 /* exclude.cc */; };
+		A3ACC4DF119FC5CD000FE789 /* feature.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3EF119FC5CD000FE789 /* feature.cc */; };
+		A3ACC4E0119FC5CD000FE789 /* fight.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3F0119FC5CD000FE789 /* fight.cc */; };
+		A3ACC4E1119FC5CD000FE789 /* files.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3F1119FC5CD000FE789 /* files.cc */; };
+		A3ACC4E2119FC5CD000FE789 /* fontwrapper-ctouch.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3F2119FC5CD000FE789 /* fontwrapper-ctouch.cc */; };
+		A3ACC4E4119FC5CD000FE789 /* food.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3F4119FC5CD000FE789 /* food.cc */; };
+		A3ACC4E5119FC5CD000FE789 /* format.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3F5119FC5CD000FE789 /* format.cc */; };
+		A3ACC4E6119FC5CD000FE789 /* fprop.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3F6119FC5CD000FE789 /* fprop.cc */; };
+		A3ACC4E7119FC5CD000FE789 /* geom2d.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3F7119FC5CD000FE789 /* geom2d.cc */; };
+		A3ACC4E8119FC5CD000FE789 /* ghost.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3F8119FC5CD000FE789 /* ghost.cc */; };
+		A3ACC4E9119FC5CD000FE789 /* glwrapper-es.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3F9119FC5CD000FE789 /* glwrapper-es.cc */; };
+		A3ACC4EB119FC5CD000FE789 /* glwrapper.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3FB119FC5CD000FE789 /* glwrapper.cc */; };
+		A3ACC4EC119FC5CD000FE789 /* godabil.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3FC119FC5CD000FE789 /* godabil.cc */; };
+		A3ACC4ED119FC5CD000FE789 /* godconduct.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3FD119FC5CD000FE789 /* godconduct.cc */; };
+		A3ACC4EE119FC5CD000FE789 /* goditem.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3FE119FC5CD000FE789 /* goditem.cc */; };
+		A3ACC4EF119FC5CD000FE789 /* godpassive.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3FF119FC5CD000FE789 /* godpassive.cc */; };
+		A3ACC4F0119FC5CD000FE789 /* godprayer.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC400119FC5CD000FE789 /* godprayer.cc */; };
+		A3ACC4F1119FC5CD000FE789 /* godwrath.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC401119FC5CD000FE789 /* godwrath.cc */; };
+		A3ACC4F2119FC5CD000FE789 /* hints.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC402119FC5CD000FE789 /* hints.cc */; };
+		A3ACC4F3119FC5CD000FE789 /* hiscores.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC403119FC5CD000FE789 /* hiscores.cc */; };
+		A3ACC4F4119FC5CD000FE789 /* initfile.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC404119FC5CD000FE789 /* initfile.cc */; };
+		A3ACC4F5119FC5CD000FE789 /* invent.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC405119FC5CD000FE789 /* invent.cc */; };
+		A3ACC4F6119FC5CD000FE789 /* it_use2.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC406119FC5CD000FE789 /* it_use2.cc */; };
+		A3ACC4F7119FC5CD000FE789 /* it_use3.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC407119FC5CD000FE789 /* it_use3.cc */; };
+		A3ACC4F8119FC5CD000FE789 /* item_use.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC408119FC5CD000FE789 /* item_use.cc */; };
+		A3ACC4F9119FC5CD000FE789 /* itemname.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC409119FC5CD000FE789 /* itemname.cc */; };
+		A3ACC4FA119FC5CD000FE789 /* itemprop.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC40A119FC5CD000FE789 /* itemprop.cc */; };
+		A3ACC4FB119FC5CD000FE789 /* items.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC40B119FC5CD000FE789 /* items.cc */; };
+		A3ACC4FC119FC5CD000FE789 /* jobs.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC40C119FC5CD000FE789 /* jobs.cc */; };
+		A3ACC4FD119FC5CD000FE789 /* kills.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC40D119FC5CD000FE789 /* kills.cc */; };
+		A3ACC4FE119FC5CD000FE789 /* l_crawl.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC40E119FC5CD000FE789 /* l_crawl.cc */; };
+		A3ACC4FF119FC5CD000FE789 /* l_debug.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC40F119FC5CD000FE789 /* l_debug.cc */; };
+		A3ACC500119FC5CD000FE789 /* l_dgn.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC410119FC5CD000FE789 /* l_dgn.cc */; };
+		A3ACC501119FC5CD000FE789 /* l_dgnbld.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC411119FC5CD000FE789 /* l_dgnbld.cc */; };
+		A3ACC502119FC5CD000FE789 /* l_dgnevt.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC412119FC5CD000FE789 /* l_dgnevt.cc */; };
+		A3ACC503119FC5CD000FE789 /* l_dgngrd.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC413119FC5CD000FE789 /* l_dgngrd.cc */; };
+		A3ACC504119FC5CD000FE789 /* l_dgnit.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC414119FC5CD000FE789 /* l_dgnit.cc */; };
+		A3ACC505119FC5CD000FE789 /* l_dgnlvl.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC415119FC5CD000FE789 /* l_dgnlvl.cc */; };
+		A3ACC506119FC5CD000FE789 /* l_dgnmon.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC416119FC5CD000FE789 /* l_dgnmon.cc */; };
+		A3ACC507119FC5CD000FE789 /* l_dgntil.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC417119FC5CD000FE789 /* l_dgntil.cc */; };
+		A3ACC508119FC5CD000FE789 /* l_feat.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC418119FC5CD000FE789 /* l_feat.cc */; };
+		A3ACC509119FC5CD000FE789 /* l_file.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC419119FC5CD000FE789 /* l_file.cc */; };
+		A3ACC50A119FC5CD000FE789 /* l_food.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC41A119FC5CD000FE789 /* l_food.cc */; };
+		A3ACC50B119FC5CD000FE789 /* l_global.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC41B119FC5CD000FE789 /* l_global.cc */; };
+		A3ACC50C119FC5CD000FE789 /* l_item.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC41C119FC5CD000FE789 /* l_item.cc */; };
+		A3ACC50D119FC5CD000FE789 /* l_los.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC41D119FC5CD000FE789 /* l_los.cc */; };
+		A3ACC50E119FC5CD000FE789 /* l_mapgrd.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC41E119FC5CD000FE789 /* l_mapgrd.cc */; };
+		A3ACC50F119FC5CD000FE789 /* l_mapmrk.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC41F119FC5CD000FE789 /* l_mapmrk.cc */; };
+		A3ACC510119FC5CD000FE789 /* l_moninf.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC420119FC5CD000FE789 /* l_moninf.cc */; };
+		A3ACC511119FC5CD000FE789 /* l_mons.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC421119FC5CD000FE789 /* l_mons.cc */; };
+		A3ACC512119FC5CD000FE789 /* l_option.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC422119FC5CD000FE789 /* l_option.cc */; };
+		A3ACC513119FC5CD000FE789 /* l_spells.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC423119FC5CD000FE789 /* l_spells.cc */; };
+		A3ACC514119FC5CD000FE789 /* l_subvault.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC424119FC5CD000FE789 /* l_subvault.cc */; };
+		A3ACC515119FC5CD000FE789 /* l_travel.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC425119FC5CD000FE789 /* l_travel.cc */; };
+		A3ACC516119FC5CD000FE789 /* l_view.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC426119FC5CD000FE789 /* l_view.cc */; };
+		A3ACC517119FC5CD000FE789 /* l_you.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC427119FC5CD000FE789 /* l_you.cc */; };
+		A3ACC518119FC5CD000FE789 /* lev-pand.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC428119FC5CD000FE789 /* lev-pand.cc */; };
+		A3ACC519119FC5CD000FE789 /* libdos.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC429119FC5CD000FE789 /* libdos.cc */; };
+		A3ACC51A119FC5CD000FE789 /* libgui.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42A119FC5CD000FE789 /* libgui.cc */; };
+		A3ACC51B119FC5CD000FE789 /* libunix.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42B119FC5CD000FE789 /* libunix.cc */; };
+		A3ACC51C119FC5CD000FE789 /* libutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42C119FC5CD000FE789 /* libutil.cc */; };
+		A3ACC51D119FC5CD000FE789 /* libw32c.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42D119FC5CD000FE789 /* libw32c.cc */; };
+		A3ACC51E119FC5CD000FE789 /* los_def.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42E119FC5CD000FE789 /* los_def.cc */; };
+		A3ACC51F119FC5CD000FE789 /* los.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42F119FC5CD000FE789 /* los.cc */; };
+		A3ACC520119FC5CD000FE789 /* losglobal.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC430119FC5CD000FE789 /* losglobal.cc */; };
+		A3ACC521119FC5CD000FE789 /* losparam.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC431119FC5CD000FE789 /* losparam.cc */; };
+		A3ACC522119FC5CD000FE789 /* luaterp.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC432119FC5CD000FE789 /* luaterp.cc */; };
+		A3ACC523119FC5CD000FE789 /* macro.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC433119FC5CD000FE789 /* macro.cc */; };
+		A3ACC524119FC5CD000FE789 /* main.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC434119FC5CD000FE789 /* main.cc */; };
+		A3ACC525119FC5CD000FE789 /* makeitem.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC435119FC5CD000FE789 /* makeitem.cc */; };
+		A3ACC526119FC5CD000FE789 /* map_knowledge.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC436119FC5CD000FE789 /* map_knowledge.cc */; };
+		A3ACC527119FC5CD000FE789 /* mapdef.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC437119FC5CD000FE789 /* mapdef.cc */; };
+		A3ACC528119FC5CD000FE789 /* mapmark.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC438119FC5CD000FE789 /* mapmark.cc */; };
+		A3ACC529119FC5CD000FE789 /* maps.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC439119FC5CD000FE789 /* maps.cc */; };
+		A3ACC52A119FC5CD000FE789 /* menu.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC43A119FC5CD000FE789 /* menu.cc */; };
+		A3ACC52B119FC5CD000FE789 /* message-stream.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC43B119FC5CD000FE789 /* message-stream.cc */; };
+		A3ACC52C119FC5CD000FE789 /* message.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC43C119FC5CD000FE789 /* message.cc */; };
+		A3ACC52D119FC5CD000FE789 /* mgen_data.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC43D119FC5CD000FE789 /* mgen_data.cc */; };
+		A3ACC52E119FC5CD000FE789 /* misc.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC43E119FC5CD000FE789 /* misc.cc */; };
+		A3ACC52F119FC5CD000FE789 /* mislead.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC43F119FC5CD000FE789 /* mislead.cc */; };
+		A3ACC530119FC5CD000FE789 /* mon_resist_def.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC440119FC5CD000FE789 /* mon_resist_def.cc */; };
+		A3ACC531119FC5CD000FE789 /* mon-abil.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC441119FC5CD000FE789 /* mon-abil.cc */; };
+		A3ACC532119FC5CD000FE789 /* mon-act.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC442119FC5CD000FE789 /* mon-act.cc */; };
+		A3ACC533119FC5CD000FE789 /* mon-behv.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC443119FC5CD000FE789 /* mon-behv.cc */; };
+		A3ACC534119FC5CD000FE789 /* mon-cast.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC444119FC5CD000FE789 /* mon-cast.cc */; };
+		A3ACC535119FC5CD000FE789 /* mon-clone.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC445119FC5CD000FE789 /* mon-clone.cc */; };
+		A3ACC536119FC5CD000FE789 /* mon-death.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC446119FC5CD000FE789 /* mon-death.cc */; };
+		A3ACC537119FC5CD000FE789 /* mon-gear.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC447119FC5CD000FE789 /* mon-gear.cc */; };
+		A3ACC538119FC5CD000FE789 /* mon-grow.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC448119FC5CD000FE789 /* mon-grow.cc */; };
+		A3ACC539119FC5CD000FE789 /* mon-info.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC449119FC5CD000FE789 /* mon-info.cc */; };
+		A3ACC53A119FC5CD000FE789 /* mon-iter.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC44A119FC5CD000FE789 /* mon-iter.cc */; };
+		A3ACC53B119FC5CD000FE789 /* mon-movetarget.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC44B119FC5CD000FE789 /* mon-movetarget.cc */; };
+		A3ACC53C119FC5CD000FE789 /* mon-pathfind.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC44C119FC5CD000FE789 /* mon-pathfind.cc */; };
+		A3ACC53D119FC5CD000FE789 /* mon-pick.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC44D119FC5CD000FE789 /* mon-pick.cc */; };
+		A3ACC53E119FC5CD000FE789 /* mon-place.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC44E119FC5CD000FE789 /* mon-place.cc */; };
+		A3ACC53F119FC5CD000FE789 /* mon-project.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC44F119FC5CD000FE789 /* mon-project.cc */; };
+		A3ACC540119FC5CD000FE789 /* mon-speak.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC450119FC5CD000FE789 /* mon-speak.cc */; };
+		A3ACC541119FC5CD000FE789 /* mon-stuff.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC451119FC5CD000FE789 /* mon-stuff.cc */; };
+		A3ACC542119FC5CD000FE789 /* mon-transit.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC452119FC5CD000FE789 /* mon-transit.cc */; };
+		A3ACC543119FC5CD000FE789 /* mon-util.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC453119FC5CD000FE789 /* mon-util.cc */; };
+		A3ACC544119FC5CD000FE789 /* monster.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC454119FC5CD000FE789 /* monster.cc */; };
+		A3ACC545119FC5CD000FE789 /* mt19937ar.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC455119FC5CD000FE789 /* mt19937ar.cc */; };
+		A3ACC546119FC5CD000FE789 /* mutation.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC456119FC5CD000FE789 /* mutation.cc */; };
+		A3ACC547119FC5CD000FE789 /* newgame.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC457119FC5CD000FE789 /* newgame.cc */; };
+		A3ACC548119FC5CD000FE789 /* ng-init.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC458119FC5CD000FE789 /* ng-init.cc */; };
+		A3ACC549119FC5CD000FE789 /* ng-input.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC459119FC5CD000FE789 /* ng-input.cc */; };
+		A3ACC54A119FC5CD000FE789 /* ng-restr.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC45A119FC5CD000FE789 /* ng-restr.cc */; };
+		A3ACC54B119FC5CD000FE789 /* ng-setup.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC45B119FC5CD000FE789 /* ng-setup.cc */; };
+		A3ACC54C119FC5CD000FE789 /* ng-wanderer.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC45C119FC5CD000FE789 /* ng-wanderer.cc */; };
+		A3ACC54D119FC5CD000FE789 /* notes.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC45D119FC5CD000FE789 /* notes.cc */; };
+		A3ACC54E119FC5CD000FE789 /* ouch.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC45E119FC5CD000FE789 /* ouch.cc */; };
+		A3ACC54F119FC5CD000FE789 /* output.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC45F119FC5CD000FE789 /* output.cc */; };
+		A3ACC550119FC5CD000FE789 /* pattern.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC460119FC5CD000FE789 /* pattern.cc */; };
+		A3ACC551119FC5CD000FE789 /* place-info.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC461119FC5CD000FE789 /* place-info.cc */; };
+		A3ACC552119FC5CD000FE789 /* place.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC462119FC5CD000FE789 /* place.cc */; };
+		A3ACC553119FC5CD000FE789 /* player-act.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC463119FC5CD000FE789 /* player-act.cc */; };
+		A3ACC554119FC5CD000FE789 /* player-equip.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC464119FC5CD000FE789 /* player-equip.cc */; };
+		A3ACC555119FC5CD000FE789 /* player-stats.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC465119FC5CD000FE789 /* player-stats.cc */; };
+		A3ACC556119FC5CD000FE789 /* player.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC466119FC5CD000FE789 /* player.cc */; };
+		A3ACC557119FC5CD000FE789 /* quiver.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC467119FC5CD000FE789 /* quiver.cc */; };
+		A3ACC558119FC5CD000FE789 /* random-var.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC468119FC5CD000FE789 /* random-var.cc */; };
+		A3ACC559119FC5CD000FE789 /* random.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC469119FC5CD000FE789 /* random.cc */; };
+		A3ACC55A119FC5CD000FE789 /* ray.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC46A119FC5CD000FE789 /* ray.cc */; };
+		A3ACC55B119FC5CD000FE789 /* religion.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC46B119FC5CD000FE789 /* religion.cc */; };
+		A3ACC55C119FC5CD000FE789 /* rng.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC46C119FC5CD000FE789 /* rng.cc */; };
+		A3ACC55D119FC5CD000FE789 /* sha256.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC46D119FC5CD000FE789 /* sha256.cc */; };
+		A3ACC55E119FC5CD000FE789 /* shopping.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC46E119FC5CD000FE789 /* shopping.cc */; };
+		A3ACC55F119FC5CD000FE789 /* shout.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC46F119FC5CD000FE789 /* shout.cc */; };
+		A3ACC560119FC5CD000FE789 /* show.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC470119FC5CD000FE789 /* show.cc */; };
+		A3ACC561119FC5CD000FE789 /* showsymb.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC471119FC5CD000FE789 /* showsymb.cc */; };
+		A3ACC562119FC5CD000FE789 /* skills.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC472119FC5CD000FE789 /* skills.cc */; };
+		A3ACC563119FC5CD000FE789 /* skills2.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC473119FC5CD000FE789 /* skills2.cc */; };
+		A3ACC564119FC5CD000FE789 /* species.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC474119FC5CD000FE789 /* species.cc */; };
+		A3ACC565119FC5CD000FE789 /* spells1.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC475119FC5CD000FE789 /* spells1.cc */; };
+		A3ACC566119FC5CD000FE789 /* spells2.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC476119FC5CD000FE789 /* spells2.cc */; };
+		A3ACC567119FC5CD000FE789 /* spells3.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC477119FC5CD000FE789 /* spells3.cc */; };
+		A3ACC568119FC5CD000FE789 /* spells4.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC478119FC5CD000FE789 /* spells4.cc */; };
+		A3ACC569119FC5CD000FE789 /* spl-book.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC479119FC5CD000FE789 /* spl-book.cc */; };
+		A3ACC56A119FC5CD000FE789 /* spl-cast.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC47A119FC5CD000FE789 /* spl-cast.cc */; };
+		A3ACC56B119FC5CD000FE789 /* spl-mis.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC47B119FC5CD000FE789 /* spl-mis.cc */; };
+		A3ACC56C119FC5CD000FE789 /* spl-util.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC47C119FC5CD000FE789 /* spl-util.cc */; };
+		A3ACC56D119FC5CD000FE789 /* spl-zap.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC47D119FC5CD000FE789 /* spl-zap.cc */; };
+		A3ACC56E119FC5CD000FE789 /* sprint.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC47E119FC5CD000FE789 /* sprint.cc */; };
+		A3ACC56F119FC5CD000FE789 /* sqldbm.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC47F119FC5CD000FE789 /* sqldbm.cc */; };
+		A3ACC570119FC5CD000FE789 /* stairs.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC480119FC5CD000FE789 /* stairs.cc */; };
+		A3ACC571119FC5CD000FE789 /* startup.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC481119FC5CD000FE789 /* startup.cc */; };
+		A3ACC572119FC5CD000FE789 /* stash.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC482119FC5CD000FE789 /* stash.cc */; };
+		A3ACC573119FC5CD000FE789 /* state.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC483119FC5CD000FE789 /* state.cc */; };
+		A3ACC574119FC5CD000FE789 /* store.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC484119FC5CD000FE789 /* store.cc */; };
+		A3ACC575119FC5CD000FE789 /* stuff.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC485119FC5CD000FE789 /* stuff.cc */; };
+		A3ACC576119FC5CD000FE789 /* tags.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC486119FC5CD000FE789 /* tags.cc */; };
+		A3ACC577119FC5CD000FE789 /* tagstring.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC487119FC5CD000FE789 /* tagstring.cc */; };
+		A3ACC578119FC5CD000FE789 /* teleport.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC488119FC5CD000FE789 /* teleport.cc */; };
+		A3ACC579119FC5CD000FE789 /* terrain.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC489119FC5CD000FE789 /* terrain.cc */; };
+		A3ACC57A119FC5CD000FE789 /* tilebuf.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC48A119FC5CD000FE789 /* tilebuf.cc */; };
+		A3ACC57B119FC5CD000FE789 /* tiledoll.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC48B119FC5CD000FE789 /* tiledoll.cc */; };
+		A3ACC57C119FC5CD000FE789 /* tilefont.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC48C119FC5CD000FE789 /* tilefont.cc */; };
+		A3ACC57D119FC5CD000FE789 /* tilemcache.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC48D119FC5CD000FE789 /* tilemcache.cc */; };
+		A3ACC57E119FC5CD000FE789 /* tilepick.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC48E119FC5CD000FE789 /* tilepick.cc */; };
+		A3ACC57F119FC5CD000FE789 /* tilereg-crt.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC48F119FC5CD000FE789 /* tilereg-crt.cc */; };
+		A3ACC580119FC5CD000FE789 /* tilereg-dgn.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC490119FC5CD000FE789 /* tilereg-dgn.cc */; };
+		A3ACC581119FC5CD000FE789 /* tilereg-doll.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC491119FC5CD000FE789 /* tilereg-doll.cc */; };
+		A3ACC582119FC5CD000FE789 /* tilereg-grid.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC492119FC5CD000FE789 /* tilereg-grid.cc */; };
+		A3ACC583119FC5CD000FE789 /* tilereg-inv.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC493119FC5CD000FE789 /* tilereg-inv.cc */; };
+		A3ACC584119FC5CD000FE789 /* tilereg-map.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC494119FC5CD000FE789 /* tilereg-map.cc */; };
+		A3ACC585119FC5CD000FE789 /* tilereg-mem.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC495119FC5CD000FE789 /* tilereg-mem.cc */; };
+		A3ACC586119FC5CD000FE789 /* tilereg-menu.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC496119FC5CD000FE789 /* tilereg-menu.cc */; };
+		A3ACC587119FC5CD000FE789 /* tilereg-msg.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC497119FC5CD000FE789 /* tilereg-msg.cc */; };
+		A3ACC588119FC5CD000FE789 /* tilereg-spl.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC498119FC5CD000FE789 /* tilereg-spl.cc */; };
+		A3ACC589119FC5CD000FE789 /* tilereg-stat.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC499119FC5CD000FE789 /* tilereg-stat.cc */; };
+		A3ACC58A119FC5CD000FE789 /* tilereg-tab.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC49A119FC5CD000FE789 /* tilereg-tab.cc */; };
+		A3ACC58B119FC5CD000FE789 /* tilereg-text.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC49B119FC5CD000FE789 /* tilereg-text.cc */; };
+		A3ACC58C119FC5CD000FE789 /* tilereg-title.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC49C119FC5CD000FE789 /* tilereg-title.cc */; };
+		A3ACC58D119FC5CD000FE789 /* tilereg.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC49D119FC5CD000FE789 /* tilereg.cc */; };
+		A3ACC58E119FC5CD000FE789 /* tilesdl.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC49E119FC5CD000FE789 /* tilesdl.cc */; };
+		A3ACC58F119FC5CD000FE789 /* tiletex.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC49F119FC5CD000FE789 /* tiletex.cc */; };
+		A3ACC590119FC5CD000FE789 /* transform.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A0119FC5CD000FE789 /* transform.cc */; };
+		A3ACC591119FC5CD000FE789 /* traps.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A1119FC5CD000FE789 /* traps.cc */; };
+		A3ACC592119FC5CD000FE789 /* travel.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A2119FC5CD000FE789 /* travel.cc */; };
+		A3ACC593119FC5CD000FE789 /* version.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A3119FC5CD000FE789 /* version.cc */; };
+		A3ACC594119FC5CD000FE789 /* view.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A4119FC5CD000FE789 /* view.cc */; };
+		A3ACC595119FC5CD000FE789 /* viewchar.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A5119FC5CD000FE789 /* viewchar.cc */; };
+		A3ACC596119FC5CD000FE789 /* viewgeom.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A6119FC5CD000FE789 /* viewgeom.cc */; };
+		A3ACC597119FC5CD000FE789 /* viewmap.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A7119FC5CD000FE789 /* viewmap.cc */; };
+		A3ACC598119FC5CD000FE789 /* windowmanager-ctouch.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A8119FC5CD000FE789 /* windowmanager-ctouch.cc */; };
+		A3ACC59A119FC5CD000FE789 /* wiz-dgn.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4AA119FC5CD000FE789 /* wiz-dgn.cc */; };
+		A3ACC59B119FC5CD000FE789 /* wiz-fsim.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4AB119FC5CD000FE789 /* wiz-fsim.cc */; };
+		A3ACC59C119FC5CD000FE789 /* wiz-item.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4AC119FC5CD000FE789 /* wiz-item.cc */; };
+		A3ACC59D119FC5CD000FE789 /* wiz-mon.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4AD119FC5CD000FE789 /* wiz-mon.cc */; };
+		A3ACC59E119FC5CD000FE789 /* wiz-you.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4AE119FC5CD000FE789 /* wiz-you.cc */; };
+		A3ACC59F119FC5CD000FE789 /* xom.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4AF119FC5CD000FE789 /* xom.cc */; };
+		A3ACC5A4119FC603000FE789 /* levcomp.lpp in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC5A2119FC603000FE789 /* levcomp.lpp */; };
+		A3ACC5A5119FC603000FE789 /* levcomp.ypp in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC5A3119FC603000FE789 /* levcomp.ypp */; };
+		A3ACC5B6119FC81D000FE789 /* levcomp.lex.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC5B3119FC81D000FE789 /* levcomp.lex.cc */; };
+		A3ACC5B7119FC81D000FE789 /* levcomp.tab.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC5B4119FC81D000FE789 /* levcomp.tab.cc */; };
 		A3F1BE93119EFAD70017F016 /* lapi.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F1BE5C119EFAD70017F016 /* lapi.h */; };
 		A3F1BE94119EFAD70017F016 /* lauxlib.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F1BE5D119EFAD70017F016 /* lauxlib.h */; };
 		A3F1BE95119EFAD70017F016 /* lcode.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F1BE5E119EFAD70017F016 /* lcode.h */; };
@@ -80,10 +328,27 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A3F1BD99119EF5DD0017F016 /* Lua */;
+			remoteGlobalIDString = A3F1BD99119EF5DD0017F016;
 			remoteInfo = Lua;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A3ACC1FA119FC393000FE789 /* Copy Dungeon Tiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = dat/tiles;
+			dstSubfolderSpec = 7;
+			files = (
+				A3ACC2BD119FC515000FE789 /* gui.png in Copy Dungeon Tiles */,
+				A3ACC2BE119FC515000FE789 /* main.png in Copy Dungeon Tiles */,
+				A3ACC2BF119FC515000FE789 /* player.png in Copy Dungeon Tiles */,
+				A3ACC2C0119FC515000FE789 /* dngn.png in Copy Dungeon Tiles */,
+			);
+			name = "Copy Dungeon Tiles";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -103,6 +368,499 @@
 		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ipad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ipad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A3ACC2AF119FC46D000FE789 /* dat */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dat; path = ../dat; sourceTree = SOURCE_ROOT; };
+		A3ACC2B1119FC48A000FE789 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = docs; path = ../../docs; sourceTree = SOURCE_ROOT; };
+		A3ACC2B3119FC494000FE789 /* settings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = settings; path = ../../settings; sourceTree = SOURCE_ROOT; };
+		A3ACC2B5119FC4BE000FE789 /* dngn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dngn.png; path = ../rltiles/dngn.png; sourceTree = SOURCE_ROOT; };
+		A3ACC2BA119FC4DF000FE789 /* gui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gui.png; path = ../rltiles/gui.png; sourceTree = SOURCE_ROOT; };
+		A3ACC2BB119FC4DF000FE789 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = main.png; path = ../rltiles/main.png; sourceTree = SOURCE_ROOT; };
+		A3ACC2BC119FC4DF000FE789 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = ../rltiles/player.png; sourceTree = SOURCE_ROOT; };
+		A3ACC2C9119FC5CD000FE789 /* abl-show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "abl-show.h"; path = "../abl-show.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2CA119FC5CD000FE789 /* abyss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = abyss.h; path = ../abyss.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2CB119FC5CD000FE789 /* act-iter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "act-iter.h"; path = "../act-iter.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2CC119FC5CD000FE789 /* actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = actor.h; path = ../actor.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2CD119FC5CD000FE789 /* AppHdr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppHdr.h; path = ../AppHdr.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2CE119FC5CD000FE789 /* areas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = areas.h; path = ../areas.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2CF119FC5CD000FE789 /* arena.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arena.h; path = ../arena.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2D0119FC5CD000FE789 /* art-data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "art-data.h"; path = "../art-data.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2D1119FC5CD000FE789 /* art-enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "art-enum.h"; path = "../art-enum.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2D2119FC5CD000FE789 /* art-func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "art-func.h"; path = "../art-func.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2D3119FC5CD000FE789 /* artefact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = artefact.h; path = ../artefact.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2D4119FC5CD000FE789 /* attitude-change.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "attitude-change.h"; path = "../attitude-change.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2D5119FC5CD000FE789 /* beam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = beam.h; path = ../beam.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2D6119FC5CD000FE789 /* bitary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bitary.h; path = ../bitary.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2D7119FC5CD000FE789 /* branch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = branch.h; path = ../branch.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2D8119FC5CD000FE789 /* build.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = build.h; path = ../build.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2D9119FC5CD000FE789 /* chardump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chardump.h; path = ../chardump.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2DA119FC5CD000FE789 /* cio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cio.h; path = ../cio.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2DB119FC5CD000FE789 /* cloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cloud.h; path = ../cloud.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2DC119FC5CD000FE789 /* clua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = clua.h; path = ../clua.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2DD119FC5CD000FE789 /* cluautil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cluautil.h; path = ../cluautil.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2DE119FC5CD000FE789 /* cmd-keys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "cmd-keys.h"; path = "../cmd-keys.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2DF119FC5CD000FE789 /* cmd-name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "cmd-name.h"; path = "../cmd-name.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2E0119FC5CD000FE789 /* colour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = colour.h; path = ../colour.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2E1119FC5CD000FE789 /* command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = command.h; path = ../command.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2E2119FC5CD000FE789 /* compflag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compflag.h; path = ../compflag.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2E3119FC5CD000FE789 /* coord-circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "coord-circle.h"; path = "../coord-circle.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2E4119FC5CD000FE789 /* coord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coord.h; path = ../coord.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2E5119FC5CD000FE789 /* coordit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coordit.h; path = ../coordit.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2E6119FC5CD000FE789 /* crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crash.h; path = ../crash.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2E7119FC5CD000FE789 /* ctest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ctest.h; path = ../ctest.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2E8119FC5CD000FE789 /* database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = database.h; path = ../database.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2E9119FC5CD000FE789 /* dbg-crsh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dbg-crsh.h"; path = "../dbg-crsh.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2EA119FC5CD000FE789 /* dbg-maps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dbg-maps.h"; path = "../dbg-maps.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2EB119FC5CD000FE789 /* dbg-scan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dbg-scan.h"; path = "../dbg-scan.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2EC119FC5CD000FE789 /* dbg-util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dbg-util.h"; path = "../dbg-util.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2ED119FC5CD000FE789 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = debug.h; path = ../debug.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2EE119FC5CD000FE789 /* decks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decks.h; path = ../decks.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2EF119FC5CD000FE789 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = defines.h; path = ../defines.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2F0119FC5CD000FE789 /* delay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = delay.h; path = ../delay.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2F1119FC5CD000FE789 /* describe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = describe.h; path = ../describe.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2F2119FC5CD000FE789 /* dgl-message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dgl-message.h"; path = "../dgl-message.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2F3119FC5CD000FE789 /* dgn-height.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dgn-height.h"; path = "../dgn-height.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2F4119FC5CD000FE789 /* dgn-overview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dgn-overview.h"; path = "../dgn-overview.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2F5119FC5CD000FE789 /* dgn-shoals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dgn-shoals.h"; path = "../dgn-shoals.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2F6119FC5CD000FE789 /* dgn-swamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dgn-swamp.h"; path = "../dgn-swamp.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC2F7119FC5CD000FE789 /* dgnevent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dgnevent.h; path = ../dgnevent.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2F8119FC5CD000FE789 /* directn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = directn.h; path = ../directn.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2F9119FC5CD000FE789 /* dlua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dlua.h; path = ../dlua.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2FA119FC5CD000FE789 /* dungeon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dungeon.h; path = ../dungeon.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2FB119FC5CD000FE789 /* effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = effects.h; path = ../effects.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2FC119FC5CD000FE789 /* enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = enum.h; path = ../enum.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2FD119FC5CD000FE789 /* env.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = env.h; path = ../env.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2FE119FC5CD000FE789 /* exclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = exclude.h; path = ../exclude.h; sourceTree = SOURCE_ROOT; };
+		A3ACC2FF119FC5CD000FE789 /* externs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = externs.h; path = ../externs.h; sourceTree = SOURCE_ROOT; };
+		A3ACC300119FC5CD000FE789 /* feature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = feature.h; path = ../feature.h; sourceTree = SOURCE_ROOT; };
+		A3ACC301119FC5CD000FE789 /* fight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fight.h; path = ../fight.h; sourceTree = SOURCE_ROOT; };
+		A3ACC302119FC5CD000FE789 /* files.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = files.h; path = ../files.h; sourceTree = SOURCE_ROOT; };
+		A3ACC303119FC5CD000FE789 /* fixedarray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fixedarray.h; path = ../fixedarray.h; sourceTree = SOURCE_ROOT; };
+		A3ACC304119FC5CD000FE789 /* fixedvector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fixedvector.h; path = ../fixedvector.h; sourceTree = SOURCE_ROOT; };
+		A3ACC305119FC5CD000FE789 /* flood_find.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flood_find.h; path = ../flood_find.h; sourceTree = SOURCE_ROOT; };
+		A3ACC306119FC5CD000FE789 /* fontwrapper-ctouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "fontwrapper-ctouch.h"; path = "../fontwrapper-ctouch.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC308119FC5CD000FE789 /* food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = food.h; path = ../food.h; sourceTree = SOURCE_ROOT; };
+		A3ACC309119FC5CD000FE789 /* format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = format.h; path = ../format.h; sourceTree = SOURCE_ROOT; };
+		A3ACC30A119FC5CD000FE789 /* fprop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fprop.h; path = ../fprop.h; sourceTree = SOURCE_ROOT; };
+		A3ACC30B119FC5CD000FE789 /* geom2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = geom2d.h; path = ../geom2d.h; sourceTree = SOURCE_ROOT; };
+		A3ACC30C119FC5CD000FE789 /* ghost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ghost.h; path = ../ghost.h; sourceTree = SOURCE_ROOT; };
+		A3ACC30D119FC5CD000FE789 /* glwrapper-es.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "glwrapper-es.h"; path = "../glwrapper-es.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC30F119FC5CD000FE789 /* glwrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = glwrapper.h; path = ../glwrapper.h; sourceTree = SOURCE_ROOT; };
+		A3ACC310119FC5CD000FE789 /* godabil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = godabil.h; path = ../godabil.h; sourceTree = SOURCE_ROOT; };
+		A3ACC311119FC5CD000FE789 /* godconduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = godconduct.h; path = ../godconduct.h; sourceTree = SOURCE_ROOT; };
+		A3ACC312119FC5CD000FE789 /* goditem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = goditem.h; path = ../goditem.h; sourceTree = SOURCE_ROOT; };
+		A3ACC313119FC5CD000FE789 /* godpassive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = godpassive.h; path = ../godpassive.h; sourceTree = SOURCE_ROOT; };
+		A3ACC314119FC5CD000FE789 /* godprayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = godprayer.h; path = ../godprayer.h; sourceTree = SOURCE_ROOT; };
+		A3ACC315119FC5CD000FE789 /* godwrath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = godwrath.h; path = ../godwrath.h; sourceTree = SOURCE_ROOT; };
+		A3ACC316119FC5CD000FE789 /* hints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hints.h; path = ../hints.h; sourceTree = SOURCE_ROOT; };
+		A3ACC317119FC5CD000FE789 /* hiscores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hiscores.h; path = ../hiscores.h; sourceTree = SOURCE_ROOT; };
+		A3ACC318119FC5CD000FE789 /* initfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = initfile.h; path = ../initfile.h; sourceTree = SOURCE_ROOT; };
+		A3ACC319119FC5CD000FE789 /* invent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = invent.h; path = ../invent.h; sourceTree = SOURCE_ROOT; };
+		A3ACC31A119FC5CD000FE789 /* it_use2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = it_use2.h; path = ../it_use2.h; sourceTree = SOURCE_ROOT; };
+		A3ACC31B119FC5CD000FE789 /* it_use3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = it_use3.h; path = ../it_use3.h; sourceTree = SOURCE_ROOT; };
+		A3ACC31C119FC5CD000FE789 /* item_use.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = item_use.h; path = ../item_use.h; sourceTree = SOURCE_ROOT; };
+		A3ACC31D119FC5CD000FE789 /* itemname.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = itemname.h; path = ../itemname.h; sourceTree = SOURCE_ROOT; };
+		A3ACC31E119FC5CD000FE789 /* itemprop-enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "itemprop-enum.h"; path = "../itemprop-enum.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC31F119FC5CD000FE789 /* itemprop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = itemprop.h; path = ../itemprop.h; sourceTree = SOURCE_ROOT; };
+		A3ACC320119FC5CD000FE789 /* items.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = items.h; path = ../items.h; sourceTree = SOURCE_ROOT; };
+		A3ACC321119FC5CD000FE789 /* jobs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jobs.h; path = ../jobs.h; sourceTree = SOURCE_ROOT; };
+		A3ACC322119FC5CD000FE789 /* kills.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kills.h; path = ../kills.h; sourceTree = SOURCE_ROOT; };
+		A3ACC323119FC5CD000FE789 /* l_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = l_defs.h; path = ../l_defs.h; sourceTree = SOURCE_ROOT; };
+		A3ACC324119FC5CD000FE789 /* l_libs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = l_libs.h; path = ../l_libs.h; sourceTree = SOURCE_ROOT; };
+		A3ACC325119FC5CD000FE789 /* lev-pand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "lev-pand.h"; path = "../lev-pand.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC326119FC5CD000FE789 /* libdos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libdos.h; path = ../libdos.h; sourceTree = SOURCE_ROOT; };
+		A3ACC327119FC5CD000FE789 /* libgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libgui.h; path = ../libgui.h; sourceTree = SOURCE_ROOT; };
+		A3ACC328119FC5CD000FE789 /* libunix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libunix.h; path = ../libunix.h; sourceTree = SOURCE_ROOT; };
+		A3ACC329119FC5CD000FE789 /* libutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libutil.h; path = ../libutil.h; sourceTree = SOURCE_ROOT; };
+		A3ACC32A119FC5CD000FE789 /* libw32c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libw32c.h; path = ../libw32c.h; sourceTree = SOURCE_ROOT; };
+		A3ACC32B119FC5CD000FE789 /* los_def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = los_def.h; path = ../los_def.h; sourceTree = SOURCE_ROOT; };
+		A3ACC32C119FC5CD000FE789 /* los.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = los.h; path = ../los.h; sourceTree = SOURCE_ROOT; };
+		A3ACC32D119FC5CD000FE789 /* losglobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = losglobal.h; path = ../losglobal.h; sourceTree = SOURCE_ROOT; };
+		A3ACC32E119FC5CD000FE789 /* losparam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = losparam.h; path = ../losparam.h; sourceTree = SOURCE_ROOT; };
+		A3ACC32F119FC5CD000FE789 /* luaterp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = luaterp.h; path = ../luaterp.h; sourceTree = SOURCE_ROOT; };
+		A3ACC330119FC5CD000FE789 /* macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = macro.h; path = ../macro.h; sourceTree = SOURCE_ROOT; };
+		A3ACC331119FC5CD000FE789 /* makeitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = makeitem.h; path = ../makeitem.h; sourceTree = SOURCE_ROOT; };
+		A3ACC332119FC5CD000FE789 /* map_knowledge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = map_knowledge.h; path = ../map_knowledge.h; sourceTree = SOURCE_ROOT; };
+		A3ACC333119FC5CD000FE789 /* mapdef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapdef.h; path = ../mapdef.h; sourceTree = SOURCE_ROOT; };
+		A3ACC334119FC5CD000FE789 /* mapmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapmark.h; path = ../mapmark.h; sourceTree = SOURCE_ROOT; };
+		A3ACC335119FC5CD000FE789 /* maps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = maps.h; path = ../maps.h; sourceTree = SOURCE_ROOT; };
+		A3ACC336119FC5CD000FE789 /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrix.h; path = ../matrix.h; sourceTree = SOURCE_ROOT; };
+		A3ACC337119FC5CD000FE789 /* melee_attack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = melee_attack.h; path = ../melee_attack.h; sourceTree = SOURCE_ROOT; };
+		A3ACC338119FC5CD000FE789 /* menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = menu.h; path = ../menu.h; sourceTree = SOURCE_ROOT; };
+		A3ACC339119FC5CD000FE789 /* message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = message.h; path = ../message.h; sourceTree = SOURCE_ROOT; };
+		A3ACC33A119FC5CD000FE789 /* mgen_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mgen_data.h; path = ../mgen_data.h; sourceTree = SOURCE_ROOT; };
+		A3ACC33B119FC5CD000FE789 /* mgen_enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mgen_enum.h; path = ../mgen_enum.h; sourceTree = SOURCE_ROOT; };
+		A3ACC33C119FC5CD000FE789 /* misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = misc.h; path = ../misc.h; sourceTree = SOURCE_ROOT; };
+		A3ACC33D119FC5CD000FE789 /* mislead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mislead.h; path = ../mislead.h; sourceTree = SOURCE_ROOT; };
+		A3ACC33E119FC5CD000FE789 /* mon_resist_def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mon_resist_def.h; path = ../mon_resist_def.h; sourceTree = SOURCE_ROOT; };
+		A3ACC33F119FC5CD000FE789 /* mon-abil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-abil.h"; path = "../mon-abil.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC340119FC5CD000FE789 /* mon-act.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-act.h"; path = "../mon-act.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC341119FC5CD000FE789 /* mon-behv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-behv.h"; path = "../mon-behv.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC342119FC5CD000FE789 /* mon-cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-cast.h"; path = "../mon-cast.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC343119FC5CD000FE789 /* mon-clone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-clone.h"; path = "../mon-clone.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC344119FC5CD000FE789 /* mon-data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-data.h"; path = "../mon-data.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC345119FC5CD000FE789 /* mon-death.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-death.h"; path = "../mon-death.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC346119FC5CD000FE789 /* mon-enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-enum.h"; path = "../mon-enum.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC347119FC5CD000FE789 /* mon-gear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-gear.h"; path = "../mon-gear.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC348119FC5CD000FE789 /* mon-grow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-grow.h"; path = "../mon-grow.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC349119FC5CD000FE789 /* mon-info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-info.h"; path = "../mon-info.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC34A119FC5CD000FE789 /* mon-iter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-iter.h"; path = "../mon-iter.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC34B119FC5CD000FE789 /* mon-movetarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-movetarget.h"; path = "../mon-movetarget.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC34C119FC5CD000FE789 /* mon-pathfind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-pathfind.h"; path = "../mon-pathfind.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC34D119FC5CD000FE789 /* mon-pick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-pick.h"; path = "../mon-pick.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC34E119FC5CD000FE789 /* mon-place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-place.h"; path = "../mon-place.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC34F119FC5CD000FE789 /* mon-project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-project.h"; path = "../mon-project.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC350119FC5CD000FE789 /* mon-speak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-speak.h"; path = "../mon-speak.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC351119FC5CD000FE789 /* mon-spll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-spll.h"; path = "../mon-spll.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC352119FC5CD000FE789 /* mon-stuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-stuff.h"; path = "../mon-stuff.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC353119FC5CD000FE789 /* mon-transit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-transit.h"; path = "../mon-transit.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC354119FC5CD000FE789 /* mon-util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mon-util.h"; path = "../mon-util.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC355119FC5CD000FE789 /* monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = monster.h; path = ../monster.h; sourceTree = SOURCE_ROOT; };
+		A3ACC356119FC5CD000FE789 /* mpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mpr.h; path = ../mpr.h; sourceTree = SOURCE_ROOT; };
+		A3ACC357119FC5CD000FE789 /* msvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = msvc.h; path = ../msvc.h; sourceTree = SOURCE_ROOT; };
+		A3ACC358119FC5CD000FE789 /* mt19937ar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mt19937ar.h; path = ../mt19937ar.h; sourceTree = SOURCE_ROOT; };
+		A3ACC359119FC5CD000FE789 /* mutation-data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mutation-data.h"; path = "../mutation-data.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC35A119FC5CD000FE789 /* mutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mutation.h; path = ../mutation.h; sourceTree = SOURCE_ROOT; };
+		A3ACC35B119FC5CD000FE789 /* newgame_def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = newgame_def.h; path = ../newgame_def.h; sourceTree = SOURCE_ROOT; };
+		A3ACC35C119FC5CD000FE789 /* newgame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = newgame.h; path = ../newgame.h; sourceTree = SOURCE_ROOT; };
+		A3ACC35D119FC5CD000FE789 /* ng-init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ng-init.h"; path = "../ng-init.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC35E119FC5CD000FE789 /* ng-input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ng-input.h"; path = "../ng-input.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC35F119FC5CD000FE789 /* ng-restr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ng-restr.h"; path = "../ng-restr.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC360119FC5CD000FE789 /* ng-setup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ng-setup.h"; path = "../ng-setup.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC361119FC5CD000FE789 /* ng-wanderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ng-wanderer.h"; path = "../ng-wanderer.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC362119FC5CD000FE789 /* notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = notes.h; path = ../notes.h; sourceTree = SOURCE_ROOT; };
+		A3ACC363119FC5CD000FE789 /* options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = options.h; path = ../options.h; sourceTree = SOURCE_ROOT; };
+		A3ACC364119FC5CD000FE789 /* ouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ouch.h; path = ../ouch.h; sourceTree = SOURCE_ROOT; };
+		A3ACC365119FC5CD000FE789 /* output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = output.h; path = ../output.h; sourceTree = SOURCE_ROOT; };
+		A3ACC366119FC5CD000FE789 /* pattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pattern.h; path = ../pattern.h; sourceTree = SOURCE_ROOT; };
+		A3ACC367119FC5CD000FE789 /* place-info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "place-info.h"; path = "../place-info.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC368119FC5CD000FE789 /* place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = place.h; path = ../place.h; sourceTree = SOURCE_ROOT; };
+		A3ACC369119FC5CD000FE789 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform.h; path = ../platform.h; sourceTree = SOURCE_ROOT; };
+		A3ACC36A119FC5CD000FE789 /* player-equip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "player-equip.h"; path = "../player-equip.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC36B119FC5CD000FE789 /* player-stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "player-stats.h"; path = "../player-stats.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC36C119FC5CD000FE789 /* player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = player.h; path = ../player.h; sourceTree = SOURCE_ROOT; };
+		A3ACC36D119FC5CD000FE789 /* quiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = quiver.h; path = ../quiver.h; sourceTree = SOURCE_ROOT; };
+		A3ACC36E119FC5CD000FE789 /* random-var.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "random-var.h"; path = "../random-var.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC36F119FC5CD000FE789 /* random-weight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "random-weight.h"; path = "../random-weight.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC370119FC5CD000FE789 /* random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = random.h; path = ../random.h; sourceTree = SOURCE_ROOT; };
+		A3ACC371119FC5CD000FE789 /* ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ray.h; path = ../ray.h; sourceTree = SOURCE_ROOT; };
+		A3ACC372119FC5CD000FE789 /* religion-enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "religion-enum.h"; path = "../religion-enum.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC373119FC5CD000FE789 /* religion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = religion.h; path = ../religion.h; sourceTree = SOURCE_ROOT; };
+		A3ACC374119FC5CD000FE789 /* rng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rng.h; path = ../rng.h; sourceTree = SOURCE_ROOT; };
+		A3ACC375119FC5CD000FE789 /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDLMain.h; path = ../SDLMain.h; sourceTree = SOURCE_ROOT; };
+		A3ACC376119FC5CD000FE789 /* sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha256.h; path = ../sha256.h; sourceTree = SOURCE_ROOT; };
+		A3ACC377119FC5CD000FE789 /* shopping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shopping.h; path = ../shopping.h; sourceTree = SOURCE_ROOT; };
+		A3ACC378119FC5CD000FE789 /* shout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shout.h; path = ../shout.h; sourceTree = SOURCE_ROOT; };
+		A3ACC379119FC5CD000FE789 /* show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = show.h; path = ../show.h; sourceTree = SOURCE_ROOT; };
+		A3ACC37A119FC5CD000FE789 /* showsymb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = showsymb.h; path = ../showsymb.h; sourceTree = SOURCE_ROOT; };
+		A3ACC37B119FC5CD000FE789 /* skills.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skills.h; path = ../skills.h; sourceTree = SOURCE_ROOT; };
+		A3ACC37C119FC5CD000FE789 /* skills2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skills2.h; path = ../skills2.h; sourceTree = SOURCE_ROOT; };
+		A3ACC37D119FC5CD000FE789 /* species.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = species.h; path = ../species.h; sourceTree = SOURCE_ROOT; };
+		A3ACC37E119FC5CD000FE789 /* spells1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spells1.h; path = ../spells1.h; sourceTree = SOURCE_ROOT; };
+		A3ACC37F119FC5CD000FE789 /* spells2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spells2.h; path = ../spells2.h; sourceTree = SOURCE_ROOT; };
+		A3ACC380119FC5CD000FE789 /* spells3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spells3.h; path = ../spells3.h; sourceTree = SOURCE_ROOT; };
+		A3ACC381119FC5CD000FE789 /* spells4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spells4.h; path = ../spells4.h; sourceTree = SOURCE_ROOT; };
+		A3ACC382119FC5CD000FE789 /* spl-book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "spl-book.h"; path = "../spl-book.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC383119FC5CD000FE789 /* spl-cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "spl-cast.h"; path = "../spl-cast.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC384119FC5CD000FE789 /* spl-data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "spl-data.h"; path = "../spl-data.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC385119FC5CD000FE789 /* spl-mis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "spl-mis.h"; path = "../spl-mis.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC386119FC5CD000FE789 /* spl-util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "spl-util.h"; path = "../spl-util.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC387119FC5CD000FE789 /* spl-zap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "spl-zap.h"; path = "../spl-zap.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC388119FC5CD000FE789 /* sprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sprint.h; path = ../sprint.h; sourceTree = SOURCE_ROOT; };
+		A3ACC389119FC5CD000FE789 /* sqldbm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqldbm.h; path = ../sqldbm.h; sourceTree = SOURCE_ROOT; };
+		A3ACC38A119FC5CD000FE789 /* stairs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stairs.h; path = ../stairs.h; sourceTree = SOURCE_ROOT; };
+		A3ACC38B119FC5CD000FE789 /* startup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = startup.h; path = ../startup.h; sourceTree = SOURCE_ROOT; };
+		A3ACC38C119FC5CD000FE789 /* stash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stash.h; path = ../stash.h; sourceTree = SOURCE_ROOT; };
+		A3ACC38D119FC5CD000FE789 /* state.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = state.h; path = ../state.h; sourceTree = SOURCE_ROOT; };
+		A3ACC38E119FC5CD000FE789 /* store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = store.h; path = ../store.h; sourceTree = SOURCE_ROOT; };
+		A3ACC38F119FC5CD000FE789 /* stuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stuff.h; path = ../stuff.h; sourceTree = SOURCE_ROOT; };
+		A3ACC390119FC5CD000FE789 /* tag-version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tag-version.h"; path = "../tag-version.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC391119FC5CD000FE789 /* tags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tags.h; path = ../tags.h; sourceTree = SOURCE_ROOT; };
+		A3ACC392119FC5CD000FE789 /* tagstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tagstring.h; path = ../tagstring.h; sourceTree = SOURCE_ROOT; };
+		A3ACC393119FC5CD000FE789 /* teleport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = teleport.h; path = ../teleport.h; sourceTree = SOURCE_ROOT; };
+		A3ACC394119FC5CD000FE789 /* terrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = terrain.h; path = ../terrain.h; sourceTree = SOURCE_ROOT; };
+		A3ACC395119FC5CD000FE789 /* tilebuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tilebuf.h; path = ../tilebuf.h; sourceTree = SOURCE_ROOT; };
+		A3ACC396119FC5CD000FE789 /* tiledoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiledoll.h; path = ../tiledoll.h; sourceTree = SOURCE_ROOT; };
+		A3ACC397119FC5CD000FE789 /* tilefont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tilefont.h; path = ../tilefont.h; sourceTree = SOURCE_ROOT; };
+		A3ACC398119FC5CD000FE789 /* tilemcache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tilemcache.h; path = ../tilemcache.h; sourceTree = SOURCE_ROOT; };
+		A3ACC399119FC5CD000FE789 /* tilereg-crt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-crt.h"; path = "../tilereg-crt.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC39A119FC5CD000FE789 /* tilereg-dgn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-dgn.h"; path = "../tilereg-dgn.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC39B119FC5CD000FE789 /* tilereg-doll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-doll.h"; path = "../tilereg-doll.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC39C119FC5CD000FE789 /* tilereg-grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-grid.h"; path = "../tilereg-grid.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC39D119FC5CD000FE789 /* tilereg-inv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-inv.h"; path = "../tilereg-inv.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC39E119FC5CD000FE789 /* tilereg-map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-map.h"; path = "../tilereg-map.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC39F119FC5CD000FE789 /* tilereg-mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-mem.h"; path = "../tilereg-mem.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3A0119FC5CD000FE789 /* tilereg-menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-menu.h"; path = "../tilereg-menu.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3A1119FC5CD000FE789 /* tilereg-msg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-msg.h"; path = "../tilereg-msg.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3A2119FC5CD000FE789 /* tilereg-spl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-spl.h"; path = "../tilereg-spl.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3A3119FC5CD000FE789 /* tilereg-stat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-stat.h"; path = "../tilereg-stat.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3A4119FC5CD000FE789 /* tilereg-tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-tab.h"; path = "../tilereg-tab.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3A5119FC5CD000FE789 /* tilereg-text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-text.h"; path = "../tilereg-text.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3A6119FC5CD000FE789 /* tilereg-title.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-title.h"; path = "../tilereg-title.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3A7119FC5CD000FE789 /* tilereg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tilereg.h; path = ../tilereg.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3A8119FC5CD000FE789 /* tiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiles.h; path = ../tiles.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3A9119FC5CD000FE789 /* tilesdl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tilesdl.h; path = ../tilesdl.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3AA119FC5CD000FE789 /* tiletex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiletex.h; path = ../tiletex.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3AB119FC5CD000FE789 /* transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = transform.h; path = ../transform.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3AC119FC5CD000FE789 /* trap_def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trap_def.h; path = ../trap_def.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3AD119FC5CD000FE789 /* traps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = traps.h; path = ../traps.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3AE119FC5CD000FE789 /* travel_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = travel_defs.h; path = ../travel_defs.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3AF119FC5CD000FE789 /* travel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = travel.h; path = ../travel.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3B0119FC5CD000FE789 /* unwind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unwind.h; path = ../unwind.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3B1119FC5CD000FE789 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = ../version.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3B2119FC5CD000FE789 /* view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = view.h; path = ../view.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3B3119FC5CD000FE789 /* viewchar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = viewchar.h; path = ../viewchar.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3B4119FC5CD000FE789 /* viewgeom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = viewgeom.h; path = ../viewgeom.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3B5119FC5CD000FE789 /* viewmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = viewmap.h; path = ../viewmap.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3B6119FC5CD000FE789 /* windowmanager-ctouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "windowmanager-ctouch.h"; path = "../windowmanager-ctouch.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3B8119FC5CD000FE789 /* windowmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = windowmanager.h; path = ../windowmanager.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3B9119FC5CD000FE789 /* wiz-dgn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "wiz-dgn.h"; path = "../wiz-dgn.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3BA119FC5CD000FE789 /* wiz-fsim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "wiz-fsim.h"; path = "../wiz-fsim.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3BB119FC5CD000FE789 /* wiz-item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "wiz-item.h"; path = "../wiz-item.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3BC119FC5CD000FE789 /* wiz-mon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "wiz-mon.h"; path = "../wiz-mon.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3BD119FC5CD000FE789 /* wiz-you.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "wiz-you.h"; path = "../wiz-you.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3BE119FC5CD000FE789 /* xom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xom.h; path = ../xom.h; sourceTree = SOURCE_ROOT; };
+		A3ACC3BF119FC5CD000FE789 /* zap-data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "zap-data.h"; path = "../zap-data.h"; sourceTree = SOURCE_ROOT; };
+		A3ACC3C0119FC5CD000FE789 /* abl-show.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "abl-show.cc"; path = "../abl-show.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3C1119FC5CD000FE789 /* abyss.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = abyss.cc; path = ../abyss.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3C2119FC5CD000FE789 /* act-iter.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "act-iter.cc"; path = "../act-iter.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3C3119FC5CD000FE789 /* actor-los.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "actor-los.cc"; path = "../actor-los.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3C4119FC5CD000FE789 /* actor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = actor.cc; path = ../actor.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3C5119FC5CD000FE789 /* AppHdr.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppHdr.cc; path = ../AppHdr.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3C6119FC5CD000FE789 /* areas.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = areas.cc; path = ../areas.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3C7119FC5CD000FE789 /* arena.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = arena.cc; path = ../arena.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3C8119FC5CD000FE789 /* artefact.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = artefact.cc; path = ../artefact.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3C9119FC5CD000FE789 /* attitude-change.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "attitude-change.cc"; path = "../attitude-change.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3CA119FC5CD000FE789 /* beam.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = beam.cc; path = ../beam.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3CB119FC5CD000FE789 /* behold.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = behold.cc; path = ../behold.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3CC119FC5CD000FE789 /* bitary.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bitary.cc; path = ../bitary.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3CD119FC5CD000FE789 /* branch.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = branch.cc; path = ../branch.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3CE119FC5CD000FE789 /* chardump.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = chardump.cc; path = ../chardump.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3CF119FC5CD000FE789 /* cio.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cio.cc; path = ../cio.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3D0119FC5CD000FE789 /* cloud.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cloud.cc; path = ../cloud.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3D1119FC5CD000FE789 /* clua.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = clua.cc; path = ../clua.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3D2119FC5CD000FE789 /* cluautil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cluautil.cc; path = ../cluautil.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3D3119FC5CD000FE789 /* colour.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = colour.cc; path = ../colour.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3D4119FC5CD000FE789 /* command.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = command.cc; path = ../command.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3D5119FC5CD000FE789 /* coord-circle.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "coord-circle.cc"; path = "../coord-circle.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3D6119FC5CD000FE789 /* coord.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = coord.cc; path = ../coord.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3D7119FC5CD000FE789 /* coordit.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = coordit.cc; path = ../coordit.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3D8119FC5CD000FE789 /* crash-d.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "crash-d.cc"; path = "../crash-d.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3D9119FC5CD000FE789 /* crash-u.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "crash-u.cc"; path = "../crash-u.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3DA119FC5CD000FE789 /* crash-w.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "crash-w.cc"; path = "../crash-w.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3DB119FC5CD000FE789 /* ctest.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ctest.cc; path = ../ctest.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3DC119FC5CD000FE789 /* database.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = database.cc; path = ../database.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3DD119FC5CD000FE789 /* dbg-asrt.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "dbg-asrt.cc"; path = "../dbg-asrt.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3DE119FC5CD000FE789 /* dbg-maps.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "dbg-maps.cc"; path = "../dbg-maps.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3DF119FC5CD000FE789 /* dbg-scan.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "dbg-scan.cc"; path = "../dbg-scan.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3E0119FC5CD000FE789 /* dbg-util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "dbg-util.cc"; path = "../dbg-util.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3E1119FC5CD000FE789 /* decks.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = decks.cc; path = ../decks.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3E2119FC5CD000FE789 /* delay.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = delay.cc; path = ../delay.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3E3119FC5CD000FE789 /* describe.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = describe.cc; path = ../describe.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3E4119FC5CD000FE789 /* dgl-message.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "dgl-message.cc"; path = "../dgl-message.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3E5119FC5CD000FE789 /* dgn-height.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "dgn-height.cc"; path = "../dgn-height.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3E6119FC5CD000FE789 /* dgn-overview.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "dgn-overview.cc"; path = "../dgn-overview.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3E7119FC5CD000FE789 /* dgn-shoals.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "dgn-shoals.cc"; path = "../dgn-shoals.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3E8119FC5CD000FE789 /* dgn-swamp.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "dgn-swamp.cc"; path = "../dgn-swamp.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3E9119FC5CD000FE789 /* dgnevent.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dgnevent.cc; path = ../dgnevent.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3EA119FC5CD000FE789 /* directn.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = directn.cc; path = ../directn.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3EB119FC5CD000FE789 /* dlua.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dlua.cc; path = ../dlua.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3EC119FC5CD000FE789 /* dungeon.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dungeon.cc; path = ../dungeon.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3ED119FC5CD000FE789 /* effects.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = effects.cc; path = ../effects.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3EE119FC5CD000FE789 /* exclude.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = exclude.cc; path = ../exclude.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3EF119FC5CD000FE789 /* feature.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = feature.cc; path = ../feature.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3F0119FC5CD000FE789 /* fight.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fight.cc; path = ../fight.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3F1119FC5CD000FE789 /* files.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = files.cc; path = ../files.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3F2119FC5CD000FE789 /* fontwrapper-ctouch.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "fontwrapper-ctouch.cc"; path = "../fontwrapper-ctouch.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3F4119FC5CD000FE789 /* food.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = food.cc; path = ../food.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3F5119FC5CD000FE789 /* format.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = format.cc; path = ../format.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3F6119FC5CD000FE789 /* fprop.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fprop.cc; path = ../fprop.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3F7119FC5CD000FE789 /* geom2d.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = geom2d.cc; path = ../geom2d.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3F8119FC5CD000FE789 /* ghost.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ghost.cc; path = ../ghost.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3F9119FC5CD000FE789 /* glwrapper-es.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "glwrapper-es.cc"; path = "../glwrapper-es.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC3FB119FC5CD000FE789 /* glwrapper.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = glwrapper.cc; path = ../glwrapper.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3FC119FC5CD000FE789 /* godabil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = godabil.cc; path = ../godabil.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3FD119FC5CD000FE789 /* godconduct.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = godconduct.cc; path = ../godconduct.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3FE119FC5CD000FE789 /* goditem.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = goditem.cc; path = ../goditem.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC3FF119FC5CD000FE789 /* godpassive.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = godpassive.cc; path = ../godpassive.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC400119FC5CD000FE789 /* godprayer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = godprayer.cc; path = ../godprayer.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC401119FC5CD000FE789 /* godwrath.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = godwrath.cc; path = ../godwrath.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC402119FC5CD000FE789 /* hints.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hints.cc; path = ../hints.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC403119FC5CD000FE789 /* hiscores.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hiscores.cc; path = ../hiscores.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC404119FC5CD000FE789 /* initfile.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = initfile.cc; path = ../initfile.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC405119FC5CD000FE789 /* invent.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = invent.cc; path = ../invent.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC406119FC5CD000FE789 /* it_use2.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = it_use2.cc; path = ../it_use2.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC407119FC5CD000FE789 /* it_use3.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = it_use3.cc; path = ../it_use3.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC408119FC5CD000FE789 /* item_use.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = item_use.cc; path = ../item_use.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC409119FC5CD000FE789 /* itemname.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = itemname.cc; path = ../itemname.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC40A119FC5CD000FE789 /* itemprop.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = itemprop.cc; path = ../itemprop.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC40B119FC5CD000FE789 /* items.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = items.cc; path = ../items.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC40C119FC5CD000FE789 /* jobs.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = jobs.cc; path = ../jobs.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC40D119FC5CD000FE789 /* kills.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = kills.cc; path = ../kills.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC40E119FC5CD000FE789 /* l_crawl.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_crawl.cc; path = ../l_crawl.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC40F119FC5CD000FE789 /* l_debug.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_debug.cc; path = ../l_debug.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC410119FC5CD000FE789 /* l_dgn.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_dgn.cc; path = ../l_dgn.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC411119FC5CD000FE789 /* l_dgnbld.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_dgnbld.cc; path = ../l_dgnbld.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC412119FC5CD000FE789 /* l_dgnevt.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_dgnevt.cc; path = ../l_dgnevt.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC413119FC5CD000FE789 /* l_dgngrd.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_dgngrd.cc; path = ../l_dgngrd.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC414119FC5CD000FE789 /* l_dgnit.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_dgnit.cc; path = ../l_dgnit.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC415119FC5CD000FE789 /* l_dgnlvl.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_dgnlvl.cc; path = ../l_dgnlvl.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC416119FC5CD000FE789 /* l_dgnmon.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_dgnmon.cc; path = ../l_dgnmon.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC417119FC5CD000FE789 /* l_dgntil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_dgntil.cc; path = ../l_dgntil.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC418119FC5CD000FE789 /* l_feat.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_feat.cc; path = ../l_feat.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC419119FC5CD000FE789 /* l_file.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_file.cc; path = ../l_file.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC41A119FC5CD000FE789 /* l_food.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_food.cc; path = ../l_food.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC41B119FC5CD000FE789 /* l_global.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_global.cc; path = ../l_global.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC41C119FC5CD000FE789 /* l_item.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_item.cc; path = ../l_item.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC41D119FC5CD000FE789 /* l_los.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_los.cc; path = ../l_los.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC41E119FC5CD000FE789 /* l_mapgrd.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_mapgrd.cc; path = ../l_mapgrd.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC41F119FC5CD000FE789 /* l_mapmrk.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_mapmrk.cc; path = ../l_mapmrk.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC420119FC5CD000FE789 /* l_moninf.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_moninf.cc; path = ../l_moninf.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC421119FC5CD000FE789 /* l_mons.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_mons.cc; path = ../l_mons.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC422119FC5CD000FE789 /* l_option.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_option.cc; path = ../l_option.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC423119FC5CD000FE789 /* l_spells.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_spells.cc; path = ../l_spells.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC424119FC5CD000FE789 /* l_subvault.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_subvault.cc; path = ../l_subvault.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC425119FC5CD000FE789 /* l_travel.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_travel.cc; path = ../l_travel.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC426119FC5CD000FE789 /* l_view.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_view.cc; path = ../l_view.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC427119FC5CD000FE789 /* l_you.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_you.cc; path = ../l_you.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC428119FC5CD000FE789 /* lev-pand.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "lev-pand.cc"; path = "../lev-pand.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC429119FC5CD000FE789 /* libdos.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libdos.cc; path = ../libdos.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC42A119FC5CD000FE789 /* libgui.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libgui.cc; path = ../libgui.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC42B119FC5CD000FE789 /* libunix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libunix.cc; path = ../libunix.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC42C119FC5CD000FE789 /* libutil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libutil.cc; path = ../libutil.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC42D119FC5CD000FE789 /* libw32c.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libw32c.cc; path = ../libw32c.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC42E119FC5CD000FE789 /* los_def.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = los_def.cc; path = ../los_def.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC42F119FC5CD000FE789 /* los.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = los.cc; path = ../los.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC430119FC5CD000FE789 /* losglobal.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = losglobal.cc; path = ../losglobal.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC431119FC5CD000FE789 /* losparam.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = losparam.cc; path = ../losparam.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC432119FC5CD000FE789 /* luaterp.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = luaterp.cc; path = ../luaterp.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC433119FC5CD000FE789 /* macro.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = macro.cc; path = ../macro.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC434119FC5CD000FE789 /* main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cc; path = ../main.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC435119FC5CD000FE789 /* makeitem.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = makeitem.cc; path = ../makeitem.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC436119FC5CD000FE789 /* map_knowledge.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = map_knowledge.cc; path = ../map_knowledge.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC437119FC5CD000FE789 /* mapdef.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mapdef.cc; path = ../mapdef.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC438119FC5CD000FE789 /* mapmark.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mapmark.cc; path = ../mapmark.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC439119FC5CD000FE789 /* maps.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maps.cc; path = ../maps.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC43A119FC5CD000FE789 /* menu.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = menu.cc; path = ../menu.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC43B119FC5CD000FE789 /* message-stream.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "message-stream.cc"; path = "../message-stream.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC43C119FC5CD000FE789 /* message.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = message.cc; path = ../message.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC43D119FC5CD000FE789 /* mgen_data.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mgen_data.cc; path = ../mgen_data.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC43E119FC5CD000FE789 /* misc.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = misc.cc; path = ../misc.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC43F119FC5CD000FE789 /* mislead.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mislead.cc; path = ../mislead.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC440119FC5CD000FE789 /* mon_resist_def.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mon_resist_def.cc; path = ../mon_resist_def.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC441119FC5CD000FE789 /* mon-abil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-abil.cc"; path = "../mon-abil.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC442119FC5CD000FE789 /* mon-act.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-act.cc"; path = "../mon-act.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC443119FC5CD000FE789 /* mon-behv.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-behv.cc"; path = "../mon-behv.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC444119FC5CD000FE789 /* mon-cast.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-cast.cc"; path = "../mon-cast.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC445119FC5CD000FE789 /* mon-clone.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-clone.cc"; path = "../mon-clone.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC446119FC5CD000FE789 /* mon-death.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-death.cc"; path = "../mon-death.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC447119FC5CD000FE789 /* mon-gear.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-gear.cc"; path = "../mon-gear.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC448119FC5CD000FE789 /* mon-grow.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-grow.cc"; path = "../mon-grow.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC449119FC5CD000FE789 /* mon-info.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-info.cc"; path = "../mon-info.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC44A119FC5CD000FE789 /* mon-iter.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-iter.cc"; path = "../mon-iter.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC44B119FC5CD000FE789 /* mon-movetarget.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-movetarget.cc"; path = "../mon-movetarget.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC44C119FC5CD000FE789 /* mon-pathfind.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-pathfind.cc"; path = "../mon-pathfind.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC44D119FC5CD000FE789 /* mon-pick.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-pick.cc"; path = "../mon-pick.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC44E119FC5CD000FE789 /* mon-place.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-place.cc"; path = "../mon-place.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC44F119FC5CD000FE789 /* mon-project.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-project.cc"; path = "../mon-project.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC450119FC5CD000FE789 /* mon-speak.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-speak.cc"; path = "../mon-speak.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC451119FC5CD000FE789 /* mon-stuff.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-stuff.cc"; path = "../mon-stuff.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC452119FC5CD000FE789 /* mon-transit.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-transit.cc"; path = "../mon-transit.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC453119FC5CD000FE789 /* mon-util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "mon-util.cc"; path = "../mon-util.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC454119FC5CD000FE789 /* monster.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = monster.cc; path = ../monster.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC455119FC5CD000FE789 /* mt19937ar.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mt19937ar.cc; path = ../mt19937ar.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC456119FC5CD000FE789 /* mutation.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mutation.cc; path = ../mutation.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC457119FC5CD000FE789 /* newgame.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = newgame.cc; path = ../newgame.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC458119FC5CD000FE789 /* ng-init.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "ng-init.cc"; path = "../ng-init.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC459119FC5CD000FE789 /* ng-input.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "ng-input.cc"; path = "../ng-input.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC45A119FC5CD000FE789 /* ng-restr.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "ng-restr.cc"; path = "../ng-restr.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC45B119FC5CD000FE789 /* ng-setup.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "ng-setup.cc"; path = "../ng-setup.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC45C119FC5CD000FE789 /* ng-wanderer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "ng-wanderer.cc"; path = "../ng-wanderer.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC45D119FC5CD000FE789 /* notes.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = notes.cc; path = ../notes.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC45E119FC5CD000FE789 /* ouch.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ouch.cc; path = ../ouch.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC45F119FC5CD000FE789 /* output.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = output.cc; path = ../output.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC460119FC5CD000FE789 /* pattern.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pattern.cc; path = ../pattern.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC461119FC5CD000FE789 /* place-info.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "place-info.cc"; path = "../place-info.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC462119FC5CD000FE789 /* place.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = place.cc; path = ../place.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC463119FC5CD000FE789 /* player-act.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "player-act.cc"; path = "../player-act.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC464119FC5CD000FE789 /* player-equip.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "player-equip.cc"; path = "../player-equip.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC465119FC5CD000FE789 /* player-stats.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "player-stats.cc"; path = "../player-stats.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC466119FC5CD000FE789 /* player.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = player.cc; path = ../player.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC467119FC5CD000FE789 /* quiver.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = quiver.cc; path = ../quiver.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC468119FC5CD000FE789 /* random-var.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "random-var.cc"; path = "../random-var.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC469119FC5CD000FE789 /* random.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = random.cc; path = ../random.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC46A119FC5CD000FE789 /* ray.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ray.cc; path = ../ray.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC46B119FC5CD000FE789 /* religion.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = religion.cc; path = ../religion.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC46C119FC5CD000FE789 /* rng.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rng.cc; path = ../rng.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC46D119FC5CD000FE789 /* sha256.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sha256.cc; path = ../sha256.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC46E119FC5CD000FE789 /* shopping.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = shopping.cc; path = ../shopping.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC46F119FC5CD000FE789 /* shout.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = shout.cc; path = ../shout.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC470119FC5CD000FE789 /* show.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = show.cc; path = ../show.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC471119FC5CD000FE789 /* showsymb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = showsymb.cc; path = ../showsymb.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC472119FC5CD000FE789 /* skills.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = skills.cc; path = ../skills.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC473119FC5CD000FE789 /* skills2.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = skills2.cc; path = ../skills2.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC474119FC5CD000FE789 /* species.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = species.cc; path = ../species.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC475119FC5CD000FE789 /* spells1.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = spells1.cc; path = ../spells1.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC476119FC5CD000FE789 /* spells2.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = spells2.cc; path = ../spells2.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC477119FC5CD000FE789 /* spells3.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = spells3.cc; path = ../spells3.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC478119FC5CD000FE789 /* spells4.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = spells4.cc; path = ../spells4.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC479119FC5CD000FE789 /* spl-book.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "spl-book.cc"; path = "../spl-book.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC47A119FC5CD000FE789 /* spl-cast.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "spl-cast.cc"; path = "../spl-cast.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC47B119FC5CD000FE789 /* spl-mis.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "spl-mis.cc"; path = "../spl-mis.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC47C119FC5CD000FE789 /* spl-util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "spl-util.cc"; path = "../spl-util.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC47D119FC5CD000FE789 /* spl-zap.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "spl-zap.cc"; path = "../spl-zap.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC47E119FC5CD000FE789 /* sprint.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sprint.cc; path = ../sprint.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC47F119FC5CD000FE789 /* sqldbm.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sqldbm.cc; path = ../sqldbm.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC480119FC5CD000FE789 /* stairs.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stairs.cc; path = ../stairs.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC481119FC5CD000FE789 /* startup.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = startup.cc; path = ../startup.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC482119FC5CD000FE789 /* stash.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stash.cc; path = ../stash.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC483119FC5CD000FE789 /* state.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = state.cc; path = ../state.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC484119FC5CD000FE789 /* store.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = store.cc; path = ../store.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC485119FC5CD000FE789 /* stuff.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stuff.cc; path = ../stuff.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC486119FC5CD000FE789 /* tags.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tags.cc; path = ../tags.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC487119FC5CD000FE789 /* tagstring.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tagstring.cc; path = ../tagstring.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC488119FC5CD000FE789 /* teleport.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = teleport.cc; path = ../teleport.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC489119FC5CD000FE789 /* terrain.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = terrain.cc; path = ../terrain.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC48A119FC5CD000FE789 /* tilebuf.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tilebuf.cc; path = ../tilebuf.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC48B119FC5CD000FE789 /* tiledoll.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tiledoll.cc; path = ../tiledoll.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC48C119FC5CD000FE789 /* tilefont.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tilefont.cc; path = ../tilefont.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC48D119FC5CD000FE789 /* tilemcache.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tilemcache.cc; path = ../tilemcache.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC48E119FC5CD000FE789 /* tilepick.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tilepick.cc; path = ../tilepick.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC48F119FC5CD000FE789 /* tilereg-crt.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-crt.cc"; path = "../tilereg-crt.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC490119FC5CD000FE789 /* tilereg-dgn.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-dgn.cc"; path = "../tilereg-dgn.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC491119FC5CD000FE789 /* tilereg-doll.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-doll.cc"; path = "../tilereg-doll.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC492119FC5CD000FE789 /* tilereg-grid.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-grid.cc"; path = "../tilereg-grid.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC493119FC5CD000FE789 /* tilereg-inv.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-inv.cc"; path = "../tilereg-inv.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC494119FC5CD000FE789 /* tilereg-map.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-map.cc"; path = "../tilereg-map.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC495119FC5CD000FE789 /* tilereg-mem.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-mem.cc"; path = "../tilereg-mem.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC496119FC5CD000FE789 /* tilereg-menu.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-menu.cc"; path = "../tilereg-menu.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC497119FC5CD000FE789 /* tilereg-msg.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-msg.cc"; path = "../tilereg-msg.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC498119FC5CD000FE789 /* tilereg-spl.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-spl.cc"; path = "../tilereg-spl.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC499119FC5CD000FE789 /* tilereg-stat.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-stat.cc"; path = "../tilereg-stat.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC49A119FC5CD000FE789 /* tilereg-tab.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-tab.cc"; path = "../tilereg-tab.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC49B119FC5CD000FE789 /* tilereg-text.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-text.cc"; path = "../tilereg-text.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC49C119FC5CD000FE789 /* tilereg-title.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-title.cc"; path = "../tilereg-title.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC49D119FC5CD000FE789 /* tilereg.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tilereg.cc; path = ../tilereg.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC49E119FC5CD000FE789 /* tilesdl.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tilesdl.cc; path = ../tilesdl.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC49F119FC5CD000FE789 /* tiletex.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tiletex.cc; path = ../tiletex.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC4A0119FC5CD000FE789 /* transform.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = transform.cc; path = ../transform.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC4A1119FC5CD000FE789 /* traps.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = traps.cc; path = ../traps.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC4A2119FC5CD000FE789 /* travel.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = travel.cc; path = ../travel.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC4A3119FC5CD000FE789 /* version.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = version.cc; path = ../version.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC4A4119FC5CD000FE789 /* view.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = view.cc; path = ../view.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC4A5119FC5CD000FE789 /* viewchar.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = viewchar.cc; path = ../viewchar.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC4A6119FC5CD000FE789 /* viewgeom.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = viewgeom.cc; path = ../viewgeom.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC4A7119FC5CD000FE789 /* viewmap.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = viewmap.cc; path = ../viewmap.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC4A8119FC5CD000FE789 /* windowmanager-ctouch.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "windowmanager-ctouch.cc"; path = "../windowmanager-ctouch.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC4AA119FC5CD000FE789 /* wiz-dgn.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "wiz-dgn.cc"; path = "../wiz-dgn.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC4AB119FC5CD000FE789 /* wiz-fsim.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "wiz-fsim.cc"; path = "../wiz-fsim.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC4AC119FC5CD000FE789 /* wiz-item.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "wiz-item.cc"; path = "../wiz-item.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC4AD119FC5CD000FE789 /* wiz-mon.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "wiz-mon.cc"; path = "../wiz-mon.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC4AE119FC5CD000FE789 /* wiz-you.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "wiz-you.cc"; path = "../wiz-you.cc"; sourceTree = SOURCE_ROOT; };
+		A3ACC4AF119FC5CD000FE789 /* xom.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = xom.cc; path = ../xom.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC5A2119FC603000FE789 /* levcomp.lpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; name = levcomp.lpp; path = ../util/levcomp.lpp; sourceTree = SOURCE_ROOT; };
+		A3ACC5A3119FC603000FE789 /* levcomp.ypp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = levcomp.ypp; path = ../util/levcomp.ypp; sourceTree = SOURCE_ROOT; };
+		A3ACC5B3119FC81D000FE789 /* levcomp.lex.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = levcomp.lex.cc; path = ../util/levcomp.lex.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC5B4119FC81D000FE789 /* levcomp.tab.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = levcomp.tab.cc; path = ../util/levcomp.tab.cc; sourceTree = SOURCE_ROOT; };
+		A3ACC5B5119FC81D000FE789 /* levcomp.tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = levcomp.tab.h; path = ../util/levcomp.tab.h; sourceTree = SOURCE_ROOT; };
 		A3F1BD9A119EF5DD0017F016 /* liblua.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblua.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F1BE5C119EFAD70017F016 /* lapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lapi.h; path = ../contrib/lua/src/lapi.h; sourceTree = SOURCE_ROOT; };
 		A3F1BE5D119EFAD70017F016 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lauxlib.h; path = ../contrib/lua/src/lauxlib.h; sourceTree = SOURCE_ROOT; };
@@ -220,7 +978,10 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A3ACC2C8119FC5B1000FE789 /* Crawl */,
+				A3ACC5A0119FC5DA000FE789 /* Levelcomp */,
 				A3F1BDAB119EFA4B0017F016 /* Lua */,
+				A3ACC5A6119FC618000FE789 /* Shared */,
 				28A0AAE50D9B0CCF005BE974 /* ipad_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -230,6 +991,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A3ACC2BA119FC4DF000FE789 /* gui.png */,
+				A3ACC2BB119FC4DF000FE789 /* main.png */,
+				A3ACC2BC119FC4DF000FE789 /* player.png */,
+				A3ACC2B5119FC4BE000FE789 /* dngn.png */,
+				A3ACC2B3119FC494000FE789 /* settings */,
+				A3ACC2B1119FC48A000FE789 /* docs */,
+				A3ACC2AF119FC46D000FE789 /* dat */,
 				2819300D112F7FA900ECF9B4 /* ipad.xcdatamodeld */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				2804203B108E9BAB000629CD /* DetailView.xib */,
@@ -247,6 +1015,513 @@
 				280420C0108EA07E000629CD /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3ACC2C8119FC5B1000FE789 /* Crawl */ = {
+			isa = PBXGroup;
+			children = (
+				A3ACC2C9119FC5CD000FE789 /* abl-show.h */,
+				A3ACC2CA119FC5CD000FE789 /* abyss.h */,
+				A3ACC2CB119FC5CD000FE789 /* act-iter.h */,
+				A3ACC2CC119FC5CD000FE789 /* actor.h */,
+				A3ACC2CD119FC5CD000FE789 /* AppHdr.h */,
+				A3ACC2CE119FC5CD000FE789 /* areas.h */,
+				A3ACC2CF119FC5CD000FE789 /* arena.h */,
+				A3ACC2D0119FC5CD000FE789 /* art-data.h */,
+				A3ACC2D1119FC5CD000FE789 /* art-enum.h */,
+				A3ACC2D2119FC5CD000FE789 /* art-func.h */,
+				A3ACC2D3119FC5CD000FE789 /* artefact.h */,
+				A3ACC2D4119FC5CD000FE789 /* attitude-change.h */,
+				A3ACC2D5119FC5CD000FE789 /* beam.h */,
+				A3ACC2D6119FC5CD000FE789 /* bitary.h */,
+				A3ACC2D7119FC5CD000FE789 /* branch.h */,
+				A3ACC2D8119FC5CD000FE789 /* build.h */,
+				A3ACC2D9119FC5CD000FE789 /* chardump.h */,
+				A3ACC2DA119FC5CD000FE789 /* cio.h */,
+				A3ACC2DB119FC5CD000FE789 /* cloud.h */,
+				A3ACC2DC119FC5CD000FE789 /* clua.h */,
+				A3ACC2DD119FC5CD000FE789 /* cluautil.h */,
+				A3ACC2DE119FC5CD000FE789 /* cmd-keys.h */,
+				A3ACC2DF119FC5CD000FE789 /* cmd-name.h */,
+				A3ACC2E0119FC5CD000FE789 /* colour.h */,
+				A3ACC2E1119FC5CD000FE789 /* command.h */,
+				A3ACC2E2119FC5CD000FE789 /* compflag.h */,
+				A3ACC2E3119FC5CD000FE789 /* coord-circle.h */,
+				A3ACC2E4119FC5CD000FE789 /* coord.h */,
+				A3ACC2E5119FC5CD000FE789 /* coordit.h */,
+				A3ACC2E6119FC5CD000FE789 /* crash.h */,
+				A3ACC2E7119FC5CD000FE789 /* ctest.h */,
+				A3ACC2E8119FC5CD000FE789 /* database.h */,
+				A3ACC2E9119FC5CD000FE789 /* dbg-crsh.h */,
+				A3ACC2EA119FC5CD000FE789 /* dbg-maps.h */,
+				A3ACC2EB119FC5CD000FE789 /* dbg-scan.h */,
+				A3ACC2EC119FC5CD000FE789 /* dbg-util.h */,
+				A3ACC2ED119FC5CD000FE789 /* debug.h */,
+				A3ACC2EE119FC5CD000FE789 /* decks.h */,
+				A3ACC2EF119FC5CD000FE789 /* defines.h */,
+				A3ACC2F0119FC5CD000FE789 /* delay.h */,
+				A3ACC2F1119FC5CD000FE789 /* describe.h */,
+				A3ACC2F2119FC5CD000FE789 /* dgl-message.h */,
+				A3ACC2F3119FC5CD000FE789 /* dgn-height.h */,
+				A3ACC2F4119FC5CD000FE789 /* dgn-overview.h */,
+				A3ACC2F5119FC5CD000FE789 /* dgn-shoals.h */,
+				A3ACC2F6119FC5CD000FE789 /* dgn-swamp.h */,
+				A3ACC2F7119FC5CD000FE789 /* dgnevent.h */,
+				A3ACC2F8119FC5CD000FE789 /* directn.h */,
+				A3ACC2F9119FC5CD000FE789 /* dlua.h */,
+				A3ACC2FA119FC5CD000FE789 /* dungeon.h */,
+				A3ACC2FB119FC5CD000FE789 /* effects.h */,
+				A3ACC2FC119FC5CD000FE789 /* enum.h */,
+				A3ACC2FD119FC5CD000FE789 /* env.h */,
+				A3ACC2FE119FC5CD000FE789 /* exclude.h */,
+				A3ACC2FF119FC5CD000FE789 /* externs.h */,
+				A3ACC300119FC5CD000FE789 /* feature.h */,
+				A3ACC301119FC5CD000FE789 /* fight.h */,
+				A3ACC302119FC5CD000FE789 /* files.h */,
+				A3ACC303119FC5CD000FE789 /* fixedarray.h */,
+				A3ACC304119FC5CD000FE789 /* fixedvector.h */,
+				A3ACC305119FC5CD000FE789 /* flood_find.h */,
+				A3ACC306119FC5CD000FE789 /* fontwrapper-ctouch.h */,
+				A3ACC308119FC5CD000FE789 /* food.h */,
+				A3ACC309119FC5CD000FE789 /* format.h */,
+				A3ACC30A119FC5CD000FE789 /* fprop.h */,
+				A3ACC30B119FC5CD000FE789 /* geom2d.h */,
+				A3ACC30C119FC5CD000FE789 /* ghost.h */,
+				A3ACC30D119FC5CD000FE789 /* glwrapper-es.h */,
+				A3ACC30F119FC5CD000FE789 /* glwrapper.h */,
+				A3ACC310119FC5CD000FE789 /* godabil.h */,
+				A3ACC311119FC5CD000FE789 /* godconduct.h */,
+				A3ACC312119FC5CD000FE789 /* goditem.h */,
+				A3ACC313119FC5CD000FE789 /* godpassive.h */,
+				A3ACC314119FC5CD000FE789 /* godprayer.h */,
+				A3ACC315119FC5CD000FE789 /* godwrath.h */,
+				A3ACC316119FC5CD000FE789 /* hints.h */,
+				A3ACC317119FC5CD000FE789 /* hiscores.h */,
+				A3ACC318119FC5CD000FE789 /* initfile.h */,
+				A3ACC319119FC5CD000FE789 /* invent.h */,
+				A3ACC31A119FC5CD000FE789 /* it_use2.h */,
+				A3ACC31B119FC5CD000FE789 /* it_use3.h */,
+				A3ACC31C119FC5CD000FE789 /* item_use.h */,
+				A3ACC31D119FC5CD000FE789 /* itemname.h */,
+				A3ACC31E119FC5CD000FE789 /* itemprop-enum.h */,
+				A3ACC31F119FC5CD000FE789 /* itemprop.h */,
+				A3ACC320119FC5CD000FE789 /* items.h */,
+				A3ACC321119FC5CD000FE789 /* jobs.h */,
+				A3ACC322119FC5CD000FE789 /* kills.h */,
+				A3ACC323119FC5CD000FE789 /* l_defs.h */,
+				A3ACC324119FC5CD000FE789 /* l_libs.h */,
+				A3ACC325119FC5CD000FE789 /* lev-pand.h */,
+				A3ACC326119FC5CD000FE789 /* libdos.h */,
+				A3ACC327119FC5CD000FE789 /* libgui.h */,
+				A3ACC328119FC5CD000FE789 /* libunix.h */,
+				A3ACC329119FC5CD000FE789 /* libutil.h */,
+				A3ACC32A119FC5CD000FE789 /* libw32c.h */,
+				A3ACC32B119FC5CD000FE789 /* los_def.h */,
+				A3ACC32C119FC5CD000FE789 /* los.h */,
+				A3ACC32D119FC5CD000FE789 /* losglobal.h */,
+				A3ACC32E119FC5CD000FE789 /* losparam.h */,
+				A3ACC32F119FC5CD000FE789 /* luaterp.h */,
+				A3ACC330119FC5CD000FE789 /* macro.h */,
+				A3ACC331119FC5CD000FE789 /* makeitem.h */,
+				A3ACC332119FC5CD000FE789 /* map_knowledge.h */,
+				A3ACC334119FC5CD000FE789 /* mapmark.h */,
+				A3ACC335119FC5CD000FE789 /* maps.h */,
+				A3ACC336119FC5CD000FE789 /* matrix.h */,
+				A3ACC337119FC5CD000FE789 /* melee_attack.h */,
+				A3ACC338119FC5CD000FE789 /* menu.h */,
+				A3ACC339119FC5CD000FE789 /* message.h */,
+				A3ACC33A119FC5CD000FE789 /* mgen_data.h */,
+				A3ACC33B119FC5CD000FE789 /* mgen_enum.h */,
+				A3ACC33C119FC5CD000FE789 /* misc.h */,
+				A3ACC33D119FC5CD000FE789 /* mislead.h */,
+				A3ACC33E119FC5CD000FE789 /* mon_resist_def.h */,
+				A3ACC33F119FC5CD000FE789 /* mon-abil.h */,
+				A3ACC340119FC5CD000FE789 /* mon-act.h */,
+				A3ACC341119FC5CD000FE789 /* mon-behv.h */,
+				A3ACC342119FC5CD000FE789 /* mon-cast.h */,
+				A3ACC343119FC5CD000FE789 /* mon-clone.h */,
+				A3ACC344119FC5CD000FE789 /* mon-data.h */,
+				A3ACC345119FC5CD000FE789 /* mon-death.h */,
+				A3ACC346119FC5CD000FE789 /* mon-enum.h */,
+				A3ACC347119FC5CD000FE789 /* mon-gear.h */,
+				A3ACC348119FC5CD000FE789 /* mon-grow.h */,
+				A3ACC349119FC5CD000FE789 /* mon-info.h */,
+				A3ACC34A119FC5CD000FE789 /* mon-iter.h */,
+				A3ACC34B119FC5CD000FE789 /* mon-movetarget.h */,
+				A3ACC34C119FC5CD000FE789 /* mon-pathfind.h */,
+				A3ACC34D119FC5CD000FE789 /* mon-pick.h */,
+				A3ACC34E119FC5CD000FE789 /* mon-place.h */,
+				A3ACC34F119FC5CD000FE789 /* mon-project.h */,
+				A3ACC350119FC5CD000FE789 /* mon-speak.h */,
+				A3ACC351119FC5CD000FE789 /* mon-spll.h */,
+				A3ACC352119FC5CD000FE789 /* mon-stuff.h */,
+				A3ACC353119FC5CD000FE789 /* mon-transit.h */,
+				A3ACC354119FC5CD000FE789 /* mon-util.h */,
+				A3ACC355119FC5CD000FE789 /* monster.h */,
+				A3ACC356119FC5CD000FE789 /* mpr.h */,
+				A3ACC357119FC5CD000FE789 /* msvc.h */,
+				A3ACC358119FC5CD000FE789 /* mt19937ar.h */,
+				A3ACC359119FC5CD000FE789 /* mutation-data.h */,
+				A3ACC35A119FC5CD000FE789 /* mutation.h */,
+				A3ACC35B119FC5CD000FE789 /* newgame_def.h */,
+				A3ACC35C119FC5CD000FE789 /* newgame.h */,
+				A3ACC35D119FC5CD000FE789 /* ng-init.h */,
+				A3ACC35E119FC5CD000FE789 /* ng-input.h */,
+				A3ACC35F119FC5CD000FE789 /* ng-restr.h */,
+				A3ACC360119FC5CD000FE789 /* ng-setup.h */,
+				A3ACC361119FC5CD000FE789 /* ng-wanderer.h */,
+				A3ACC362119FC5CD000FE789 /* notes.h */,
+				A3ACC363119FC5CD000FE789 /* options.h */,
+				A3ACC364119FC5CD000FE789 /* ouch.h */,
+				A3ACC365119FC5CD000FE789 /* output.h */,
+				A3ACC366119FC5CD000FE789 /* pattern.h */,
+				A3ACC367119FC5CD000FE789 /* place-info.h */,
+				A3ACC368119FC5CD000FE789 /* place.h */,
+				A3ACC369119FC5CD000FE789 /* platform.h */,
+				A3ACC36A119FC5CD000FE789 /* player-equip.h */,
+				A3ACC36B119FC5CD000FE789 /* player-stats.h */,
+				A3ACC36C119FC5CD000FE789 /* player.h */,
+				A3ACC36D119FC5CD000FE789 /* quiver.h */,
+				A3ACC36E119FC5CD000FE789 /* random-var.h */,
+				A3ACC36F119FC5CD000FE789 /* random-weight.h */,
+				A3ACC370119FC5CD000FE789 /* random.h */,
+				A3ACC371119FC5CD000FE789 /* ray.h */,
+				A3ACC372119FC5CD000FE789 /* religion-enum.h */,
+				A3ACC373119FC5CD000FE789 /* religion.h */,
+				A3ACC374119FC5CD000FE789 /* rng.h */,
+				A3ACC375119FC5CD000FE789 /* SDLMain.h */,
+				A3ACC376119FC5CD000FE789 /* sha256.h */,
+				A3ACC377119FC5CD000FE789 /* shopping.h */,
+				A3ACC378119FC5CD000FE789 /* shout.h */,
+				A3ACC379119FC5CD000FE789 /* show.h */,
+				A3ACC37A119FC5CD000FE789 /* showsymb.h */,
+				A3ACC37B119FC5CD000FE789 /* skills.h */,
+				A3ACC37C119FC5CD000FE789 /* skills2.h */,
+				A3ACC37D119FC5CD000FE789 /* species.h */,
+				A3ACC37E119FC5CD000FE789 /* spells1.h */,
+				A3ACC37F119FC5CD000FE789 /* spells2.h */,
+				A3ACC380119FC5CD000FE789 /* spells3.h */,
+				A3ACC381119FC5CD000FE789 /* spells4.h */,
+				A3ACC382119FC5CD000FE789 /* spl-book.h */,
+				A3ACC383119FC5CD000FE789 /* spl-cast.h */,
+				A3ACC384119FC5CD000FE789 /* spl-data.h */,
+				A3ACC385119FC5CD000FE789 /* spl-mis.h */,
+				A3ACC386119FC5CD000FE789 /* spl-util.h */,
+				A3ACC387119FC5CD000FE789 /* spl-zap.h */,
+				A3ACC388119FC5CD000FE789 /* sprint.h */,
+				A3ACC389119FC5CD000FE789 /* sqldbm.h */,
+				A3ACC38A119FC5CD000FE789 /* stairs.h */,
+				A3ACC38B119FC5CD000FE789 /* startup.h */,
+				A3ACC38C119FC5CD000FE789 /* stash.h */,
+				A3ACC38D119FC5CD000FE789 /* state.h */,
+				A3ACC38E119FC5CD000FE789 /* store.h */,
+				A3ACC38F119FC5CD000FE789 /* stuff.h */,
+				A3ACC390119FC5CD000FE789 /* tag-version.h */,
+				A3ACC391119FC5CD000FE789 /* tags.h */,
+				A3ACC392119FC5CD000FE789 /* tagstring.h */,
+				A3ACC393119FC5CD000FE789 /* teleport.h */,
+				A3ACC394119FC5CD000FE789 /* terrain.h */,
+				A3ACC395119FC5CD000FE789 /* tilebuf.h */,
+				A3ACC396119FC5CD000FE789 /* tiledoll.h */,
+				A3ACC397119FC5CD000FE789 /* tilefont.h */,
+				A3ACC398119FC5CD000FE789 /* tilemcache.h */,
+				A3ACC399119FC5CD000FE789 /* tilereg-crt.h */,
+				A3ACC39A119FC5CD000FE789 /* tilereg-dgn.h */,
+				A3ACC39B119FC5CD000FE789 /* tilereg-doll.h */,
+				A3ACC39C119FC5CD000FE789 /* tilereg-grid.h */,
+				A3ACC39D119FC5CD000FE789 /* tilereg-inv.h */,
+				A3ACC39E119FC5CD000FE789 /* tilereg-map.h */,
+				A3ACC39F119FC5CD000FE789 /* tilereg-mem.h */,
+				A3ACC3A0119FC5CD000FE789 /* tilereg-menu.h */,
+				A3ACC3A1119FC5CD000FE789 /* tilereg-msg.h */,
+				A3ACC3A2119FC5CD000FE789 /* tilereg-spl.h */,
+				A3ACC3A3119FC5CD000FE789 /* tilereg-stat.h */,
+				A3ACC3A4119FC5CD000FE789 /* tilereg-tab.h */,
+				A3ACC3A5119FC5CD000FE789 /* tilereg-text.h */,
+				A3ACC3A6119FC5CD000FE789 /* tilereg-title.h */,
+				A3ACC3A7119FC5CD000FE789 /* tilereg.h */,
+				A3ACC3A8119FC5CD000FE789 /* tiles.h */,
+				A3ACC3A9119FC5CD000FE789 /* tilesdl.h */,
+				A3ACC3AA119FC5CD000FE789 /* tiletex.h */,
+				A3ACC3AB119FC5CD000FE789 /* transform.h */,
+				A3ACC3AC119FC5CD000FE789 /* trap_def.h */,
+				A3ACC3AD119FC5CD000FE789 /* traps.h */,
+				A3ACC3AE119FC5CD000FE789 /* travel_defs.h */,
+				A3ACC3AF119FC5CD000FE789 /* travel.h */,
+				A3ACC3B0119FC5CD000FE789 /* unwind.h */,
+				A3ACC3B1119FC5CD000FE789 /* version.h */,
+				A3ACC3B2119FC5CD000FE789 /* view.h */,
+				A3ACC3B3119FC5CD000FE789 /* viewchar.h */,
+				A3ACC3B4119FC5CD000FE789 /* viewgeom.h */,
+				A3ACC3B5119FC5CD000FE789 /* viewmap.h */,
+				A3ACC3B6119FC5CD000FE789 /* windowmanager-ctouch.h */,
+				A3ACC3B8119FC5CD000FE789 /* windowmanager.h */,
+				A3ACC3B9119FC5CD000FE789 /* wiz-dgn.h */,
+				A3ACC3BA119FC5CD000FE789 /* wiz-fsim.h */,
+				A3ACC3BB119FC5CD000FE789 /* wiz-item.h */,
+				A3ACC3BC119FC5CD000FE789 /* wiz-mon.h */,
+				A3ACC3BD119FC5CD000FE789 /* wiz-you.h */,
+				A3ACC3BE119FC5CD000FE789 /* xom.h */,
+				A3ACC3BF119FC5CD000FE789 /* zap-data.h */,
+				A3ACC3C0119FC5CD000FE789 /* abl-show.cc */,
+				A3ACC3C1119FC5CD000FE789 /* abyss.cc */,
+				A3ACC3C2119FC5CD000FE789 /* act-iter.cc */,
+				A3ACC3C3119FC5CD000FE789 /* actor-los.cc */,
+				A3ACC3C4119FC5CD000FE789 /* actor.cc */,
+				A3ACC3C5119FC5CD000FE789 /* AppHdr.cc */,
+				A3ACC3C6119FC5CD000FE789 /* areas.cc */,
+				A3ACC3C7119FC5CD000FE789 /* arena.cc */,
+				A3ACC3C8119FC5CD000FE789 /* artefact.cc */,
+				A3ACC3C9119FC5CD000FE789 /* attitude-change.cc */,
+				A3ACC3CA119FC5CD000FE789 /* beam.cc */,
+				A3ACC3CB119FC5CD000FE789 /* behold.cc */,
+				A3ACC3CC119FC5CD000FE789 /* bitary.cc */,
+				A3ACC3CD119FC5CD000FE789 /* branch.cc */,
+				A3ACC3CE119FC5CD000FE789 /* chardump.cc */,
+				A3ACC3CF119FC5CD000FE789 /* cio.cc */,
+				A3ACC3D0119FC5CD000FE789 /* cloud.cc */,
+				A3ACC3D1119FC5CD000FE789 /* clua.cc */,
+				A3ACC3D2119FC5CD000FE789 /* cluautil.cc */,
+				A3ACC3D3119FC5CD000FE789 /* colour.cc */,
+				A3ACC3D4119FC5CD000FE789 /* command.cc */,
+				A3ACC3D5119FC5CD000FE789 /* coord-circle.cc */,
+				A3ACC3D6119FC5CD000FE789 /* coord.cc */,
+				A3ACC3D7119FC5CD000FE789 /* coordit.cc */,
+				A3ACC3D8119FC5CD000FE789 /* crash-d.cc */,
+				A3ACC3D9119FC5CD000FE789 /* crash-u.cc */,
+				A3ACC3DA119FC5CD000FE789 /* crash-w.cc */,
+				A3ACC3DB119FC5CD000FE789 /* ctest.cc */,
+				A3ACC3DC119FC5CD000FE789 /* database.cc */,
+				A3ACC3DD119FC5CD000FE789 /* dbg-asrt.cc */,
+				A3ACC3DE119FC5CD000FE789 /* dbg-maps.cc */,
+				A3ACC3DF119FC5CD000FE789 /* dbg-scan.cc */,
+				A3ACC3E0119FC5CD000FE789 /* dbg-util.cc */,
+				A3ACC3E1119FC5CD000FE789 /* decks.cc */,
+				A3ACC3E2119FC5CD000FE789 /* delay.cc */,
+				A3ACC3E3119FC5CD000FE789 /* describe.cc */,
+				A3ACC3E4119FC5CD000FE789 /* dgl-message.cc */,
+				A3ACC3E5119FC5CD000FE789 /* dgn-height.cc */,
+				A3ACC3E6119FC5CD000FE789 /* dgn-overview.cc */,
+				A3ACC3E7119FC5CD000FE789 /* dgn-shoals.cc */,
+				A3ACC3E8119FC5CD000FE789 /* dgn-swamp.cc */,
+				A3ACC3E9119FC5CD000FE789 /* dgnevent.cc */,
+				A3ACC3EA119FC5CD000FE789 /* directn.cc */,
+				A3ACC3EB119FC5CD000FE789 /* dlua.cc */,
+				A3ACC3EC119FC5CD000FE789 /* dungeon.cc */,
+				A3ACC3ED119FC5CD000FE789 /* effects.cc */,
+				A3ACC3EE119FC5CD000FE789 /* exclude.cc */,
+				A3ACC3EF119FC5CD000FE789 /* feature.cc */,
+				A3ACC3F0119FC5CD000FE789 /* fight.cc */,
+				A3ACC3F1119FC5CD000FE789 /* files.cc */,
+				A3ACC3F2119FC5CD000FE789 /* fontwrapper-ctouch.cc */,
+				A3ACC3F4119FC5CD000FE789 /* food.cc */,
+				A3ACC3F5119FC5CD000FE789 /* format.cc */,
+				A3ACC3F6119FC5CD000FE789 /* fprop.cc */,
+				A3ACC3F7119FC5CD000FE789 /* geom2d.cc */,
+				A3ACC3F8119FC5CD000FE789 /* ghost.cc */,
+				A3ACC3F9119FC5CD000FE789 /* glwrapper-es.cc */,
+				A3ACC3FB119FC5CD000FE789 /* glwrapper.cc */,
+				A3ACC3FC119FC5CD000FE789 /* godabil.cc */,
+				A3ACC3FD119FC5CD000FE789 /* godconduct.cc */,
+				A3ACC3FE119FC5CD000FE789 /* goditem.cc */,
+				A3ACC3FF119FC5CD000FE789 /* godpassive.cc */,
+				A3ACC400119FC5CD000FE789 /* godprayer.cc */,
+				A3ACC401119FC5CD000FE789 /* godwrath.cc */,
+				A3ACC402119FC5CD000FE789 /* hints.cc */,
+				A3ACC403119FC5CD000FE789 /* hiscores.cc */,
+				A3ACC404119FC5CD000FE789 /* initfile.cc */,
+				A3ACC405119FC5CD000FE789 /* invent.cc */,
+				A3ACC406119FC5CD000FE789 /* it_use2.cc */,
+				A3ACC407119FC5CD000FE789 /* it_use3.cc */,
+				A3ACC408119FC5CD000FE789 /* item_use.cc */,
+				A3ACC409119FC5CD000FE789 /* itemname.cc */,
+				A3ACC40A119FC5CD000FE789 /* itemprop.cc */,
+				A3ACC40B119FC5CD000FE789 /* items.cc */,
+				A3ACC40C119FC5CD000FE789 /* jobs.cc */,
+				A3ACC40D119FC5CD000FE789 /* kills.cc */,
+				A3ACC40E119FC5CD000FE789 /* l_crawl.cc */,
+				A3ACC40F119FC5CD000FE789 /* l_debug.cc */,
+				A3ACC410119FC5CD000FE789 /* l_dgn.cc */,
+				A3ACC411119FC5CD000FE789 /* l_dgnbld.cc */,
+				A3ACC412119FC5CD000FE789 /* l_dgnevt.cc */,
+				A3ACC413119FC5CD000FE789 /* l_dgngrd.cc */,
+				A3ACC414119FC5CD000FE789 /* l_dgnit.cc */,
+				A3ACC415119FC5CD000FE789 /* l_dgnlvl.cc */,
+				A3ACC416119FC5CD000FE789 /* l_dgnmon.cc */,
+				A3ACC417119FC5CD000FE789 /* l_dgntil.cc */,
+				A3ACC418119FC5CD000FE789 /* l_feat.cc */,
+				A3ACC419119FC5CD000FE789 /* l_file.cc */,
+				A3ACC41A119FC5CD000FE789 /* l_food.cc */,
+				A3ACC41B119FC5CD000FE789 /* l_global.cc */,
+				A3ACC41C119FC5CD000FE789 /* l_item.cc */,
+				A3ACC41D119FC5CD000FE789 /* l_los.cc */,
+				A3ACC41E119FC5CD000FE789 /* l_mapgrd.cc */,
+				A3ACC41F119FC5CD000FE789 /* l_mapmrk.cc */,
+				A3ACC420119FC5CD000FE789 /* l_moninf.cc */,
+				A3ACC421119FC5CD000FE789 /* l_mons.cc */,
+				A3ACC422119FC5CD000FE789 /* l_option.cc */,
+				A3ACC423119FC5CD000FE789 /* l_spells.cc */,
+				A3ACC424119FC5CD000FE789 /* l_subvault.cc */,
+				A3ACC425119FC5CD000FE789 /* l_travel.cc */,
+				A3ACC426119FC5CD000FE789 /* l_view.cc */,
+				A3ACC427119FC5CD000FE789 /* l_you.cc */,
+				A3ACC428119FC5CD000FE789 /* lev-pand.cc */,
+				A3ACC429119FC5CD000FE789 /* libdos.cc */,
+				A3ACC42A119FC5CD000FE789 /* libgui.cc */,
+				A3ACC42B119FC5CD000FE789 /* libunix.cc */,
+				A3ACC42C119FC5CD000FE789 /* libutil.cc */,
+				A3ACC42D119FC5CD000FE789 /* libw32c.cc */,
+				A3ACC42E119FC5CD000FE789 /* los_def.cc */,
+				A3ACC42F119FC5CD000FE789 /* los.cc */,
+				A3ACC430119FC5CD000FE789 /* losglobal.cc */,
+				A3ACC431119FC5CD000FE789 /* losparam.cc */,
+				A3ACC432119FC5CD000FE789 /* luaterp.cc */,
+				A3ACC433119FC5CD000FE789 /* macro.cc */,
+				A3ACC434119FC5CD000FE789 /* main.cc */,
+				A3ACC435119FC5CD000FE789 /* makeitem.cc */,
+				A3ACC436119FC5CD000FE789 /* map_knowledge.cc */,
+				A3ACC438119FC5CD000FE789 /* mapmark.cc */,
+				A3ACC439119FC5CD000FE789 /* maps.cc */,
+				A3ACC43A119FC5CD000FE789 /* menu.cc */,
+				A3ACC43B119FC5CD000FE789 /* message-stream.cc */,
+				A3ACC43C119FC5CD000FE789 /* message.cc */,
+				A3ACC43D119FC5CD000FE789 /* mgen_data.cc */,
+				A3ACC43E119FC5CD000FE789 /* misc.cc */,
+				A3ACC43F119FC5CD000FE789 /* mislead.cc */,
+				A3ACC440119FC5CD000FE789 /* mon_resist_def.cc */,
+				A3ACC441119FC5CD000FE789 /* mon-abil.cc */,
+				A3ACC442119FC5CD000FE789 /* mon-act.cc */,
+				A3ACC443119FC5CD000FE789 /* mon-behv.cc */,
+				A3ACC444119FC5CD000FE789 /* mon-cast.cc */,
+				A3ACC445119FC5CD000FE789 /* mon-clone.cc */,
+				A3ACC446119FC5CD000FE789 /* mon-death.cc */,
+				A3ACC447119FC5CD000FE789 /* mon-gear.cc */,
+				A3ACC448119FC5CD000FE789 /* mon-grow.cc */,
+				A3ACC449119FC5CD000FE789 /* mon-info.cc */,
+				A3ACC44A119FC5CD000FE789 /* mon-iter.cc */,
+				A3ACC44B119FC5CD000FE789 /* mon-movetarget.cc */,
+				A3ACC44C119FC5CD000FE789 /* mon-pathfind.cc */,
+				A3ACC44D119FC5CD000FE789 /* mon-pick.cc */,
+				A3ACC44E119FC5CD000FE789 /* mon-place.cc */,
+				A3ACC44F119FC5CD000FE789 /* mon-project.cc */,
+				A3ACC450119FC5CD000FE789 /* mon-speak.cc */,
+				A3ACC451119FC5CD000FE789 /* mon-stuff.cc */,
+				A3ACC452119FC5CD000FE789 /* mon-transit.cc */,
+				A3ACC453119FC5CD000FE789 /* mon-util.cc */,
+				A3ACC454119FC5CD000FE789 /* monster.cc */,
+				A3ACC455119FC5CD000FE789 /* mt19937ar.cc */,
+				A3ACC456119FC5CD000FE789 /* mutation.cc */,
+				A3ACC457119FC5CD000FE789 /* newgame.cc */,
+				A3ACC458119FC5CD000FE789 /* ng-init.cc */,
+				A3ACC459119FC5CD000FE789 /* ng-input.cc */,
+				A3ACC45A119FC5CD000FE789 /* ng-restr.cc */,
+				A3ACC45B119FC5CD000FE789 /* ng-setup.cc */,
+				A3ACC45C119FC5CD000FE789 /* ng-wanderer.cc */,
+				A3ACC45D119FC5CD000FE789 /* notes.cc */,
+				A3ACC45E119FC5CD000FE789 /* ouch.cc */,
+				A3ACC45F119FC5CD000FE789 /* output.cc */,
+				A3ACC460119FC5CD000FE789 /* pattern.cc */,
+				A3ACC461119FC5CD000FE789 /* place-info.cc */,
+				A3ACC462119FC5CD000FE789 /* place.cc */,
+				A3ACC463119FC5CD000FE789 /* player-act.cc */,
+				A3ACC464119FC5CD000FE789 /* player-equip.cc */,
+				A3ACC465119FC5CD000FE789 /* player-stats.cc */,
+				A3ACC466119FC5CD000FE789 /* player.cc */,
+				A3ACC467119FC5CD000FE789 /* quiver.cc */,
+				A3ACC468119FC5CD000FE789 /* random-var.cc */,
+				A3ACC469119FC5CD000FE789 /* random.cc */,
+				A3ACC46A119FC5CD000FE789 /* ray.cc */,
+				A3ACC46B119FC5CD000FE789 /* religion.cc */,
+				A3ACC46C119FC5CD000FE789 /* rng.cc */,
+				A3ACC46D119FC5CD000FE789 /* sha256.cc */,
+				A3ACC46E119FC5CD000FE789 /* shopping.cc */,
+				A3ACC46F119FC5CD000FE789 /* shout.cc */,
+				A3ACC470119FC5CD000FE789 /* show.cc */,
+				A3ACC471119FC5CD000FE789 /* showsymb.cc */,
+				A3ACC472119FC5CD000FE789 /* skills.cc */,
+				A3ACC473119FC5CD000FE789 /* skills2.cc */,
+				A3ACC474119FC5CD000FE789 /* species.cc */,
+				A3ACC475119FC5CD000FE789 /* spells1.cc */,
+				A3ACC476119FC5CD000FE789 /* spells2.cc */,
+				A3ACC477119FC5CD000FE789 /* spells3.cc */,
+				A3ACC478119FC5CD000FE789 /* spells4.cc */,
+				A3ACC479119FC5CD000FE789 /* spl-book.cc */,
+				A3ACC47A119FC5CD000FE789 /* spl-cast.cc */,
+				A3ACC47B119FC5CD000FE789 /* spl-mis.cc */,
+				A3ACC47C119FC5CD000FE789 /* spl-util.cc */,
+				A3ACC47D119FC5CD000FE789 /* spl-zap.cc */,
+				A3ACC47E119FC5CD000FE789 /* sprint.cc */,
+				A3ACC47F119FC5CD000FE789 /* sqldbm.cc */,
+				A3ACC480119FC5CD000FE789 /* stairs.cc */,
+				A3ACC481119FC5CD000FE789 /* startup.cc */,
+				A3ACC482119FC5CD000FE789 /* stash.cc */,
+				A3ACC483119FC5CD000FE789 /* state.cc */,
+				A3ACC484119FC5CD000FE789 /* store.cc */,
+				A3ACC485119FC5CD000FE789 /* stuff.cc */,
+				A3ACC486119FC5CD000FE789 /* tags.cc */,
+				A3ACC487119FC5CD000FE789 /* tagstring.cc */,
+				A3ACC488119FC5CD000FE789 /* teleport.cc */,
+				A3ACC489119FC5CD000FE789 /* terrain.cc */,
+				A3ACC48A119FC5CD000FE789 /* tilebuf.cc */,
+				A3ACC48B119FC5CD000FE789 /* tiledoll.cc */,
+				A3ACC48C119FC5CD000FE789 /* tilefont.cc */,
+				A3ACC48D119FC5CD000FE789 /* tilemcache.cc */,
+				A3ACC48E119FC5CD000FE789 /* tilepick.cc */,
+				A3ACC48F119FC5CD000FE789 /* tilereg-crt.cc */,
+				A3ACC490119FC5CD000FE789 /* tilereg-dgn.cc */,
+				A3ACC491119FC5CD000FE789 /* tilereg-doll.cc */,
+				A3ACC492119FC5CD000FE789 /* tilereg-grid.cc */,
+				A3ACC493119FC5CD000FE789 /* tilereg-inv.cc */,
+				A3ACC494119FC5CD000FE789 /* tilereg-map.cc */,
+				A3ACC495119FC5CD000FE789 /* tilereg-mem.cc */,
+				A3ACC496119FC5CD000FE789 /* tilereg-menu.cc */,
+				A3ACC497119FC5CD000FE789 /* tilereg-msg.cc */,
+				A3ACC498119FC5CD000FE789 /* tilereg-spl.cc */,
+				A3ACC499119FC5CD000FE789 /* tilereg-stat.cc */,
+				A3ACC49A119FC5CD000FE789 /* tilereg-tab.cc */,
+				A3ACC49B119FC5CD000FE789 /* tilereg-text.cc */,
+				A3ACC49C119FC5CD000FE789 /* tilereg-title.cc */,
+				A3ACC49D119FC5CD000FE789 /* tilereg.cc */,
+				A3ACC49E119FC5CD000FE789 /* tilesdl.cc */,
+				A3ACC49F119FC5CD000FE789 /* tiletex.cc */,
+				A3ACC4A0119FC5CD000FE789 /* transform.cc */,
+				A3ACC4A1119FC5CD000FE789 /* traps.cc */,
+				A3ACC4A2119FC5CD000FE789 /* travel.cc */,
+				A3ACC4A3119FC5CD000FE789 /* version.cc */,
+				A3ACC4A4119FC5CD000FE789 /* view.cc */,
+				A3ACC4A5119FC5CD000FE789 /* viewchar.cc */,
+				A3ACC4A6119FC5CD000FE789 /* viewgeom.cc */,
+				A3ACC4A7119FC5CD000FE789 /* viewmap.cc */,
+				A3ACC4A8119FC5CD000FE789 /* windowmanager-ctouch.cc */,
+				A3ACC4AA119FC5CD000FE789 /* wiz-dgn.cc */,
+				A3ACC4AB119FC5CD000FE789 /* wiz-fsim.cc */,
+				A3ACC4AC119FC5CD000FE789 /* wiz-item.cc */,
+				A3ACC4AD119FC5CD000FE789 /* wiz-mon.cc */,
+				A3ACC4AE119FC5CD000FE789 /* wiz-you.cc */,
+				A3ACC4AF119FC5CD000FE789 /* xom.cc */,
+			);
+			name = Crawl;
+			sourceTree = "<group>";
+		};
+		A3ACC5A0119FC5DA000FE789 /* Levelcomp */ = {
+			isa = PBXGroup;
+			children = (
+				A3ACC5B3119FC81D000FE789 /* levcomp.lex.cc */,
+				A3ACC5B4119FC81D000FE789 /* levcomp.tab.cc */,
+				A3ACC5B5119FC81D000FE789 /* levcomp.tab.h */,
+				A3ACC5A2119FC603000FE789 /* levcomp.lpp */,
+				A3ACC5A3119FC603000FE789 /* levcomp.ypp */,
+			);
+			name = Levelcomp;
+			sourceTree = "<group>";
+		};
+		A3ACC5A6119FC618000FE789 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A3ACC437119FC5CD000FE789 /* mapdef.cc */,
+				A3ACC333119FC5CD000FE789 /* mapdef.h */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 		A3F1BDAB119EFA4B0017F016 /* Lua */ = {
@@ -351,7 +1626,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ipad" */;
 			buildPhases = (
+				A3ACC5AB119FC70F000FE789 /* Generate Headers */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
+				A3ACC1FA119FC393000FE789 /* Copy Dungeon Tiles */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
 			);
@@ -414,10 +1691,32 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2804203C108E9BAB000629CD /* DetailView.xib in Resources */,
+				A3ACC2B0119FC46D000FE789 /* dat in Resources */,
+				A3ACC2B2119FC48A000FE789 /* docs in Resources */,
+				A3ACC2B4119FC494000FE789 /* settings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3ACC5AB119FC70F000FE789 /* Generate Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Headers";
+			outputPaths = (
+				"$(PROJECT_DIR)/build.h",
+				"$(PROJECT_DIR)/compflag.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nexport PATH=\"/opt/git/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:$PATH\"\nif [ -f $HOME/.bashrc ]; then\n\tsource $HOME/.bashrc\nfi\ncd \"$PROJECT_DIR\"\nutil/gen_ver.pl build.h\nutil/gen-cflg.pl compflag.h \"<unavailable>\" \"<unavailable>\" \"<unavailable>\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -429,6 +1728,247 @@
 				2804200B108E984D000629CD /* RootViewController.m in Sources */,
 				2804200C108E984D000629CD /* DetailViewController.m in Sources */,
 				2819300E112F7FA900ECF9B4 /* ipad.xcdatamodeld in Sources */,
+				A3ACC4B0119FC5CD000FE789 /* abl-show.cc in Sources */,
+				A3ACC4B1119FC5CD000FE789 /* abyss.cc in Sources */,
+				A3ACC4B2119FC5CD000FE789 /* act-iter.cc in Sources */,
+				A3ACC4B3119FC5CD000FE789 /* actor-los.cc in Sources */,
+				A3ACC4B4119FC5CD000FE789 /* actor.cc in Sources */,
+				A3ACC4B5119FC5CD000FE789 /* AppHdr.cc in Sources */,
+				A3ACC4B6119FC5CD000FE789 /* areas.cc in Sources */,
+				A3ACC4B7119FC5CD000FE789 /* arena.cc in Sources */,
+				A3ACC4B8119FC5CD000FE789 /* artefact.cc in Sources */,
+				A3ACC4B9119FC5CD000FE789 /* attitude-change.cc in Sources */,
+				A3ACC4BA119FC5CD000FE789 /* beam.cc in Sources */,
+				A3ACC4BB119FC5CD000FE789 /* behold.cc in Sources */,
+				A3ACC4BC119FC5CD000FE789 /* bitary.cc in Sources */,
+				A3ACC4BD119FC5CD000FE789 /* branch.cc in Sources */,
+				A3ACC4BE119FC5CD000FE789 /* chardump.cc in Sources */,
+				A3ACC4BF119FC5CD000FE789 /* cio.cc in Sources */,
+				A3ACC4C0119FC5CD000FE789 /* cloud.cc in Sources */,
+				A3ACC4C1119FC5CD000FE789 /* clua.cc in Sources */,
+				A3ACC4C2119FC5CD000FE789 /* cluautil.cc in Sources */,
+				A3ACC4C3119FC5CD000FE789 /* colour.cc in Sources */,
+				A3ACC4C4119FC5CD000FE789 /* command.cc in Sources */,
+				A3ACC4C5119FC5CD000FE789 /* coord-circle.cc in Sources */,
+				A3ACC4C6119FC5CD000FE789 /* coord.cc in Sources */,
+				A3ACC4C7119FC5CD000FE789 /* coordit.cc in Sources */,
+				A3ACC4C8119FC5CD000FE789 /* crash-d.cc in Sources */,
+				A3ACC4C9119FC5CD000FE789 /* crash-u.cc in Sources */,
+				A3ACC4CA119FC5CD000FE789 /* crash-w.cc in Sources */,
+				A3ACC4CB119FC5CD000FE789 /* ctest.cc in Sources */,
+				A3ACC4CC119FC5CD000FE789 /* database.cc in Sources */,
+				A3ACC4CD119FC5CD000FE789 /* dbg-asrt.cc in Sources */,
+				A3ACC4CE119FC5CD000FE789 /* dbg-maps.cc in Sources */,
+				A3ACC4CF119FC5CD000FE789 /* dbg-scan.cc in Sources */,
+				A3ACC4D0119FC5CD000FE789 /* dbg-util.cc in Sources */,
+				A3ACC4D1119FC5CD000FE789 /* decks.cc in Sources */,
+				A3ACC4D2119FC5CD000FE789 /* delay.cc in Sources */,
+				A3ACC4D3119FC5CD000FE789 /* describe.cc in Sources */,
+				A3ACC4D4119FC5CD000FE789 /* dgl-message.cc in Sources */,
+				A3ACC4D5119FC5CD000FE789 /* dgn-height.cc in Sources */,
+				A3ACC4D6119FC5CD000FE789 /* dgn-overview.cc in Sources */,
+				A3ACC4D7119FC5CD000FE789 /* dgn-shoals.cc in Sources */,
+				A3ACC4D8119FC5CD000FE789 /* dgn-swamp.cc in Sources */,
+				A3ACC4D9119FC5CD000FE789 /* dgnevent.cc in Sources */,
+				A3ACC4DA119FC5CD000FE789 /* directn.cc in Sources */,
+				A3ACC4DB119FC5CD000FE789 /* dlua.cc in Sources */,
+				A3ACC4DC119FC5CD000FE789 /* dungeon.cc in Sources */,
+				A3ACC4DD119FC5CD000FE789 /* effects.cc in Sources */,
+				A3ACC4DE119FC5CD000FE789 /* exclude.cc in Sources */,
+				A3ACC4DF119FC5CD000FE789 /* feature.cc in Sources */,
+				A3ACC4E0119FC5CD000FE789 /* fight.cc in Sources */,
+				A3ACC4E1119FC5CD000FE789 /* files.cc in Sources */,
+				A3ACC4E2119FC5CD000FE789 /* fontwrapper-ctouch.cc in Sources */,
+				A3ACC4E4119FC5CD000FE789 /* food.cc in Sources */,
+				A3ACC4E5119FC5CD000FE789 /* format.cc in Sources */,
+				A3ACC4E6119FC5CD000FE789 /* fprop.cc in Sources */,
+				A3ACC4E7119FC5CD000FE789 /* geom2d.cc in Sources */,
+				A3ACC4E8119FC5CD000FE789 /* ghost.cc in Sources */,
+				A3ACC4E9119FC5CD000FE789 /* glwrapper-es.cc in Sources */,
+				A3ACC4EB119FC5CD000FE789 /* glwrapper.cc in Sources */,
+				A3ACC4EC119FC5CD000FE789 /* godabil.cc in Sources */,
+				A3ACC4ED119FC5CD000FE789 /* godconduct.cc in Sources */,
+				A3ACC4EE119FC5CD000FE789 /* goditem.cc in Sources */,
+				A3ACC4EF119FC5CD000FE789 /* godpassive.cc in Sources */,
+				A3ACC4F0119FC5CD000FE789 /* godprayer.cc in Sources */,
+				A3ACC4F1119FC5CD000FE789 /* godwrath.cc in Sources */,
+				A3ACC4F2119FC5CD000FE789 /* hints.cc in Sources */,
+				A3ACC4F3119FC5CD000FE789 /* hiscores.cc in Sources */,
+				A3ACC4F4119FC5CD000FE789 /* initfile.cc in Sources */,
+				A3ACC4F5119FC5CD000FE789 /* invent.cc in Sources */,
+				A3ACC4F6119FC5CD000FE789 /* it_use2.cc in Sources */,
+				A3ACC4F7119FC5CD000FE789 /* it_use3.cc in Sources */,
+				A3ACC4F8119FC5CD000FE789 /* item_use.cc in Sources */,
+				A3ACC4F9119FC5CD000FE789 /* itemname.cc in Sources */,
+				A3ACC4FA119FC5CD000FE789 /* itemprop.cc in Sources */,
+				A3ACC4FB119FC5CD000FE789 /* items.cc in Sources */,
+				A3ACC4FC119FC5CD000FE789 /* jobs.cc in Sources */,
+				A3ACC4FD119FC5CD000FE789 /* kills.cc in Sources */,
+				A3ACC4FE119FC5CD000FE789 /* l_crawl.cc in Sources */,
+				A3ACC4FF119FC5CD000FE789 /* l_debug.cc in Sources */,
+				A3ACC500119FC5CD000FE789 /* l_dgn.cc in Sources */,
+				A3ACC501119FC5CD000FE789 /* l_dgnbld.cc in Sources */,
+				A3ACC502119FC5CD000FE789 /* l_dgnevt.cc in Sources */,
+				A3ACC503119FC5CD000FE789 /* l_dgngrd.cc in Sources */,
+				A3ACC504119FC5CD000FE789 /* l_dgnit.cc in Sources */,
+				A3ACC505119FC5CD000FE789 /* l_dgnlvl.cc in Sources */,
+				A3ACC506119FC5CD000FE789 /* l_dgnmon.cc in Sources */,
+				A3ACC507119FC5CD000FE789 /* l_dgntil.cc in Sources */,
+				A3ACC508119FC5CD000FE789 /* l_feat.cc in Sources */,
+				A3ACC509119FC5CD000FE789 /* l_file.cc in Sources */,
+				A3ACC50A119FC5CD000FE789 /* l_food.cc in Sources */,
+				A3ACC50B119FC5CD000FE789 /* l_global.cc in Sources */,
+				A3ACC50C119FC5CD000FE789 /* l_item.cc in Sources */,
+				A3ACC50D119FC5CD000FE789 /* l_los.cc in Sources */,
+				A3ACC50E119FC5CD000FE789 /* l_mapgrd.cc in Sources */,
+				A3ACC50F119FC5CD000FE789 /* l_mapmrk.cc in Sources */,
+				A3ACC510119FC5CD000FE789 /* l_moninf.cc in Sources */,
+				A3ACC511119FC5CD000FE789 /* l_mons.cc in Sources */,
+				A3ACC512119FC5CD000FE789 /* l_option.cc in Sources */,
+				A3ACC513119FC5CD000FE789 /* l_spells.cc in Sources */,
+				A3ACC514119FC5CD000FE789 /* l_subvault.cc in Sources */,
+				A3ACC515119FC5CD000FE789 /* l_travel.cc in Sources */,
+				A3ACC516119FC5CD000FE789 /* l_view.cc in Sources */,
+				A3ACC517119FC5CD000FE789 /* l_you.cc in Sources */,
+				A3ACC518119FC5CD000FE789 /* lev-pand.cc in Sources */,
+				A3ACC519119FC5CD000FE789 /* libdos.cc in Sources */,
+				A3ACC51A119FC5CD000FE789 /* libgui.cc in Sources */,
+				A3ACC51B119FC5CD000FE789 /* libunix.cc in Sources */,
+				A3ACC51C119FC5CD000FE789 /* libutil.cc in Sources */,
+				A3ACC51D119FC5CD000FE789 /* libw32c.cc in Sources */,
+				A3ACC51E119FC5CD000FE789 /* los_def.cc in Sources */,
+				A3ACC51F119FC5CD000FE789 /* los.cc in Sources */,
+				A3ACC520119FC5CD000FE789 /* losglobal.cc in Sources */,
+				A3ACC521119FC5CD000FE789 /* losparam.cc in Sources */,
+				A3ACC522119FC5CD000FE789 /* luaterp.cc in Sources */,
+				A3ACC523119FC5CD000FE789 /* macro.cc in Sources */,
+				A3ACC524119FC5CD000FE789 /* main.cc in Sources */,
+				A3ACC525119FC5CD000FE789 /* makeitem.cc in Sources */,
+				A3ACC526119FC5CD000FE789 /* map_knowledge.cc in Sources */,
+				A3ACC527119FC5CD000FE789 /* mapdef.cc in Sources */,
+				A3ACC528119FC5CD000FE789 /* mapmark.cc in Sources */,
+				A3ACC529119FC5CD000FE789 /* maps.cc in Sources */,
+				A3ACC52A119FC5CD000FE789 /* menu.cc in Sources */,
+				A3ACC52B119FC5CD000FE789 /* message-stream.cc in Sources */,
+				A3ACC52C119FC5CD000FE789 /* message.cc in Sources */,
+				A3ACC52D119FC5CD000FE789 /* mgen_data.cc in Sources */,
+				A3ACC52E119FC5CD000FE789 /* misc.cc in Sources */,
+				A3ACC52F119FC5CD000FE789 /* mislead.cc in Sources */,
+				A3ACC530119FC5CD000FE789 /* mon_resist_def.cc in Sources */,
+				A3ACC531119FC5CD000FE789 /* mon-abil.cc in Sources */,
+				A3ACC532119FC5CD000FE789 /* mon-act.cc in Sources */,
+				A3ACC533119FC5CD000FE789 /* mon-behv.cc in Sources */,
+				A3ACC534119FC5CD000FE789 /* mon-cast.cc in Sources */,
+				A3ACC535119FC5CD000FE789 /* mon-clone.cc in Sources */,
+				A3ACC536119FC5CD000FE789 /* mon-death.cc in Sources */,
+				A3ACC537119FC5CD000FE789 /* mon-gear.cc in Sources */,
+				A3ACC538119FC5CD000FE789 /* mon-grow.cc in Sources */,
+				A3ACC539119FC5CD000FE789 /* mon-info.cc in Sources */,
+				A3ACC53A119FC5CD000FE789 /* mon-iter.cc in Sources */,
+				A3ACC53B119FC5CD000FE789 /* mon-movetarget.cc in Sources */,
+				A3ACC53C119FC5CD000FE789 /* mon-pathfind.cc in Sources */,
+				A3ACC53D119FC5CD000FE789 /* mon-pick.cc in Sources */,
+				A3ACC53E119FC5CD000FE789 /* mon-place.cc in Sources */,
+				A3ACC53F119FC5CD000FE789 /* mon-project.cc in Sources */,
+				A3ACC540119FC5CD000FE789 /* mon-speak.cc in Sources */,
+				A3ACC541119FC5CD000FE789 /* mon-stuff.cc in Sources */,
+				A3ACC542119FC5CD000FE789 /* mon-transit.cc in Sources */,
+				A3ACC543119FC5CD000FE789 /* mon-util.cc in Sources */,
+				A3ACC544119FC5CD000FE789 /* monster.cc in Sources */,
+				A3ACC545119FC5CD000FE789 /* mt19937ar.cc in Sources */,
+				A3ACC546119FC5CD000FE789 /* mutation.cc in Sources */,
+				A3ACC547119FC5CD000FE789 /* newgame.cc in Sources */,
+				A3ACC548119FC5CD000FE789 /* ng-init.cc in Sources */,
+				A3ACC549119FC5CD000FE789 /* ng-input.cc in Sources */,
+				A3ACC54A119FC5CD000FE789 /* ng-restr.cc in Sources */,
+				A3ACC54B119FC5CD000FE789 /* ng-setup.cc in Sources */,
+				A3ACC54C119FC5CD000FE789 /* ng-wanderer.cc in Sources */,
+				A3ACC54D119FC5CD000FE789 /* notes.cc in Sources */,
+				A3ACC54E119FC5CD000FE789 /* ouch.cc in Sources */,
+				A3ACC54F119FC5CD000FE789 /* output.cc in Sources */,
+				A3ACC550119FC5CD000FE789 /* pattern.cc in Sources */,
+				A3ACC551119FC5CD000FE789 /* place-info.cc in Sources */,
+				A3ACC552119FC5CD000FE789 /* place.cc in Sources */,
+				A3ACC553119FC5CD000FE789 /* player-act.cc in Sources */,
+				A3ACC554119FC5CD000FE789 /* player-equip.cc in Sources */,
+				A3ACC555119FC5CD000FE789 /* player-stats.cc in Sources */,
+				A3ACC556119FC5CD000FE789 /* player.cc in Sources */,
+				A3ACC557119FC5CD000FE789 /* quiver.cc in Sources */,
+				A3ACC558119FC5CD000FE789 /* random-var.cc in Sources */,
+				A3ACC559119FC5CD000FE789 /* random.cc in Sources */,
+				A3ACC55A119FC5CD000FE789 /* ray.cc in Sources */,
+				A3ACC55B119FC5CD000FE789 /* religion.cc in Sources */,
+				A3ACC55C119FC5CD000FE789 /* rng.cc in Sources */,
+				A3ACC55D119FC5CD000FE789 /* sha256.cc in Sources */,
+				A3ACC55E119FC5CD000FE789 /* shopping.cc in Sources */,
+				A3ACC55F119FC5CD000FE789 /* shout.cc in Sources */,
+				A3ACC560119FC5CD000FE789 /* show.cc in Sources */,
+				A3ACC561119FC5CD000FE789 /* showsymb.cc in Sources */,
+				A3ACC562119FC5CD000FE789 /* skills.cc in Sources */,
+				A3ACC563119FC5CD000FE789 /* skills2.cc in Sources */,
+				A3ACC564119FC5CD000FE789 /* species.cc in Sources */,
+				A3ACC565119FC5CD000FE789 /* spells1.cc in Sources */,
+				A3ACC566119FC5CD000FE789 /* spells2.cc in Sources */,
+				A3ACC567119FC5CD000FE789 /* spells3.cc in Sources */,
+				A3ACC568119FC5CD000FE789 /* spells4.cc in Sources */,
+				A3ACC569119FC5CD000FE789 /* spl-book.cc in Sources */,
+				A3ACC56A119FC5CD000FE789 /* spl-cast.cc in Sources */,
+				A3ACC56B119FC5CD000FE789 /* spl-mis.cc in Sources */,
+				A3ACC56C119FC5CD000FE789 /* spl-util.cc in Sources */,
+				A3ACC56D119FC5CD000FE789 /* spl-zap.cc in Sources */,
+				A3ACC56E119FC5CD000FE789 /* sprint.cc in Sources */,
+				A3ACC56F119FC5CD000FE789 /* sqldbm.cc in Sources */,
+				A3ACC570119FC5CD000FE789 /* stairs.cc in Sources */,
+				A3ACC571119FC5CD000FE789 /* startup.cc in Sources */,
+				A3ACC572119FC5CD000FE789 /* stash.cc in Sources */,
+				A3ACC573119FC5CD000FE789 /* state.cc in Sources */,
+				A3ACC574119FC5CD000FE789 /* store.cc in Sources */,
+				A3ACC575119FC5CD000FE789 /* stuff.cc in Sources */,
+				A3ACC576119FC5CD000FE789 /* tags.cc in Sources */,
+				A3ACC577119FC5CD000FE789 /* tagstring.cc in Sources */,
+				A3ACC578119FC5CD000FE789 /* teleport.cc in Sources */,
+				A3ACC579119FC5CD000FE789 /* terrain.cc in Sources */,
+				A3ACC57A119FC5CD000FE789 /* tilebuf.cc in Sources */,
+				A3ACC57B119FC5CD000FE789 /* tiledoll.cc in Sources */,
+				A3ACC57C119FC5CD000FE789 /* tilefont.cc in Sources */,
+				A3ACC57D119FC5CD000FE789 /* tilemcache.cc in Sources */,
+				A3ACC57E119FC5CD000FE789 /* tilepick.cc in Sources */,
+				A3ACC57F119FC5CD000FE789 /* tilereg-crt.cc in Sources */,
+				A3ACC580119FC5CD000FE789 /* tilereg-dgn.cc in Sources */,
+				A3ACC581119FC5CD000FE789 /* tilereg-doll.cc in Sources */,
+				A3ACC582119FC5CD000FE789 /* tilereg-grid.cc in Sources */,
+				A3ACC583119FC5CD000FE789 /* tilereg-inv.cc in Sources */,
+				A3ACC584119FC5CD000FE789 /* tilereg-map.cc in Sources */,
+				A3ACC585119FC5CD000FE789 /* tilereg-mem.cc in Sources */,
+				A3ACC586119FC5CD000FE789 /* tilereg-menu.cc in Sources */,
+				A3ACC587119FC5CD000FE789 /* tilereg-msg.cc in Sources */,
+				A3ACC588119FC5CD000FE789 /* tilereg-spl.cc in Sources */,
+				A3ACC589119FC5CD000FE789 /* tilereg-stat.cc in Sources */,
+				A3ACC58A119FC5CD000FE789 /* tilereg-tab.cc in Sources */,
+				A3ACC58B119FC5CD000FE789 /* tilereg-text.cc in Sources */,
+				A3ACC58C119FC5CD000FE789 /* tilereg-title.cc in Sources */,
+				A3ACC58D119FC5CD000FE789 /* tilereg.cc in Sources */,
+				A3ACC58E119FC5CD000FE789 /* tilesdl.cc in Sources */,
+				A3ACC58F119FC5CD000FE789 /* tiletex.cc in Sources */,
+				A3ACC590119FC5CD000FE789 /* transform.cc in Sources */,
+				A3ACC591119FC5CD000FE789 /* traps.cc in Sources */,
+				A3ACC592119FC5CD000FE789 /* travel.cc in Sources */,
+				A3ACC593119FC5CD000FE789 /* version.cc in Sources */,
+				A3ACC594119FC5CD000FE789 /* view.cc in Sources */,
+				A3ACC595119FC5CD000FE789 /* viewchar.cc in Sources */,
+				A3ACC596119FC5CD000FE789 /* viewgeom.cc in Sources */,
+				A3ACC597119FC5CD000FE789 /* viewmap.cc in Sources */,
+				A3ACC598119FC5CD000FE789 /* windowmanager-ctouch.cc in Sources */,
+				A3ACC59A119FC5CD000FE789 /* wiz-dgn.cc in Sources */,
+				A3ACC59B119FC5CD000FE789 /* wiz-fsim.cc in Sources */,
+				A3ACC59C119FC5CD000FE789 /* wiz-item.cc in Sources */,
+				A3ACC59D119FC5CD000FE789 /* wiz-mon.cc in Sources */,
+				A3ACC59E119FC5CD000FE789 /* wiz-you.cc in Sources */,
+				A3ACC59F119FC5CD000FE789 /* xom.cc in Sources */,
+				A3ACC5A4119FC603000FE789 /* levcomp.lpp in Sources */,
+				A3ACC5A5119FC603000FE789 /* levcomp.ypp in Sources */,
+				A3ACC5B6119FC81D000FE789 /* levcomp.lex.cc in Sources */,
+				A3ACC5B7119FC81D000FE789 /* levcomp.tab.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
