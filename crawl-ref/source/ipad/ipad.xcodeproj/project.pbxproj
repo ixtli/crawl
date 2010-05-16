@@ -49,9 +49,7 @@
 		A3ACC4C5119FC5CD000FE789 /* coord-circle.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D5119FC5CD000FE789 /* coord-circle.cc */; };
 		A3ACC4C6119FC5CD000FE789 /* coord.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D6119FC5CD000FE789 /* coord.cc */; };
 		A3ACC4C7119FC5CD000FE789 /* coordit.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D7119FC5CD000FE789 /* coordit.cc */; };
-		A3ACC4C8119FC5CD000FE789 /* crash-d.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D8119FC5CD000FE789 /* crash-d.cc */; };
 		A3ACC4C9119FC5CD000FE789 /* crash-u.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3D9119FC5CD000FE789 /* crash-u.cc */; };
-		A3ACC4CA119FC5CD000FE789 /* crash-w.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3DA119FC5CD000FE789 /* crash-w.cc */; };
 		A3ACC4CB119FC5CD000FE789 /* ctest.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3DB119FC5CD000FE789 /* ctest.cc */; };
 		A3ACC4CC119FC5CD000FE789 /* database.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3DC119FC5CD000FE789 /* database.cc */; };
 		A3ACC4CD119FC5CD000FE789 /* dbg-asrt.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC3DD119FC5CD000FE789 /* dbg-asrt.cc */; };
@@ -128,7 +126,6 @@
 		A3ACC516119FC5CD000FE789 /* l_view.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC426119FC5CD000FE789 /* l_view.cc */; };
 		A3ACC517119FC5CD000FE789 /* l_you.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC427119FC5CD000FE789 /* l_you.cc */; };
 		A3ACC518119FC5CD000FE789 /* lev-pand.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC428119FC5CD000FE789 /* lev-pand.cc */; };
-		A3ACC519119FC5CD000FE789 /* libdos.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC429119FC5CD000FE789 /* libdos.cc */; };
 		A3ACC51A119FC5CD000FE789 /* libgui.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42A119FC5CD000FE789 /* libgui.cc */; };
 		A3ACC51B119FC5CD000FE789 /* libunix.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42B119FC5CD000FE789 /* libunix.cc */; };
 		A3ACC51C119FC5CD000FE789 /* libutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42C119FC5CD000FE789 /* libutil.cc */; };
@@ -466,7 +463,6 @@
 		A3ACC323119FC5CD000FE789 /* l_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = l_defs.h; path = ../l_defs.h; sourceTree = SOURCE_ROOT; };
 		A3ACC324119FC5CD000FE789 /* l_libs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = l_libs.h; path = ../l_libs.h; sourceTree = SOURCE_ROOT; };
 		A3ACC325119FC5CD000FE789 /* lev-pand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "lev-pand.h"; path = "../lev-pand.h"; sourceTree = SOURCE_ROOT; };
-		A3ACC326119FC5CD000FE789 /* libdos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libdos.h; path = ../libdos.h; sourceTree = SOURCE_ROOT; };
 		A3ACC327119FC5CD000FE789 /* libgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libgui.h; path = ../libgui.h; sourceTree = SOURCE_ROOT; };
 		A3ACC328119FC5CD000FE789 /* libunix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libunix.h; path = ../libunix.h; sourceTree = SOURCE_ROOT; };
 		A3ACC329119FC5CD000FE789 /* libutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libutil.h; path = ../libutil.h; sourceTree = SOURCE_ROOT; };
@@ -643,9 +639,7 @@
 		A3ACC3D5119FC5CD000FE789 /* coord-circle.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "coord-circle.cc"; path = "../coord-circle.cc"; sourceTree = SOURCE_ROOT; };
 		A3ACC3D6119FC5CD000FE789 /* coord.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = coord.cc; path = ../coord.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC3D7119FC5CD000FE789 /* coordit.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = coordit.cc; path = ../coordit.cc; sourceTree = SOURCE_ROOT; };
-		A3ACC3D8119FC5CD000FE789 /* crash-d.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "crash-d.cc"; path = "../crash-d.cc"; sourceTree = SOURCE_ROOT; };
 		A3ACC3D9119FC5CD000FE789 /* crash-u.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "crash-u.cc"; path = "../crash-u.cc"; sourceTree = SOURCE_ROOT; };
-		A3ACC3DA119FC5CD000FE789 /* crash-w.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "crash-w.cc"; path = "../crash-w.cc"; sourceTree = SOURCE_ROOT; };
 		A3ACC3DB119FC5CD000FE789 /* ctest.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ctest.cc; path = ../ctest.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC3DC119FC5CD000FE789 /* database.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = database.cc; path = ../database.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC3DD119FC5CD000FE789 /* dbg-asrt.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "dbg-asrt.cc"; path = "../dbg-asrt.cc"; sourceTree = SOURCE_ROOT; };
@@ -722,7 +716,6 @@
 		A3ACC426119FC5CD000FE789 /* l_view.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_view.cc; path = ../l_view.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC427119FC5CD000FE789 /* l_you.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_you.cc; path = ../l_you.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC428119FC5CD000FE789 /* lev-pand.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "lev-pand.cc"; path = "../lev-pand.cc"; sourceTree = SOURCE_ROOT; };
-		A3ACC429119FC5CD000FE789 /* libdos.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libdos.cc; path = ../libdos.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC42A119FC5CD000FE789 /* libgui.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libgui.cc; path = ../libgui.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC42B119FC5CD000FE789 /* libunix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libunix.cc; path = ../libunix.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC42C119FC5CD000FE789 /* libutil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libutil.cc; path = ../libutil.cc; sourceTree = SOURCE_ROOT; };
@@ -1111,7 +1104,6 @@
 				A3ACC323119FC5CD000FE789 /* l_defs.h */,
 				A3ACC324119FC5CD000FE789 /* l_libs.h */,
 				A3ACC325119FC5CD000FE789 /* lev-pand.h */,
-				A3ACC326119FC5CD000FE789 /* libdos.h */,
 				A3ACC327119FC5CD000FE789 /* libgui.h */,
 				A3ACC328119FC5CD000FE789 /* libunix.h */,
 				A3ACC329119FC5CD000FE789 /* libutil.h */,
@@ -1287,9 +1279,7 @@
 				A3ACC3D5119FC5CD000FE789 /* coord-circle.cc */,
 				A3ACC3D6119FC5CD000FE789 /* coord.cc */,
 				A3ACC3D7119FC5CD000FE789 /* coordit.cc */,
-				A3ACC3D8119FC5CD000FE789 /* crash-d.cc */,
 				A3ACC3D9119FC5CD000FE789 /* crash-u.cc */,
-				A3ACC3DA119FC5CD000FE789 /* crash-w.cc */,
 				A3ACC3DB119FC5CD000FE789 /* ctest.cc */,
 				A3ACC3DC119FC5CD000FE789 /* database.cc */,
 				A3ACC3DD119FC5CD000FE789 /* dbg-asrt.cc */,
@@ -1366,7 +1356,6 @@
 				A3ACC426119FC5CD000FE789 /* l_view.cc */,
 				A3ACC427119FC5CD000FE789 /* l_you.cc */,
 				A3ACC428119FC5CD000FE789 /* lev-pand.cc */,
-				A3ACC429119FC5CD000FE789 /* libdos.cc */,
 				A3ACC42A119FC5CD000FE789 /* libgui.cc */,
 				A3ACC42B119FC5CD000FE789 /* libunix.cc */,
 				A3ACC42C119FC5CD000FE789 /* libutil.cc */,
@@ -1709,12 +1698,10 @@
 			);
 			name = "Generate Headers";
 			outputPaths = (
-				"$(PROJECT_DIR)/build.h",
-				"$(PROJECT_DIR)/compflag.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\nexport PATH=\"/opt/git/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:$PATH\"\nif [ -f $HOME/.bashrc ]; then\n\tsource $HOME/.bashrc\nfi\ncd \"$PROJECT_DIR\"\nutil/gen_ver.pl build.h\nutil/gen-cflg.pl compflag.h \"<unavailable>\" \"<unavailable>\" \"<unavailable>\"";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1752,9 +1739,7 @@
 				A3ACC4C5119FC5CD000FE789 /* coord-circle.cc in Sources */,
 				A3ACC4C6119FC5CD000FE789 /* coord.cc in Sources */,
 				A3ACC4C7119FC5CD000FE789 /* coordit.cc in Sources */,
-				A3ACC4C8119FC5CD000FE789 /* crash-d.cc in Sources */,
 				A3ACC4C9119FC5CD000FE789 /* crash-u.cc in Sources */,
-				A3ACC4CA119FC5CD000FE789 /* crash-w.cc in Sources */,
 				A3ACC4CB119FC5CD000FE789 /* ctest.cc in Sources */,
 				A3ACC4CC119FC5CD000FE789 /* database.cc in Sources */,
 				A3ACC4CD119FC5CD000FE789 /* dbg-asrt.cc in Sources */,
@@ -1831,7 +1816,6 @@
 				A3ACC516119FC5CD000FE789 /* l_view.cc in Sources */,
 				A3ACC517119FC5CD000FE789 /* l_you.cc in Sources */,
 				A3ACC518119FC5CD000FE789 /* lev-pand.cc in Sources */,
-				A3ACC519119FC5CD000FE789 /* libdos.cc in Sources */,
 				A3ACC51A119FC5CD000FE789 /* libgui.cc in Sources */,
 				A3ACC51B119FC5CD000FE789 /* libunix.cc in Sources */,
 				A3ACC51C119FC5CD000FE789 /* libutil.cc in Sources */,
