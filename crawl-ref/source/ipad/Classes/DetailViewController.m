@@ -9,17 +9,16 @@
 #import "DetailViewController.h"
 #import "RootViewController.h"
 
+#import "DCSSController.h"
 
 @interface DetailViewController ()
 @property (nonatomic, retain) UIPopoverController *popoverController;
 - (void)configureView;
 @end
 
-
-
 @implementation DetailViewController
 
-@synthesize toolbar, popoverController, detailItem, detailDescriptionLabel, rootViewController;
+@synthesize toolbar, popoverController, detailItem, detailDescriptionLabel, rootViewController, dcss;
 
 
 #pragma mark -
@@ -27,7 +26,10 @@
 
 - (IBAction)insertNewObject:(id)sender {
 	
-	[rootViewController insertNewObject:sender];	
+	// [rootViewController insertNewObject:sender];
+	
+	self.dcss = [[DCSSController alloc] init];
+	[dcss launchGameThread];
 }
 
 
@@ -146,9 +148,11 @@
 }
 
 - (void)dealloc {
+
+	[dcss release];
 	
-    [popoverController release];
-    [toolbar release];
+	[popoverController release];
+	[toolbar release];
 	
 	[detailItem release];
 	[detailDescriptionLabel release];

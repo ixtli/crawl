@@ -10,7 +10,15 @@
 
 #include "main.h"
 
+@interface DCSSController (PrivateMethods)
+- (int)startGame;
+@end
+
+
 @implementation DCSSController
+
+#pragma mark -
+#pragma mark Starting Crawl
 
 - (int)launchGameThread
 {
@@ -20,8 +28,15 @@
 
 - (int)startGame
 {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
+	// Run the game
 	char *a = "ipad";
-	return (crawl_main(1, &a));
+	int ret = crawl_main(1, &a);
+	
+	// Clean up
+	[pool release];
+	return ret;
 }
 
 @end

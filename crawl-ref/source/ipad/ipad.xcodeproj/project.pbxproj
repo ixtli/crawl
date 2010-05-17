@@ -23,6 +23,8 @@
 		A323BB4511A0FB1800AE8468 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BB4411A0FB1800AE8468 /* OpenGLES.framework */; };
 		A323BB4711A0FB1800AE8468 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BB4611A0FB1800AE8468 /* QuartzCore.framework */; };
 		A323BC8E11A1211D00AE8468 /* DCSSController.m in Sources */ = {isa = PBXBuildFile; fileRef = A323BC8D11A1211D00AE8468 /* DCSSController.m */; };
+		A323BCEB11A13B9700AE8468 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = A323BCEA11A13B9700AE8468 /* EAGLView.m */; };
+		A3AB6DEA11A155360059E8D0 /* ES2Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AB6DE911A155360059E8D0 /* ES2Renderer.m */; };
 		A3ACC2B0119FC46D000FE789 /* dat in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2AF119FC46D000FE789 /* dat */; };
 		A3ACC2B2119FC48A000FE789 /* docs in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B1119FC48A000FE789 /* docs */; };
 		A3ACC2B4119FC494000FE789 /* settings in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B3119FC494000FE789 /* settings */; };
@@ -377,6 +379,11 @@
 		A323BC8C11A1211D00AE8468 /* DCSSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSSController.h; sourceTree = "<group>"; };
 		A323BC8D11A1211D00AE8468 /* DCSSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSSController.m; sourceTree = "<group>"; };
 		A323BCC811A1320000AE8468 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		A323BCE911A13B9700AE8468 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		A323BCEA11A13B9700AE8468 /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
+		A323BCF211A13BBE00AE8468 /* ESRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESRenderer.h; sourceTree = "<group>"; };
+		A3AB6DE811A155360059E8D0 /* ES2Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ES2Renderer.h; sourceTree = "<group>"; };
+		A3AB6DE911A155360059E8D0 /* ES2Renderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ES2Renderer.m; sourceTree = "<group>"; };
 		A3ACC2AF119FC46D000FE789 /* dat */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dat; path = ../dat; sourceTree = SOURCE_ROOT; };
 		A3ACC2B1119FC48A000FE789 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = docs; path = ../../docs; sourceTree = SOURCE_ROOT; };
 		A3ACC2B3119FC494000FE789 /* settings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = settings; path = ../../settings; sourceTree = SOURCE_ROOT; };
@@ -958,6 +965,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A323BCF211A13BBE00AE8468 /* ESRenderer.h */,
 				A323BC8C11A1211D00AE8468 /* DCSSController.h */,
 				A323BC8D11A1211D00AE8468 /* DCSSController.m */,
 				1D3623240D0F684500981E51 /* ipadAppDelegate.h */,
@@ -966,6 +974,10 @@
 				28042008108E984D000629CD /* RootViewController.m */,
 				28042009108E984D000629CD /* DetailViewController.h */,
 				2804200A108E984D000629CD /* DetailViewController.m */,
+				A323BCE911A13B9700AE8468 /* EAGLView.h */,
+				A323BCEA11A13B9700AE8468 /* EAGLView.m */,
+				A3AB6DE811A155360059E8D0 /* ES2Renderer.h */,
+				A3AB6DE911A155360059E8D0 /* ES2Renderer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -983,6 +995,7 @@
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
+				A3AB6E0A11A1565A0059E8D0 /* Shaders */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -1035,6 +1048,13 @@
 				A323BB4611A0FB1800AE8468 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3AB6E0A11A1565A0059E8D0 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Shaders;
 			sourceTree = "<group>";
 		};
 		A3ACC2C8119FC5B1000FE789 /* Crawl */ = {
@@ -1989,6 +2009,8 @@
 				A3AD960D119FD223000E5C94 /* tiledef-player.cc in Sources */,
 				A3AD960E119FD223000E5C94 /* tiledef-unrand.cc in Sources */,
 				A323BC8E11A1211D00AE8468 /* DCSSController.m in Sources */,
+				A323BCEB11A13B9700AE8468 /* EAGLView.m in Sources */,
+				A3AB6DEA11A155360059E8D0 /* ES2Renderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

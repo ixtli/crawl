@@ -10,17 +10,22 @@
 #import <CoreData/CoreData.h>
 
 @class RootViewController;
+@class DCSSController;
 
 @interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate> {
     
-    UIPopoverController *popoverController;
-    UIToolbar *toolbar;
-    
-    NSManagedObject *detailItem;
-    UILabel *detailDescriptionLabel;
+	UIPopoverController *popoverController;
+	UIToolbar *toolbar;
 
-    RootViewController *rootViewController;
+	NSManagedObject *detailItem;
+	UILabel *detailDescriptionLabel;
+
+	RootViewController *rootViewController;
+	
+	DCSSController *dcss;
 }
+
+@property (nonatomic, retain) DCSSController *dcss;
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 
