@@ -296,6 +296,11 @@
     [super didReceiveMemoryWarning];
     
     // Relinquish ownership any cached data, images, etc. that aren't in use.
+	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Low Memory" message:@"DCSS has gotten a low memory notification from the system.  You may want to try restarting your device."
+												   delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+	[alert show];
+	[alert release];
 }
 
 
