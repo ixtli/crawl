@@ -2052,8 +2052,6 @@
 					USE_CTOUCH,
 					USE_TILE,
 					CLUA_BINDINGS,
-					OSX,
-					DEBUG_ITEM_SCAN,
 					FULLDEBUG,
 					WIZARD,
 					DEBUG,
