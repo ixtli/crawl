@@ -372,6 +372,7 @@
 		A323BB2A11A0FA5600AE8468 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		A323BB4411A0FB1800AE8468 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A323BB4611A0FB1800AE8468 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A323BBCF11A1090A00AE8468 /* levcomp.tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = levcomp.tab.h; path = ../util/levcomp.tab.h; sourceTree = SOURCE_ROOT; };
 		A3ACC2AF119FC46D000FE789 /* dat */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dat; path = ../dat; sourceTree = SOURCE_ROOT; };
 		A3ACC2B1119FC48A000FE789 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = docs; path = ../../docs; sourceTree = SOURCE_ROOT; };
 		A3ACC2B3119FC494000FE789 /* settings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = settings; path = ../../settings; sourceTree = SOURCE_ROOT; };
@@ -1514,6 +1515,7 @@
 			isa = PBXGroup;
 			children = (
 				A3ACC5A2119FC603000FE789 /* levcomp.lpp */,
+				A323BBCF11A1090A00AE8468 /* levcomp.tab.h */,
 				A3ACC5A3119FC603000FE789 /* levcomp.ypp */,
 			);
 			name = Levelcomp;
@@ -2042,6 +2044,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ipad_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					TARGET_OS_MACOSX,
 					USE_GLES,
 					USE_CTOUCH,
 					USE_TILE,
