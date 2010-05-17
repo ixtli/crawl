@@ -324,6 +324,15 @@ extern "C" int crawl_main(int argc, char *argv[])
     return 0;
 }
 
+// If you don't want crawl to define a main() entry point for whatever reason,
+// add your preprocessor defines here
+#ifndef USE_CTOUCH
+int main(int argc, char *argv[])
+{
+	return (crawl_main(argc, argv));
+}
+#endif
+
 static void _show_commandline_options_help()
 {
     puts("Command line options:");
