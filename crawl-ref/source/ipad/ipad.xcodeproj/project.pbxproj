@@ -22,6 +22,7 @@
 		A323BB2B11A0FA5600AE8468 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BB2A11A0FA5600AE8468 /* libsqlite3.0.dylib */; };
 		A323BB4511A0FB1800AE8468 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BB4411A0FB1800AE8468 /* OpenGLES.framework */; };
 		A323BB4711A0FB1800AE8468 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BB4611A0FB1800AE8468 /* QuartzCore.framework */; };
+		A323BC8E11A1211D00AE8468 /* DCSSController.m in Sources */ = {isa = PBXBuildFile; fileRef = A323BC8D11A1211D00AE8468 /* DCSSController.m */; };
 		A3ACC2B0119FC46D000FE789 /* dat in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2AF119FC46D000FE789 /* dat */; };
 		A3ACC2B2119FC48A000FE789 /* docs in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B1119FC48A000FE789 /* docs */; };
 		A3ACC2B4119FC494000FE789 /* settings in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B3119FC494000FE789 /* settings */; };
@@ -373,6 +374,9 @@
 		A323BB4411A0FB1800AE8468 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A323BB4611A0FB1800AE8468 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A323BBCF11A1090A00AE8468 /* levcomp.tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = levcomp.tab.h; path = ../util/levcomp.tab.h; sourceTree = SOURCE_ROOT; };
+		A323BC8C11A1211D00AE8468 /* DCSSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSSController.h; sourceTree = "<group>"; };
+		A323BC8D11A1211D00AE8468 /* DCSSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSSController.m; sourceTree = "<group>"; };
+		A323BCC811A1320000AE8468 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		A3ACC2AF119FC46D000FE789 /* dat */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dat; path = ../dat; sourceTree = SOURCE_ROOT; };
 		A3ACC2B1119FC48A000FE789 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = docs; path = ../../docs; sourceTree = SOURCE_ROOT; };
 		A3ACC2B3119FC494000FE789 /* settings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = settings; path = ../../settings; sourceTree = SOURCE_ROOT; };
@@ -548,7 +552,6 @@
 		A3ACC372119FC5CD000FE789 /* religion-enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "religion-enum.h"; path = "../religion-enum.h"; sourceTree = SOURCE_ROOT; };
 		A3ACC373119FC5CD000FE789 /* religion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = religion.h; path = ../religion.h; sourceTree = SOURCE_ROOT; };
 		A3ACC374119FC5CD000FE789 /* rng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rng.h; path = ../rng.h; sourceTree = SOURCE_ROOT; };
-		A3ACC375119FC5CD000FE789 /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDLMain.h; path = ../SDLMain.h; sourceTree = SOURCE_ROOT; };
 		A3ACC376119FC5CD000FE789 /* sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha256.h; path = ../sha256.h; sourceTree = SOURCE_ROOT; };
 		A3ACC377119FC5CD000FE789 /* shopping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shopping.h; path = ../shopping.h; sourceTree = SOURCE_ROOT; };
 		A3ACC378119FC5CD000FE789 /* shout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shout.h; path = ../shout.h; sourceTree = SOURCE_ROOT; };
@@ -955,6 +958,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A323BC8C11A1211D00AE8468 /* DCSSController.h */,
+				A323BC8D11A1211D00AE8468 /* DCSSController.m */,
 				1D3623240D0F684500981E51 /* ipadAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ipadAppDelegate.m */,
 				28042007108E984D000629CD /* RootViewController.h */,
@@ -994,6 +999,7 @@
 				A3F1BDAB119EFA4B0017F016 /* Lua */,
 				A3ACC5A6119FC618000FE789 /* Shared */,
 				28A0AAE50D9B0CCF005BE974 /* ipad_Prefix.pch */,
+				A323BCC811A1320000AE8468 /* main.h */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -1201,7 +1207,6 @@
 				A3ACC372119FC5CD000FE789 /* religion-enum.h */,
 				A3ACC373119FC5CD000FE789 /* religion.h */,
 				A3ACC374119FC5CD000FE789 /* rng.h */,
-				A3ACC375119FC5CD000FE789 /* SDLMain.h */,
 				A3ACC376119FC5CD000FE789 /* sha256.h */,
 				A3ACC377119FC5CD000FE789 /* shopping.h */,
 				A3ACC378119FC5CD000FE789 /* shout.h */,
@@ -1983,6 +1988,7 @@
 				A3AD960C119FD223000E5C94 /* tiledef-main.cc in Sources */,
 				A3AD960D119FD223000E5C94 /* tiledef-player.cc in Sources */,
 				A3AD960E119FD223000E5C94 /* tiledef-unrand.cc in Sources */,
+				A323BC8E11A1211D00AE8468 /* DCSSController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
