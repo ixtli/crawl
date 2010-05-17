@@ -3,7 +3,7 @@
 #ifdef USE_TILE
 #ifdef USE_CTOUCH
 
-#include "windowmanager-sdl.h"
+#include "windowmanager-ctouch.h"
 
 #include "cio.h"
 #include "files.h"
@@ -43,12 +43,12 @@ int CTWrapper::init(coord_def *m_windowsz)
 
 int CTWrapper::screen_width() const
 {
-    return (video_info->current_w);
+    return (video_info.current_w);
 }
 
 int CTWrapper::screen_height() const
 {
-    return (video_info->current_h);
+    return (video_info.current_h);
 }
 
 void CTWrapper::set_window_title(const char *title)
@@ -68,7 +68,7 @@ void CTWrapper::resize(coord_def &m_windowsz)
 
 unsigned int CTWrapper::get_ticks() const
 {
-    return (0)
+    return (0);
 }
 
 key_mod CTWrapper::get_mod_state() const
