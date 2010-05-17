@@ -127,7 +127,6 @@
 		A3ACC517119FC5CD000FE789 /* l_you.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC427119FC5CD000FE789 /* l_you.cc */; };
 		A3ACC518119FC5CD000FE789 /* lev-pand.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC428119FC5CD000FE789 /* lev-pand.cc */; };
 		A3ACC51A119FC5CD000FE789 /* libgui.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42A119FC5CD000FE789 /* libgui.cc */; };
-		A3ACC51B119FC5CD000FE789 /* libunix.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42B119FC5CD000FE789 /* libunix.cc */; };
 		A3ACC51C119FC5CD000FE789 /* libutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42C119FC5CD000FE789 /* libutil.cc */; };
 		A3ACC51D119FC5CD000FE789 /* libw32c.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42D119FC5CD000FE789 /* libw32c.cc */; };
 		A3ACC51E119FC5CD000FE789 /* los_def.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC42E119FC5CD000FE789 /* los_def.cc */; };
@@ -469,7 +468,6 @@
 		A3ACC324119FC5CD000FE789 /* l_libs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = l_libs.h; path = ../l_libs.h; sourceTree = SOURCE_ROOT; };
 		A3ACC325119FC5CD000FE789 /* lev-pand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "lev-pand.h"; path = "../lev-pand.h"; sourceTree = SOURCE_ROOT; };
 		A3ACC327119FC5CD000FE789 /* libgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libgui.h; path = ../libgui.h; sourceTree = SOURCE_ROOT; };
-		A3ACC328119FC5CD000FE789 /* libunix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libunix.h; path = ../libunix.h; sourceTree = SOURCE_ROOT; };
 		A3ACC329119FC5CD000FE789 /* libutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libutil.h; path = ../libutil.h; sourceTree = SOURCE_ROOT; };
 		A3ACC32A119FC5CD000FE789 /* libw32c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libw32c.h; path = ../libw32c.h; sourceTree = SOURCE_ROOT; };
 		A3ACC32B119FC5CD000FE789 /* los_def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = los_def.h; path = ../los_def.h; sourceTree = SOURCE_ROOT; };
@@ -722,7 +720,6 @@
 		A3ACC427119FC5CD000FE789 /* l_you.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = l_you.cc; path = ../l_you.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC428119FC5CD000FE789 /* lev-pand.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "lev-pand.cc"; path = "../lev-pand.cc"; sourceTree = SOURCE_ROOT; };
 		A3ACC42A119FC5CD000FE789 /* libgui.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libgui.cc; path = ../libgui.cc; sourceTree = SOURCE_ROOT; };
-		A3ACC42B119FC5CD000FE789 /* libunix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libunix.cc; path = ../libunix.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC42C119FC5CD000FE789 /* libutil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libutil.cc; path = ../libutil.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC42D119FC5CD000FE789 /* libw32c.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libw32c.cc; path = ../libw32c.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC42E119FC5CD000FE789 /* los_def.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = los_def.cc; path = ../los_def.cc; sourceTree = SOURCE_ROOT; };
@@ -1121,7 +1118,6 @@
 				A3ACC324119FC5CD000FE789 /* l_libs.h */,
 				A3ACC325119FC5CD000FE789 /* lev-pand.h */,
 				A3ACC327119FC5CD000FE789 /* libgui.h */,
-				A3ACC328119FC5CD000FE789 /* libunix.h */,
 				A3ACC329119FC5CD000FE789 /* libutil.h */,
 				A3ACC32A119FC5CD000FE789 /* libw32c.h */,
 				A3ACC32B119FC5CD000FE789 /* los_def.h */,
@@ -1373,7 +1369,6 @@
 				A3ACC427119FC5CD000FE789 /* l_you.cc */,
 				A3ACC428119FC5CD000FE789 /* lev-pand.cc */,
 				A3ACC42A119FC5CD000FE789 /* libgui.cc */,
-				A3ACC42B119FC5CD000FE789 /* libunix.cc */,
 				A3ACC42C119FC5CD000FE789 /* libutil.cc */,
 				A3ACC42D119FC5CD000FE789 /* libw32c.cc */,
 				A3ACC42E119FC5CD000FE789 /* los_def.cc */,
@@ -1844,7 +1839,6 @@
 				A3ACC517119FC5CD000FE789 /* l_you.cc in Sources */,
 				A3ACC518119FC5CD000FE789 /* lev-pand.cc in Sources */,
 				A3ACC51A119FC5CD000FE789 /* libgui.cc in Sources */,
-				A3ACC51B119FC5CD000FE789 /* libunix.cc in Sources */,
 				A3ACC51C119FC5CD000FE789 /* libutil.cc in Sources */,
 				A3ACC51D119FC5CD000FE789 /* libw32c.cc in Sources */,
 				A3ACC51E119FC5CD000FE789 /* los_def.cc in Sources */,
