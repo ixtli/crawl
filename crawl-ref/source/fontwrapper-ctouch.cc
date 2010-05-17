@@ -1,15 +1,12 @@
 #include "AppHdr.h"
 
 #ifdef USE_TILE
-#ifdef USE_FT
-
-#include <ft2build.h>
-#include FT_FREETYPE_H
+#ifdef USE_CTOUCH
 
 #include "defines.h"
 #include "files.h"
 #include "format.h"
-#include "fontwrapper-ft.h"
+#include "fontwrapper-ctouch.h"
 #include "glwrapper.h"
 #include "tilebuf.h"
 #include "tilefont.h"
@@ -32,7 +29,7 @@ CTFontWrapper::~CTFontWrapper()
 bool CTFontWrapper::load_font(const char *font_name, unsigned int font_size,
                               bool outl)
 {
-    return (success);
+    return (true);
 }
 
 void CTFontWrapper::render_textblock(unsigned int x_pos, unsigned int y_pos,
@@ -41,7 +38,7 @@ void CTFontWrapper::render_textblock(unsigned int x_pos, unsigned int y_pos,
                                      unsigned int width, unsigned int height,
                                      bool drop_shadow)
 {
-    if (!chars || !colours || !width || !height || !m_glyphs)
+    if (!chars || !colours || !width || !height)
         return;
 
     GLState state;
@@ -175,6 +172,10 @@ void CTFontWrapper::render_string(unsigned int px, unsigned int py,
     }
 
     // Create the text block
+    unsigned char *chars = (unsigned char *)malloc(max_rows * max_cols);
+    unsigned char *colours = (unsigned char *)malloc(max_rows * max_cols);
+    memset(chars, ' ', max_rows * max_cols);
+    memset(colours, font_colour, max_rows * max_cols);
 
     // Fill the text block
 
@@ -229,19 +230,7 @@ void CTFontWrapper::store(FontBuffer &buf, float &x, float &y,
                           const std::string &str, const VColour &col,
                           float orig_x)
 {
-    for (unsigned int i = 0; i < str.size(); i++)
-    {
-        char c = str[i];
-        if (c == '\n')
-        {
-            x = orig_x;
-            y += m_max_advance.y;
-        }
-        else
-        {
-            store(buf, x, y, c, col);
-        }
-    }
+    // TODO: Redo without knowing max_advance
 }
 
 void CTFontWrapper::store(FontBuffer &buf, float &x, float &y,
@@ -274,40 +263,17 @@ void CTFontWrapper::store(FontBuffer &buf, float &x, float &y,
 void CTFontWrapper::store(FontBuffer &buf, float &x, float &y,
                           unsigned char c, const VColour &col)
 {
-    if (!m_glyphs[c].renderable)
-    {
-        x += m_glyphs[c].advance;
-        return;
-    }
-
-    int this_width = m_glyphs[c].width;
-
-    float pos_sx = x + m_glyphs[c].offset;
-    float pos_sy = y;
-    float pos_ex = pos_sx + this_width;
-    float pos_ey = y + m_max_advance.y;
-
-    float tex_sx = (float)(c % 16) / 16.0f;
-    float tex_sy = (float)(c / 16) / 16.0f;
-    float tex_ex = tex_sx + (float)this_width / (float)m_tex.width();
-    float tex_ey = tex_sy + (float)m_max_advance.y / (float)m_tex.height();
-
-    GLWPrim rect(pos_sx, pos_sy, pos_ex, pos_ey);
-    rect.set_tex(tex_sx, tex_sy, tex_ex, tex_ey);
-    rect.set_col(col);
-    buf.add_primitive(rect);
-
-    x += m_glyphs[c].advance;
+    // TODO: Redo without knowing about glyphs
 }
 
 unsigned int CTFontWrapper::char_width() const
 {
-    return (m_max_advance.x);
+    return (12);
 }
 
 unsigned int CTFontWrapper::char_height() const
 {
-    return (m_max_advance.y);
+    return (12);
 }
 
 const GenericTexture *CTFontWrapper::font_tex() const

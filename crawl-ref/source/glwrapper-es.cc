@@ -1,7 +1,7 @@
 #include "AppHdr.h"
 
 #ifdef USE_TILE
-#ifdef USE_GL
+#ifdef USE_GLES
 
 #include "glwrapper-es.h"
 
@@ -44,170 +44,51 @@ GLShapeBuffer *GLShapeBuffer::create(bool texture, bool colour,
 
 GLESStateManager::GLESStateManager()
 {
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glClearColor(0.0, 0.0, 0.0, 1.0f);
-    glDepthFunc(GL_LEQUAL);
 }
 
 void GLESStateManager::set(const GLState& state)
 {
-    if (state.array_vertex != m_current_state.array_vertex)
-    {
-        if (state.array_vertex)
-            glEnableClientState(GL_VERTEX_ARRAY);
-        else
-            glDisableClientState(GL_VERTEX_ARRAY);
-    }
-
-    if (state.array_texcoord != m_current_state.array_texcoord)
-    {
-        if (state.array_texcoord)
-            glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-        else
-            glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-    }
-
-    if (state.array_colour != m_current_state.array_colour)
-    {
-        if (state.array_colour)
-        {
-            glEnableClientState(GL_COLOR_ARRAY);
-        }
-        else
-        {
-            glDisableClientState(GL_COLOR_ARRAY);
-
-            // [enne] This should *not* be necessary, but the Linux OpenGL
-            // driver that I'm using sets this to the last colour of the
-            // colour array.  So, we need to unset it here.
-            glColor3f(1.0f, 1.0f, 1.0f);
-        }
-    }
-
-    if (state.texture != m_current_state.texture)
-    {
-        if (state.texture)
-            glEnable(GL_TEXTURE_2D);
-        else
-            glDisable(GL_TEXTURE_2D);
-    }
-
-    if (state.blend != m_current_state.blend)
-    {
-        if (state.blend)
-            glEnable(GL_BLEND);
-        else
-            glDisable(GL_BLEND);
-    }
-
-    if (state.depthtest != m_current_state.depthtest)
-    {
-        if (state.depthtest)
-            glEnable(GL_DEPTH_TEST);
-        else
-            glDisable(GL_DEPTH_TEST);
-    }
-
-    if (state.alphatest != m_current_state.alphatest
-        || state.alpharef != m_current_state.alpharef)
-    {
-        if (state.alphatest)
-        {
-            glEnable(GL_ALPHA_TEST);
-            glAlphaFunc(GL_NOTEQUAL, state.alpharef);
-        }
-        else
-            glDisable(GL_ALPHA_TEST);
-    }
-
-    if (state.colour != m_current_state.colour)
-    {
-        glColor4f(state.colour.r, state.colour.g,
-                  state.colour.b, state.colour.a);
-    }
-
     m_current_state = state;
 }
 
 void GLESStateManager::set_transform(const GLW_3VF &trans, const GLW_3VF &scale)
 {
-    glLoadIdentity();
-    glTranslatef(trans.x, trans.y, trans.z);
-    glScalef(scale.x, scale.y, scale.z);
 }
 
 void GLESStateManager::reset_view_for_resize(const coord_def &m_windowsz)
 {
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-
-    // For ease, vertex positions are pixel positions.
-    glOrtho(0, m_windowsz.x, m_windowsz.y, 0, -1000, 1000);
 }
 
 void GLESStateManager::reset_transform()
 {
-    glLoadIdentity();
-    glTranslatef(0,0,0);
-    glScalef(1,1,1);
 }
 
 void GLESStateManager::pixelstore_unpack_alignment(unsigned int bpp)
 {
-    glPixelStorei(GL_UNPACK_ALIGNMENT, bpp);
 }
 
 void GLESStateManager::delete_textures(size_t count, unsigned int *textures)
 {
-    glDeleteTextures(count, (GLuint*)textures);
 }
 
 void GLESStateManager::generate_textures(size_t count, unsigned int *textures)
 {
-    glGenTextures(count, (GLuint*)textures);
 }
 
 void GLESStateManager::bind_texture(unsigned int texture)
 {
-    glBindTexture(GL_TEXTURE_2D, texture);
 }
 
 void GLESStateManager::load_texture(unsigned char *pixels, unsigned int width,
                                    unsigned int height, MipMapOptions mip_opt)
 {
     // Assumptions...
-    const unsigned int bpp = 4;
-    const GLenum texture_format = GL_RGBA;
-    const GLenum format = GL_UNSIGNED_BYTE;
+    // const unsigned int bpp = 4;
     // Also assume that the texture is already bound using bind_texture
-
-    glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
-
-    if (mip_opt == MIPMAP_CREATE)
-    {
-        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
-                        GL_LINEAR_MIPMAP_NEAREST);
-        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        gluBuild2DMipmaps(GL_TEXTURE_2D, bpp, width, height,
-                          texture_format, format, pixels);
-    }
-    else
-    {
-        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-        glTexImage2D(GL_TEXTURE_2D, 0, bpp, width, height, 0,
-                     texture_format, format, pixels);
-    }
 }
 
 void GLESStateManager::reset_view_for_redraw(float x, float y)
 {
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    glTranslatef(x, y , 1.0f);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -344,35 +225,7 @@ void GLESShapeBuffer::draw(const GLState &state, const GLW_3VF *pt, const GLW_3V
 #endif
 void GLESShapeBuffer::draw(const GLState &state)
 {
-    if (m_position_buffer.size() == 0)
-        return;
-
-    if (!state.array_vertex)
-        return;
-
-    glmanager->set(state);
-
-    glVertexPointer(3, GL_FLOAT, 0, &m_position_buffer[0]);
-
-    if (state.array_texcoord && m_texture_verts)
-        glTexCoordPointer(2, GL_FLOAT, 0, &m_texture_buffer[0]);
-
-    if (state.array_colour && m_colour_verts)
-        glColorPointer(4, GL_UNSIGNED_BYTE, 0, &m_colour_buffer[0]);
-
-    switch (m_prim_type)
-    {
-    case GLW_RECTANGLE:
-        glDrawElements(GL_TRIANGLE_STRIP, m_ind_buffer.size(),
-                       GL_UNSIGNED_SHORT, &m_ind_buffer[0]);
-        break;
-    case GLW_LINES:
-        glDrawArrays(GL_LINES, 0, m_position_buffer.size());
-        break;
-    default:
-        ASSERT(!"Invalid primitive type");
-        break;
-    }
+    
 }
 
 void GLESShapeBuffer::clear()

@@ -20,6 +20,8 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		A323BB1611A0F69500AE8468 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F1BD9A119EF5DD0017F016 /* liblua.a */; };
 		A323BB2B11A0FA5600AE8468 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BB2A11A0FA5600AE8468 /* libsqlite3.0.dylib */; };
+		A323BB4511A0FB1800AE8468 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BB4411A0FB1800AE8468 /* OpenGLES.framework */; };
+		A323BB4711A0FB1800AE8468 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BB4611A0FB1800AE8468 /* QuartzCore.framework */; };
 		A3ACC2B0119FC46D000FE789 /* dat in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2AF119FC46D000FE789 /* dat */; };
 		A3ACC2B2119FC48A000FE789 /* docs in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B1119FC48A000FE789 /* docs */; };
 		A3ACC2B4119FC494000FE789 /* settings in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B3119FC494000FE789 /* settings */; };
@@ -353,7 +355,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* ipadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ipadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* ipadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ipadAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* Dungeon Crawl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Crawl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28042007108E984D000629CD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		28042008108E984D000629CD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
@@ -368,6 +370,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ipad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ipad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		A323BB2A11A0FA5600AE8468 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		A323BB4411A0FB1800AE8468 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		A323BB4611A0FB1800AE8468 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3ACC2AF119FC46D000FE789 /* dat */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dat; path = ../dat; sourceTree = SOURCE_ROOT; };
 		A3ACC2B1119FC48A000FE789 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = docs; path = ../../docs; sourceTree = SOURCE_ROOT; };
 		A3ACC2B3119FC494000FE789 /* settings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = settings; path = ../../settings; sourceTree = SOURCE_ROOT; };
@@ -932,6 +936,8 @@
 				280420C1108EA07E000629CD /* CoreData.framework in Frameworks */,
 				A323BB1611A0F69500AE8468 /* liblua.a in Frameworks */,
 				A323BB2B11A0FA5600AE8468 /* libsqlite3.0.dylib in Frameworks */,
+				A323BB4511A0FB1800AE8468 /* OpenGLES.framework in Frameworks */,
+				A323BB4711A0FB1800AE8468 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -961,7 +967,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* ipad.app */,
+				1D6058910D05DD3D006BFB54 /* Dungeon Crawl.app */,
 				A3F1BD9A119EF5DD0017F016 /* liblua.a */,
 			);
 			name = Products;
@@ -1018,6 +1024,8 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 				280420C0108EA07E000629CD /* CoreData.framework */,
 				A323BB2A11A0FA5600AE8468 /* libsqlite3.0.dylib */,
+				A323BB4411A0FB1800AE8468 /* OpenGLES.framework */,
+				A323BB4611A0FB1800AE8468 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1646,7 +1654,7 @@
 			);
 			name = ipad;
 			productName = ipad;
-			productReference = 1D6058910D05DD3D006BFB54 /* ipad.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* Dungeon Crawl.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A3F1BD99119EF5DD0017F016 /* Lua */ = {
@@ -2043,7 +2051,7 @@
 					DEBUG,
 				);
 				INFOPLIST_FILE = "ipad-Info.plist";
-				PRODUCT_NAME = ipad;
+				PRODUCT_NAME = "Dungeon Crawl";
 			};
 			name = Debug;
 		};
