@@ -213,7 +213,7 @@ static void _compile_time_asserts();
 #include <SDL_main.h>
 #endif
 
-int main(int argc, char *argv[])
+int crawl_main(int argc, char *argv[])
 {
     _compile_time_asserts();  // Just to quiet "unused static function" warning.
 
