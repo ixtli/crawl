@@ -260,8 +260,6 @@
 		A3ACC59F119FC5CD000FE789 /* xom.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4AF119FC5CD000FE789 /* xom.cc */; };
 		A3ACC5A4119FC603000FE789 /* levcomp.lpp in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC5A2119FC603000FE789 /* levcomp.lpp */; };
 		A3ACC5A5119FC603000FE789 /* levcomp.ypp in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC5A3119FC603000FE789 /* levcomp.ypp */; };
-		A3ACC5B6119FC81D000FE789 /* levcomp.lex.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC5B3119FC81D000FE789 /* levcomp.lex.cc */; };
-		A3ACC5B7119FC81D000FE789 /* levcomp.tab.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC5B4119FC81D000FE789 /* levcomp.tab.cc */; };
 		A3AD960A119FD223000E5C94 /* tiledef-dngn.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3AD9605119FD223000E5C94 /* tiledef-dngn.cc */; };
 		A3AD960B119FD223000E5C94 /* tiledef-gui.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3AD9606119FD223000E5C94 /* tiledef-gui.cc */; };
 		A3AD960C119FD223000E5C94 /* tiledef-main.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3AD9607119FD223000E5C94 /* tiledef-main.cc */; };
@@ -853,9 +851,6 @@
 		A3ACC4AF119FC5CD000FE789 /* xom.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = xom.cc; path = ../xom.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC5A2119FC603000FE789 /* levcomp.lpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; name = levcomp.lpp; path = ../util/levcomp.lpp; sourceTree = SOURCE_ROOT; };
 		A3ACC5A3119FC603000FE789 /* levcomp.ypp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = levcomp.ypp; path = ../util/levcomp.ypp; sourceTree = SOURCE_ROOT; };
-		A3ACC5B3119FC81D000FE789 /* levcomp.lex.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = levcomp.lex.cc; path = ../util/levcomp.lex.cc; sourceTree = SOURCE_ROOT; };
-		A3ACC5B4119FC81D000FE789 /* levcomp.tab.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = levcomp.tab.cc; path = ../util/levcomp.tab.cc; sourceTree = SOURCE_ROOT; };
-		A3ACC5B5119FC81D000FE789 /* levcomp.tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = levcomp.tab.h; path = ../util/levcomp.tab.h; sourceTree = SOURCE_ROOT; };
 		A3AD95FD119FD1E8000E5C94 /* tiledef_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiledef_defines.h; path = ../rltiles/tiledef_defines.h; sourceTree = SOURCE_ROOT; };
 		A3AD9600119FD208000E5C94 /* tiledef-dngn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tiledef-dngn.h"; path = "../rltiles/tiledef-dngn.h"; sourceTree = SOURCE_ROOT; };
 		A3AD9601119FD208000E5C94 /* tiledef-gui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tiledef-gui.h"; path = "../rltiles/tiledef-gui.h"; sourceTree = SOURCE_ROOT; };
@@ -1506,9 +1501,6 @@
 		A3ACC5A0119FC5DA000FE789 /* Levelcomp */ = {
 			isa = PBXGroup;
 			children = (
-				A3ACC5B3119FC81D000FE789 /* levcomp.lex.cc */,
-				A3ACC5B4119FC81D000FE789 /* levcomp.tab.cc */,
-				A3ACC5B5119FC81D000FE789 /* levcomp.tab.h */,
 				A3ACC5A2119FC603000FE789 /* levcomp.lpp */,
 				A3ACC5A3119FC603000FE789 /* levcomp.ypp */,
 			);
@@ -1972,8 +1964,6 @@
 				A3ACC59F119FC5CD000FE789 /* xom.cc in Sources */,
 				A3ACC5A4119FC603000FE789 /* levcomp.lpp in Sources */,
 				A3ACC5A5119FC603000FE789 /* levcomp.ypp in Sources */,
-				A3ACC5B6119FC81D000FE789 /* levcomp.lex.cc in Sources */,
-				A3ACC5B7119FC81D000FE789 /* levcomp.tab.cc in Sources */,
 				A3AD960A119FD223000E5C94 /* tiledef-dngn.cc in Sources */,
 				A3AD960B119FD223000E5C94 /* tiledef-gui.cc in Sources */,
 				A3AD960C119FD223000E5C94 /* tiledef-main.cc in Sources */,
