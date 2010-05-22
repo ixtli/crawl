@@ -27,9 +27,10 @@
 - (IBAction)insertNewObject:(id)sender {
 	
 	// [rootViewController insertNewObject:sender];
-	
-	self.dcss = [[DCSSController alloc] init];
-	[dcss launchGameThread];
+	dcss = [[DCSSController alloc] init];
+	[self.view addSubview: [[dcss view] view]];
+	[[dcss view] startAnimating];
+	//[dcss launchGameThread];
 }
 
 

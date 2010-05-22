@@ -66,6 +66,13 @@ enum {
 	
 	// ... work ...
 	
+
+	[EAGLContext setCurrentContext:context];
+	glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
+	glViewport(0, 0, backingWidth, backingHeight);
+
+	glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
 	
 	// Use precompiled shader program
 	glUseProgram(program);

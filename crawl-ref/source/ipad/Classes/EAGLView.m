@@ -76,8 +76,8 @@
 
 - (void)layoutSubviews
 {
-	[renderer setDcss:dcss];
-	[renderer resizeFromLayer:self.layer];
+	renderer.dcss = dcss;
+	[renderer resizeFromLayer:(CAEAGLLayer *)self.layer];
 	[self drawView:nil];
 }
 

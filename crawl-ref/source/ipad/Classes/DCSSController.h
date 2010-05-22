@@ -6,14 +6,24 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
+@class EAGLView;
+@class DCSSViewController;
 
 @interface DCSSController : NSObject {
-
+@private
+	// Control our window
+	DCSSViewController *view;
+	NSThread *gameThread;
 }
 
+@property (readonly, nonatomic, retain) NSThread *gameThread;
+@property (nonatomic, retain) DCSSViewController *view;
+
 - (int)launchGameThread;
-- (int)startGame;
+
+- (void)halt;
+- (void)applicationHasLowMemory;
 
 @end

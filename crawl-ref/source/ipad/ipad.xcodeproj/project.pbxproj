@@ -25,6 +25,7 @@
 		A323BC8E11A1211D00AE8468 /* DCSSController.m in Sources */ = {isa = PBXBuildFile; fileRef = A323BC8D11A1211D00AE8468 /* DCSSController.m */; };
 		A323BCEB11A13B9700AE8468 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = A323BCEA11A13B9700AE8468 /* EAGLView.m */; };
 		A3AB6DEA11A155360059E8D0 /* ES2Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AB6DE911A155360059E8D0 /* ES2Renderer.m */; };
+		A3AB6E3111A16A5F0059E8D0 /* GameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3AB6E3011A16A5F0059E8D0 /* GameView.xib */; };
 		A3ACC2B0119FC46D000FE789 /* dat in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2AF119FC46D000FE789 /* dat */; };
 		A3ACC2B2119FC48A000FE789 /* docs in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B1119FC48A000FE789 /* docs */; };
 		A3ACC2B4119FC494000FE789 /* settings in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B3119FC494000FE789 /* settings */; };
@@ -325,6 +326,7 @@
 		A3F1BEC7119EFAD70017F016 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = A3F1BE90119EFAD70017F016 /* lvm.c */; };
 		A3F1BEC8119EFAD70017F016 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = A3F1BE91119EFAD70017F016 /* lzio.c */; };
 		A3F1BEC9119EFAD70017F016 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = A3F1BE92119EFAD70017F016 /* print.c */; };
+		A3FE35A511A41D360018AA69 /* DCSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE35A411A41D360018AA69 /* DCSSViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,6 +386,7 @@
 		A323BCF211A13BBE00AE8468 /* ESRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESRenderer.h; sourceTree = "<group>"; };
 		A3AB6DE811A155360059E8D0 /* ES2Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ES2Renderer.h; sourceTree = "<group>"; };
 		A3AB6DE911A155360059E8D0 /* ES2Renderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ES2Renderer.m; sourceTree = "<group>"; };
+		A3AB6E3011A16A5F0059E8D0 /* GameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameView.xib; sourceTree = "<group>"; };
 		A3ACC2AF119FC46D000FE789 /* dat */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dat; path = ../dat; sourceTree = SOURCE_ROOT; };
 		A3ACC2B1119FC48A000FE789 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = docs; path = ../../docs; sourceTree = SOURCE_ROOT; };
 		A3ACC2B3119FC494000FE789 /* settings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = settings; path = ../../settings; sourceTree = SOURCE_ROOT; };
@@ -934,6 +937,8 @@
 		A3F1BE90119EFAD70017F016 /* lvm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lvm.c; path = ../contrib/lua/src/lvm.c; sourceTree = SOURCE_ROOT; };
 		A3F1BE91119EFAD70017F016 /* lzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lzio.c; path = ../contrib/lua/src/lzio.c; sourceTree = SOURCE_ROOT; };
 		A3F1BE92119EFAD70017F016 /* print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = print.c; path = ../contrib/lua/src/print.c; sourceTree = SOURCE_ROOT; };
+		A3FE35A311A41D360018AA69 /* DCSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSSViewController.h; sourceTree = "<group>"; };
+		A3FE35A411A41D360018AA69 /* DCSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSSViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -965,9 +970,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A323BCF211A13BBE00AE8468 /* ESRenderer.h */,
-				A323BC8C11A1211D00AE8468 /* DCSSController.h */,
-				A323BC8D11A1211D00AE8468 /* DCSSController.m */,
 				1D3623240D0F684500981E51 /* ipadAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ipadAppDelegate.m */,
 				28042007108E984D000629CD /* RootViewController.h */,
@@ -976,8 +978,13 @@
 				2804200A108E984D000629CD /* DetailViewController.m */,
 				A323BCE911A13B9700AE8468 /* EAGLView.h */,
 				A323BCEA11A13B9700AE8468 /* EAGLView.m */,
+				A323BCF211A13BBE00AE8468 /* ESRenderer.h */,
 				A3AB6DE811A155360059E8D0 /* ES2Renderer.h */,
 				A3AB6DE911A155360059E8D0 /* ES2Renderer.m */,
+				A3FE35A311A41D360018AA69 /* DCSSViewController.h */,
+				A3FE35A411A41D360018AA69 /* DCSSViewController.m */,
+				A323BC8C11A1211D00AE8468 /* DCSSController.h */,
+				A323BC8D11A1211D00AE8468 /* DCSSController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1030,6 +1037,7 @@
 				A3ACC2AF119FC46D000FE789 /* dat */,
 				2819300D112F7FA900ECF9B4 /* ipad.xcdatamodeld */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				A3AB6E3011A16A5F0059E8D0 /* GameView.xib */,
 				2804203B108E9BAB000629CD /* DetailView.xib */,
 				8D1107310486CEB800E47090 /* ipad-Info.plist */,
 			);
@@ -1736,6 +1744,7 @@
 				A3ACC2B0119FC46D000FE789 /* dat in Resources */,
 				A3ACC2B2119FC48A000FE789 /* docs in Resources */,
 				A3ACC2B4119FC494000FE789 /* settings in Resources */,
+				A3AB6E3111A16A5F0059E8D0 /* GameView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2011,6 +2020,7 @@
 				A323BC8E11A1211D00AE8468 /* DCSSController.m in Sources */,
 				A323BCEB11A13B9700AE8468 /* EAGLView.m in Sources */,
 				A3AB6DEA11A155360059E8D0 /* ES2Renderer.m in Sources */,
+				A3FE35A511A41D360018AA69 /* DCSSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

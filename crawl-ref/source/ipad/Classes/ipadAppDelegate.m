@@ -62,6 +62,10 @@
     }
 }
 
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+	
+}
 
 #pragma mark -
 #pragma mark Core Data stack
@@ -162,8 +166,8 @@
 - (void)dealloc {
 
 	[managedObjectContext release];
-    [managedObjectModel release];
-    [persistentStoreCoordinator release];
+	[managedObjectModel release];
+	[persistentStoreCoordinator release];
     
 	[splitViewController release];
 	[rootViewController release];

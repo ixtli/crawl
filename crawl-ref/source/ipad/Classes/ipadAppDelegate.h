@@ -14,7 +14,7 @@
 @class DetailViewController;
 
 @interface ipadAppDelegate : NSObject <UIApplicationDelegate> {
-    
+
 	NSManagedObjectModel *managedObjectModel;
 	NSManagedObjectContext *managedObjectContext;	    
 	NSPersistentStoreCoordinator *persistentStoreCoordinator;
