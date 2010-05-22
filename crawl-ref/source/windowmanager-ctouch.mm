@@ -1,15 +1,17 @@
 #include "AppHdr.h"
 
+#include "cio.h"
+#include "files.h"
+#include "options.h"
+
 #ifdef USE_TILE
+
+#include "glwrapper.h"
+#include "windowmanager.h"
+
 #ifdef USE_CTOUCH
 
 #include "windowmanager-ctouch.h"
-
-#include "cio.h"
-#include "files.h"
-#include "glwrapper.h"
-#include "options.h"
-#include "windowmanager.h"
 
 WindowManager *wm = NULL;
 
@@ -29,26 +31,30 @@ void WindowManager::shutdown()
 
 CTWrapper::CTWrapper()
 {
+    // Set the currently active DCSSController as ours.
+    controller = [DCSSController currentlyActiveController];
+    [controller retain];
 }
 
 CTWrapper::~CTWrapper()
 {
-    // SDL_Quit();
+    [controller crawlShutdown];
+    [controller release];
 }
 
 int CTWrapper::init(coord_def *m_windowsz)
 {
-    return (true);
+    return ([controller crawlStartup]);
 }
 
 int CTWrapper::screen_width() const
 {
-    return (video_info.current_w);
+    return ([controller vinfo].current_w);
 }
 
 int CTWrapper::screen_height() const
 {
-    return (video_info.current_h);
+    return ([controller vinfo].current_h);
 }
 
 void CTWrapper::set_window_title(const char *title)

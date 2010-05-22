@@ -19,12 +19,12 @@
 
 - (void)startAnimating
 {
-	[self.view startAnimation];
+	[(EAGLView *)self.view startAnimation];
 }
 
 - (void)stopAnimating
 {
-	[self.view stopAnimation];
+	[(EAGLView *)self.view stopAnimation];
 }
 
 #pragma mark -

@@ -11,14 +11,21 @@
 
 #include "main.h"
 
+// Currently active DCSS controller
+DCSSController *current = nil;
+
 @interface DCSSController (PrivateMethods)
 - (void)startGame;
 @end
 
-
 @implementation DCSSController
 
 @synthesize view, gameThread;
+
++ (DCSSController *)currentlyActiveController
+{
+	return current;
+}
 
 - (id)init
 {
@@ -78,6 +85,30 @@
 {
 	// Handle low memory environment somehow
 	// TODO: Make this clean up stashes or something
+}
+
+#pragma mark -
+#pragma mark Crawl main thread interface
+
+- (int)crawlStartup
+{
+	NSLog(@"CTWrapper initializing.");
+	
+	// Populate the vinfo struct
+	vinfo.current_w = 768;
+	vinfo.current_h = 1024;
+	
+	return 0;
+}
+
+- (void)crawlShutown
+{
+	NSLog(@"CTWrapper destructor called.");
+}
+
+- (const video_info *)videoInfo
+{
+	return &vinfo;
 }
 
 #pragma mark -

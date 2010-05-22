@@ -26,6 +26,7 @@
 		A323BCEB11A13B9700AE8468 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = A323BCEA11A13B9700AE8468 /* EAGLView.m */; };
 		A34E1A1D11A80EBF00D7D53A /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A34E1A0611A80E1B00D7D53A /* Shader.fsh */; };
 		A34E1A1E11A80EBF00D7D53A /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A34E1A0811A80E4300D7D53A /* Shader.vsh */; };
+		A34E1B0211A8551300D7D53A /* windowmanager-ctouch.mm in Sources */ = {isa = PBXBuildFile; fileRef = A34E1B0111A8551300D7D53A /* windowmanager-ctouch.mm */; };
 		A3AB6DEA11A155360059E8D0 /* ES2Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AB6DE911A155360059E8D0 /* ES2Renderer.m */; };
 		A3AB6E3111A16A5F0059E8D0 /* DCSSView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3AB6E3011A16A5F0059E8D0 /* DCSSView.xib */; };
 		A3ACC2B0119FC46D000FE789 /* dat in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2AF119FC46D000FE789 /* dat */; };
@@ -261,7 +262,6 @@
 		A3ACC595119FC5CD000FE789 /* viewchar.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A5119FC5CD000FE789 /* viewchar.cc */; };
 		A3ACC596119FC5CD000FE789 /* viewgeom.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A6119FC5CD000FE789 /* viewgeom.cc */; };
 		A3ACC597119FC5CD000FE789 /* viewmap.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A7119FC5CD000FE789 /* viewmap.cc */; };
-		A3ACC598119FC5CD000FE789 /* windowmanager-ctouch.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4A8119FC5CD000FE789 /* windowmanager-ctouch.cc */; };
 		A3ACC59A119FC5CD000FE789 /* wiz-dgn.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4AA119FC5CD000FE789 /* wiz-dgn.cc */; };
 		A3ACC59B119FC5CD000FE789 /* wiz-fsim.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4AB119FC5CD000FE789 /* wiz-fsim.cc */; };
 		A3ACC59C119FC5CD000FE789 /* wiz-item.cc in Sources */ = {isa = PBXBuildFile; fileRef = A3ACC4AC119FC5CD000FE789 /* wiz-item.cc */; };
@@ -388,6 +388,7 @@
 		A323BCF211A13BBE00AE8468 /* ESRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESRenderer.h; sourceTree = "<group>"; };
 		A34E1A0611A80E1B00D7D53A /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
 		A34E1A0811A80E4300D7D53A /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		A34E1B0111A8551300D7D53A /* windowmanager-ctouch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "windowmanager-ctouch.mm"; path = "../windowmanager-ctouch.mm"; sourceTree = SOURCE_ROOT; };
 		A3AB6DE811A155360059E8D0 /* ES2Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ES2Renderer.h; sourceTree = "<group>"; };
 		A3AB6DE911A155360059E8D0 /* ES2Renderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ES2Renderer.m; sourceTree = "<group>"; };
 		A3AB6E3011A16A5F0059E8D0 /* DCSSView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCSSView.xib; sourceTree = "<group>"; };
@@ -865,7 +866,6 @@
 		A3ACC4A5119FC5CD000FE789 /* viewchar.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = viewchar.cc; path = ../viewchar.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC4A6119FC5CD000FE789 /* viewgeom.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = viewgeom.cc; path = ../viewgeom.cc; sourceTree = SOURCE_ROOT; };
 		A3ACC4A7119FC5CD000FE789 /* viewmap.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = viewmap.cc; path = ../viewmap.cc; sourceTree = SOURCE_ROOT; };
-		A3ACC4A8119FC5CD000FE789 /* windowmanager-ctouch.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "windowmanager-ctouch.cc"; path = "../windowmanager-ctouch.cc"; sourceTree = SOURCE_ROOT; };
 		A3ACC4AA119FC5CD000FE789 /* wiz-dgn.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "wiz-dgn.cc"; path = "../wiz-dgn.cc"; sourceTree = SOURCE_ROOT; };
 		A3ACC4AB119FC5CD000FE789 /* wiz-fsim.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "wiz-fsim.cc"; path = "../wiz-fsim.cc"; sourceTree = SOURCE_ROOT; };
 		A3ACC4AC119FC5CD000FE789 /* wiz-item.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "wiz-item.cc"; path = "../wiz-item.cc"; sourceTree = SOURCE_ROOT; };
@@ -1074,6 +1074,7 @@
 		A3ACC2C8119FC5B1000FE789 /* Crawl */ = {
 			isa = PBXGroup;
 			children = (
+				A34E1B0111A8551300D7D53A /* windowmanager-ctouch.mm */,
 				A3ACC2C9119FC5CD000FE789 /* abl-show.h */,
 				A3ACC2CA119FC5CD000FE789 /* abyss.h */,
 				A3ACC2CB119FC5CD000FE789 /* act-iter.h */,
@@ -1539,7 +1540,6 @@
 				A3ACC4A5119FC5CD000FE789 /* viewchar.cc */,
 				A3ACC4A6119FC5CD000FE789 /* viewgeom.cc */,
 				A3ACC4A7119FC5CD000FE789 /* viewmap.cc */,
-				A3ACC4A8119FC5CD000FE789 /* windowmanager-ctouch.cc */,
 				A3ACC4AA119FC5CD000FE789 /* wiz-dgn.cc */,
 				A3ACC4AB119FC5CD000FE789 /* wiz-fsim.cc */,
 				A3ACC4AC119FC5CD000FE789 /* wiz-item.cc */,
@@ -2011,7 +2011,6 @@
 				A3ACC595119FC5CD000FE789 /* viewchar.cc in Sources */,
 				A3ACC596119FC5CD000FE789 /* viewgeom.cc in Sources */,
 				A3ACC597119FC5CD000FE789 /* viewmap.cc in Sources */,
-				A3ACC598119FC5CD000FE789 /* windowmanager-ctouch.cc in Sources */,
 				A3ACC59A119FC5CD000FE789 /* wiz-dgn.cc in Sources */,
 				A3ACC59B119FC5CD000FE789 /* wiz-fsim.cc in Sources */,
 				A3ACC59C119FC5CD000FE789 /* wiz-item.cc in Sources */,
@@ -2029,6 +2028,7 @@
 				A323BCEB11A13B9700AE8468 /* EAGLView.m in Sources */,
 				A3AB6DEA11A155360059E8D0 /* ES2Renderer.m in Sources */,
 				A3FE35A511A41D360018AA69 /* DCSSViewController.m in Sources */,
+				A34E1B0211A8551300D7D53A /* windowmanager-ctouch.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

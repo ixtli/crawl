@@ -11,6 +11,7 @@
 @class DCSSController;
 
 @interface DCSSViewController : UIViewController {
+@private
 	DCSSController *dcss;
 }
 

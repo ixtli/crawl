@@ -2,9 +2,12 @@
 #define CTOUCH_WINDOWMANAGER_H
 
 #ifdef USE_TILE
-#ifdef USE_CTOUCH
 
 #include "windowmanager.h"
+
+#ifdef USE_CTOUCH
+
+#import "./ipad/Classes/DCSSController.h"
 
 // Wrapper for Cocoa Touch
 class CTWrapper : public WindowManager
@@ -48,9 +51,7 @@ public:
                               bool force_power_of_two = true);
 
 protected:
-    struct {
-        size_t current_w, current_h;
-    } video_info;
+    DCSSController *controller;
 };
 
 #endif // USE_CTOUCH
