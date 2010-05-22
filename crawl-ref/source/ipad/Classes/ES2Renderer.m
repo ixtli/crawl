@@ -1,27 +1,25 @@
 //
 //  ES2Renderer.m
-//  ipad
+//  testGLESproject
 //
-//  Created by Ixtli on 5/17/10.
+//  Created by Ixtli on 5/22/10.
+//  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
 #import "ES2Renderer.h"
 
-// Index for shader uniforms
+// uniform index
 enum {
-	UNIFORM_TRANSLATE,
-	UNIFORM_SCALE,
-	NUM_UNIFORMS
+    UNIFORM_TRANSLATE,
+    NUM_UNIFORMS
 };
 GLint uniforms[NUM_UNIFORMS];
 
-// Shader attribute indicies
+// attribute index
 enum {
-	ATTRIB_VERTEX,
-	ATTRIB_COLOR,
-	ATTRIB_TEXTURE,
-	ATTRIB_ELEMENTS,
-	NUM_ATTRIBUTES
+    ATTRIB_VERTEX,
+    ATTRIB_COLOR,
+    NUM_ATTRIBUTES
 };
 
 @interface ES2Renderer (PrivateMethods)
@@ -35,107 +33,137 @@ enum {
 
 @synthesize dcss;
 
-// Create out OpenGL ES 2.0 context
+// Create an OpenGL ES 2.0 context
 - (id)init
 {
-	if ((self = [super init]))
-	{
-		context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    if ((self = [super init]))
+    {
+        context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
 		
-		if (!context || ![EAGLContext setCurrentContext:context] || ![self loadShaders])
-		{
-			[self release];
-			return nil;
-		}
+        if (!context || ![EAGLContext setCurrentContext:context] || ![self loadShaders])
+        {
+            [self release];
+            return nil;
+        }
 		
-		// Default framebuffer object. The backing will be allocated for current
-		// layer in -resizeFromLayer
-		glGenFramebuffers(1, &defaultFramebuffer);
-		glGenRenderbuffers(1, &colorRenderbuffer);
-		glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
-		glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
-		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, colorRenderbuffer);
-	}
+        // Create default framebuffer object. The backing will be allocated for the current layer in -resizeFromLayer
+        glGenFramebuffers(1, &defaultFramebuffer);
+        glGenRenderbuffers(1, &colorRenderbuffer);
+        glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
+        glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
+        glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, colorRenderbuffer);
+    }
 	
-	return self;
+    return self;
 }
 
 - (void)render
 {
-	// Draw!
+    // Replace the implementation of this method to do your own custom drawing
 	
-	// ... work ...
+    static const GLfloat squareVertices[] = {
+        -0.5f, -0.33f,
+		0.5f, -0.33f,
+        -0.5f,  0.33f,
+		0.5f,  0.33f,
+    };
 	
-
-	[EAGLContext setCurrentContext:context];
-	glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
-	glViewport(0, 0, backingWidth, backingHeight);
-
-	glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
+    static const GLubyte squareColors[] = {
+        255, 255,   0, 255,
+        0,   255, 255, 255,
+        0,     0,   0,   0,
+        255,   0, 255, 255,
+    };
 	
-	// Use precompiled shader program
-	glUseProgram(program);
+    static float transY = 0.0f;
 	
-	// Update uniform values
+    // This application only creates a single context which is already set current at this point.
+    // This call is redundant, but needed if dealing with multiple contexts.
+    [EAGLContext setCurrentContext:context];
 	
-	// Update attribute values
+    // This application only creates a single default framebuffer which is already bound at this point.
+    // This call is redundant, but needed if dealing with multiple framebuffers.
+    glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
+    glViewport(0, 0, backingWidth, backingHeight);
 	
-	// Validate program.  Only really necessary when debugging.
+    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+	
+    // Use shader program
+    glUseProgram(program);
+	
+    // Update uniform value
+    glUniform1f(uniforms[UNIFORM_TRANSLATE], (GLfloat)transY);
+    transY += 0.075f;	
+	
+    // Update attribute values
+    glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
+    glEnableVertexAttribArray(ATTRIB_VERTEX);
+    glVertexAttribPointer(ATTRIB_COLOR, 4, GL_UNSIGNED_BYTE, 1, 0, squareColors);
+    glEnableVertexAttribArray(ATTRIB_COLOR);
+	
+    // Validate program before drawing. This is a good check, but only really necessary in a debug build.
+    // DEBUG macro must be defined in your debug configurations if that's not already the case.
 #if defined(DEBUG)
-	if (![self validateProgram:program])
-	{
-		NSLog(@"Failed to validate program: %d", program);
-		return;
-	}
+    if (![self validateProgram:program])
+    {
+        NSLog(@"Failed to validate program: %d", program);
+        return;
+    }
 #endif
 	
-	glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
-	[context presentRenderbuffer:GL_RENDERBUFFER];
+    // Draw
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+	
+    // This application only creates a single color renderbuffer which is already bound at this point.
+    // This call is redundant, but needed if dealing with multiple renderbuffers.
+    glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
+    [context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
 - (BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file
 {
-	GLint status;
-	const GLchar *source;
+    GLint status;
+    const GLchar *source;
 	
-	source = (GLchar *)[[NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error: nil] UTF8String];
-	if (!source)
-	{
-		NSLog(@"Failed to load vertex shader");
-		return FALSE;
-	}
+    source = (GLchar *)[[NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil] UTF8String];
+    if (!source)
+    {
+        NSLog(@"Failed to load vertex shader");
+        return FALSE;
+    }
 	
-	*shader = glCreateShader(type);
-	glShaderSource(*shader, 1, &source, NULL);
-	glCompileShader(*shader);
+    *shader = glCreateShader(type);
+    glShaderSource(*shader, 1, &source, NULL);
+    glCompileShader(*shader);
 	
 #if defined(DEBUG)
-	GLint logLength;
-	glGetShaderiv(*shader, GL_INFO_LOG_LENGTH, &logLength);
-	if (logLength > 0)
-	{
-		GLchar *log = (GLchar *)malloc(logLength);
-		glGetShaderInfoLog(*shader, logLength, &logLength, log);
-		NSLog(@"Shader compile log:\n%s", log);
-		free(log);
-	}
+    GLint logLength;
+    glGetShaderiv(*shader, GL_INFO_LOG_LENGTH, &logLength);
+    if (logLength > 0)
+    {
+        GLchar *log = (GLchar *)malloc(logLength);
+        glGetShaderInfoLog(*shader, logLength, &logLength, log);
+        NSLog(@"Shader compile log:\n%s", log);
+        free(log);
+    }
 #endif
 	
-	glGetShaderiv(*shader, GL_COMPILE_STATUS, &status);
-	if (status == 0)
-	{
-		glDeleteShader(*shader);
-		return FALSE;
-	}
+    glGetShaderiv(*shader, GL_COMPILE_STATUS, &status);
+    if (status == 0)
+    {
+        glDeleteShader(*shader);
+        return FALSE;
+    }
 	
-	return TRUE;
+    return TRUE;
 }
 
 - (BOOL)linkProgram:(GLuint)prog
 {
-	GLint status;
-	glLinkProgram(prog);
+    GLint status;
+	
+    glLinkProgram(prog);
 	
 #if defined(DEBUG)
     GLint logLength;
@@ -149,150 +177,151 @@ enum {
     }
 #endif
 	
-	glGetProgramiv(prog, GL_LINK_STATUS, &status);
-	if (status == 0)
-		return FALSE;
+    glGetProgramiv(prog, GL_LINK_STATUS, &status);
+    if (status == 0)
+        return FALSE;
 	
-	return TRUE;
+    return TRUE;
 }
 
 - (BOOL)validateProgram:(GLuint)prog
 {
-	GLint logLength, status;
+    GLint logLength, status;
 	
-	glValidateProgram(prog);
-	glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
-	if (logLength > 0)
-	{
-		GLchar *log = (GLchar *)malloc(logLength);
-		glGetProgramInfoLog(prog, logLength, &logLength, log);
-		NSLog(@"Program validate log:\n%s", log);
-		free(log);
-	}
+    glValidateProgram(prog);
+    glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
+    if (logLength > 0)
+    {
+        GLchar *log = (GLchar *)malloc(logLength);
+        glGetProgramInfoLog(prog, logLength, &logLength, log);
+        NSLog(@"Program validate log:\n%s", log);
+        free(log);
+    }
 	
-	glGetProgramiv(prog, GL_VALIDATE_STATUS, &status);
-	if (status == 0)
-		return FALSE;
+    glGetProgramiv(prog, GL_VALIDATE_STATUS, &status);
+    if (status == 0)
+        return FALSE;
 	
-	return TRUE;
+    return TRUE;
 }
 
 - (BOOL)loadShaders
 {
-	GLuint vertShader, fragShader;
-	NSString *vertShaderPathname, *fragShaderPathname;
+    GLuint vertShader, fragShader;
+    NSString *vertShaderPathname, *fragShaderPathname;
 	
-	// Create shader program
-	program = glCreateProgram();
+    // Create shader program
+    program = glCreateProgram();
 	
-	// Create and compile vertex shader
-	vertShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];
+    // Create and compile vertex shader
+    vertShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];
+    if (![self compileShader:&vertShader type:GL_VERTEX_SHADER file:vertShaderPathname])
+    {
+        NSLog(@"Failed to compile vertex shader");
+        return FALSE;
+    }
 	
-	if (![self compileShader:&vertShader type:GL_VERTEX_SHADER file:vertShaderPathname])
-	{
-		NSLog(@"Failed to compile vertex shader");
-		return FALSE;
-	}
+    // Create and compile fragment shader
+    fragShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];
+    if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER file:fragShaderPathname])
+    {
+        NSLog(@"Failed to compile fragment shader");
+        return FALSE;
+    }
 	
-	// Create and compile frag shader
-	fragShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];
-	if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER file:fragShaderPathname])
-	{
-		NSLog(@"Failed to compile fragment shader");
-		return FALSE;
-	}
+    // Attach vertex shader to program
+    glAttachShader(program, vertShader);
 	
-	// Attach vert and frag shaders to program
-	glAttachShader(program, vertShader);
-	glAttachShader(program, fragShader);
+    // Attach fragment shader to program
+    glAttachShader(program, fragShader);
 	
-	// Bind attribute locations (needs to be done prior to link)
-	glBindAttribLocation(program, ATTRIB_VERTEX, "position");
-	glBindAttribLocation(program, ATTRIB_COLOR, "color");
+    // Bind attribute locations
+    // this needs to be done prior to linking
+    glBindAttribLocation(program, ATTRIB_VERTEX, "position");
+    glBindAttribLocation(program, ATTRIB_COLOR, "color");
 	
-	// Link program
-	if (![self linkProgram:program])
-	{
-		NSLog(@"Failed to link program %d", program);
+    // Link program
+    if (![self linkProgram:program])
+    {
+        NSLog(@"Failed to link program: %d", program);
 		
-		if (vertShader)
-		{
-			glDeleteShader(vertShader);
-			vertShader = 0;
-		}
-		if (fragShader)
-		{
-			glDeleteShader(fragShader);
-			fragShader = 0;
-		}
-		if (program)
-		{
-			glDeleteProgram(program);
-			program = 0;
-		}
-		
-		return FALSE;
-	}
+        if (vertShader)
+        {
+            glDeleteShader(vertShader);
+            vertShader = 0;
+        }
+        if (fragShader)
+        {
+            glDeleteShader(fragShader);
+            fragShader = 0;
+        }
+        if (program)
+        {
+            glDeleteProgram(program);
+            program = 0;
+        }
+        
+        return FALSE;
+    }
 	
-	// Get locations of uniforms in our linked program.
-	uniforms[UNIFORM_TRANSLATE] = glGetUniformLocation(program, "translate");
+    // Get uniform locations
+    uniforms[UNIFORM_TRANSLATE] = glGetUniformLocation(program, "translate");
 	
-	// Release vertex and frag shaders
-	if (vertShader)
-		glDeleteShader(vertShader);
-	if (fragShader)
-		glDeleteShader(fragShader);
+    // Release vertex and fragment shaders
+    if (vertShader)
+        glDeleteShader(vertShader);
+    if (fragShader)
+        glDeleteShader(fragShader);
 	
-	return TRUE;
+    return TRUE;
 }
 
 - (BOOL)resizeFromLayer:(CAEAGLLayer *)layer
 {
-	// Allocate color buffer backing basef on the current layer size
-	glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
-	[context renderbufferStorage:GL_RENDERBUFFER fromDrawable:layer];
-	glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &backingWidth);
-	glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &backingHeight);
+    // Allocate color buffer backing based on the current layer size
+    glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
+    [context renderbufferStorage:GL_RENDERBUFFER fromDrawable:layer];
+    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &backingWidth);
+    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &backingHeight);
 	
-	if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
-	{
-		NSLog(@"Failed to make complete framebuffer object %x",
-			  glCheckFramebufferStatus(GL_FRAMEBUFFER));
-		return NO;
-	}
+    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+    {
+        NSLog(@"Failed to make complete framebuffer object %x", glCheckFramebufferStatus(GL_FRAMEBUFFER));
+        return NO;
+    }
 	
-	return YES;
+    return YES;
 }
 
 - (void)dealloc
 {
-	// Tear down GL
-	if (defaultFramebuffer)
-	{
-		glDeleteFramebuffers(1, &defaultFramebuffer);
-		defaultFramebuffer = 0;
-	}
+    // Tear down GL
+    if (defaultFramebuffer)
+    {
+        glDeleteFramebuffers(1, &defaultFramebuffer);
+        defaultFramebuffer = 0;
+    }
 	
-	if (colorRenderbuffer)
-	{
-		glDeleteFramebuffers(1, &colorRenderbuffer);
-		colorRenderbuffer = 0;
-	}
+    if (colorRenderbuffer)
+    {
+        glDeleteRenderbuffers(1, &colorRenderbuffer);
+        colorRenderbuffer = 0;
+    }
 	
-	if (program)
-	{
-		glDeleteProgram(program);
-		program = 0;
-	}
+    if (program)
+    {
+        glDeleteProgram(program);
+        program = 0;
+    }
 	
-	// Tear down context
-	if ([EAGLContext currentContext] == context)
-		[EAGLContext setCurrentContext:nil];
+    // Tear down context
+    if ([EAGLContext currentContext] == context)
+        [EAGLContext setCurrentContext:nil];
 	
-	[context release];
-	context = nil;
+    [context release];
+    context = nil;
 	
-	[super dealloc];
+    [super dealloc];
 }
 
 @end

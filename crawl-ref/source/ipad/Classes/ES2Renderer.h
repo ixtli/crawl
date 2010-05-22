@@ -20,8 +20,6 @@
 	GLint backingWidth;
 	GLint backingHeight;
 	
-	GLfloat tileWidth, tileHeight;
-	
 	// OpenGL ES names for the framebuffer and renderbuffer used to
 	// render this view.
 	GLuint defaultFramebuffer, colorRenderbuffer;

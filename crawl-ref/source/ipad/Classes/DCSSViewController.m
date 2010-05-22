@@ -14,34 +14,17 @@
 
 @synthesize dcss;
 
-- (id)initWithGameState: (DCSSController *)state
-{
-	if (self = [super initWithNibName:@"GameView" bundle:nil])
-	{
-		dcss = state;
-		glView = [[EAGLView alloc] init];
-		self.view = (UIView *)glView;
-	}
-	
-	return self;
-}
-
-- (id)init
-{
-	return [self initWithGameState:nil];
-}
-
 #pragma mark -
 #pragma mark Graphics State Query and Manipulation
 
 - (void)startAnimating
 {
-	[glView startAnimation];
+	[self.view startAnimation];
 }
 
 - (void)stopAnimating
 {
-	[glView stopAnimation];
+	[self.view stopAnimation];
 }
 
 #pragma mark -
@@ -50,7 +33,6 @@
 - (void)dealloc
 {
 	[dcss release];
-	[glView release];
 	[super dealloc];
 }
 

@@ -6,20 +6,15 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIkit.h>
+#import <UIKit/UIKit.h>
 
-@class EAGLView;
 @class DCSSController;
 
 @interface DCSSViewController : UIViewController {
-@private
-	EAGLView *glView;
 	DCSSController *dcss;
 }
 
 @property (nonatomic, retain) DCSSController *dcss;
-
-- (id)initWithGameState: (DCSSController *)state;
 
 - (void)startAnimating;
 - (void)stopAnimating;

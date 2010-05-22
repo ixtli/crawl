@@ -8,10 +8,10 @@
 
 #import "ipadAppDelegate.h"
 
-
 #import "RootViewController.h"
 #import "DetailViewController.h"
 
+#import "DCSSController.h"
 
 @interface ipadAppDelegate (CoreDataPrivate)
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

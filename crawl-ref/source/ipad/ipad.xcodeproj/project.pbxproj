@@ -24,8 +24,10 @@
 		A323BB4711A0FB1800AE8468 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BB4611A0FB1800AE8468 /* QuartzCore.framework */; };
 		A323BC8E11A1211D00AE8468 /* DCSSController.m in Sources */ = {isa = PBXBuildFile; fileRef = A323BC8D11A1211D00AE8468 /* DCSSController.m */; };
 		A323BCEB11A13B9700AE8468 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = A323BCEA11A13B9700AE8468 /* EAGLView.m */; };
+		A34E1A1D11A80EBF00D7D53A /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A34E1A0611A80E1B00D7D53A /* Shader.fsh */; };
+		A34E1A1E11A80EBF00D7D53A /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A34E1A0811A80E4300D7D53A /* Shader.vsh */; };
 		A3AB6DEA11A155360059E8D0 /* ES2Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AB6DE911A155360059E8D0 /* ES2Renderer.m */; };
-		A3AB6E3111A16A5F0059E8D0 /* GameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3AB6E3011A16A5F0059E8D0 /* GameView.xib */; };
+		A3AB6E3111A16A5F0059E8D0 /* DCSSView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3AB6E3011A16A5F0059E8D0 /* DCSSView.xib */; };
 		A3ACC2B0119FC46D000FE789 /* dat in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2AF119FC46D000FE789 /* dat */; };
 		A3ACC2B2119FC48A000FE789 /* docs in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B1119FC48A000FE789 /* docs */; };
 		A3ACC2B4119FC494000FE789 /* settings in Resources */ = {isa = PBXBuildFile; fileRef = A3ACC2B3119FC494000FE789 /* settings */; };
@@ -384,9 +386,11 @@
 		A323BCE911A13B9700AE8468 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
 		A323BCEA11A13B9700AE8468 /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
 		A323BCF211A13BBE00AE8468 /* ESRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESRenderer.h; sourceTree = "<group>"; };
+		A34E1A0611A80E1B00D7D53A /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		A34E1A0811A80E4300D7D53A /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
 		A3AB6DE811A155360059E8D0 /* ES2Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ES2Renderer.h; sourceTree = "<group>"; };
 		A3AB6DE911A155360059E8D0 /* ES2Renderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ES2Renderer.m; sourceTree = "<group>"; };
-		A3AB6E3011A16A5F0059E8D0 /* GameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameView.xib; sourceTree = "<group>"; };
+		A3AB6E3011A16A5F0059E8D0 /* DCSSView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCSSView.xib; sourceTree = "<group>"; };
 		A3ACC2AF119FC46D000FE789 /* dat */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dat; path = ../dat; sourceTree = SOURCE_ROOT; };
 		A3ACC2B1119FC48A000FE789 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = docs; path = ../../docs; sourceTree = SOURCE_ROOT; };
 		A3ACC2B3119FC494000FE789 /* settings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = settings; path = ../../settings; sourceTree = SOURCE_ROOT; };
@@ -1037,7 +1041,7 @@
 				A3ACC2AF119FC46D000FE789 /* dat */,
 				2819300D112F7FA900ECF9B4 /* ipad.xcdatamodeld */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
-				A3AB6E3011A16A5F0059E8D0 /* GameView.xib */,
+				A3AB6E3011A16A5F0059E8D0 /* DCSSView.xib */,
 				2804203B108E9BAB000629CD /* DetailView.xib */,
 				8D1107310486CEB800E47090 /* ipad-Info.plist */,
 			);
@@ -1061,6 +1065,8 @@
 		A3AB6E0A11A1565A0059E8D0 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				A34E1A0611A80E1B00D7D53A /* Shader.fsh */,
+				A34E1A0811A80E4300D7D53A /* Shader.vsh */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -1739,12 +1745,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A34E1A1D11A80EBF00D7D53A /* Shader.fsh in Resources */,
+				A34E1A1E11A80EBF00D7D53A /* Shader.vsh in Resources */,
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2804203C108E9BAB000629CD /* DetailView.xib in Resources */,
 				A3ACC2B0119FC46D000FE789 /* dat in Resources */,
 				A3ACC2B2119FC48A000FE789 /* docs in Resources */,
 				A3ACC2B4119FC494000FE789 /* settings in Resources */,
-				A3AB6E3111A16A5F0059E8D0 /* GameView.xib in Resources */,
+				A3AB6E3111A16A5F0059E8D0 /* DCSSView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,8 @@
 {
 	if (self = [super init])
 	{
-		view = [[DCSSViewController alloc] initWithGameState:self];
+		view = [[DCSSViewController alloc] init];
+		view.dcss = self;
 	}
 	
 	return self;

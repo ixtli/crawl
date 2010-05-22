@@ -6,6 +6,9 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
+// Import QuartzCore for animations
+#import <QuartzCore/QuartzCore.h>
+
 #import "DetailViewController.h"
 #import "RootViewController.h"
 
@@ -26,10 +29,17 @@
 
 - (IBAction)insertNewObject:(id)sender {
 	
-	// [rootViewController insertNewObject:sender];
+	//[rootViewController insertNewObject:sender];
+	
 	dcss = [[DCSSController alloc] init];
-	[self.view addSubview: [[dcss view] view]];
+	
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:1.0];
+	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:[self view] cache:YES];
+	[self.view addSubview:[[dcss view] view]];
+	[UIView commitAnimations];
 	[[dcss view] startAnimating];
+	
 	//[dcss launchGameThread];
 }
 
