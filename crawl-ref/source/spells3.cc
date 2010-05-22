@@ -62,6 +62,7 @@
 #include "traps.h"
 #include "travel.h"
 #include "view.h"
+#include "viewmap.h"
 #include "shout.h"
 #include "xom.h"
 
@@ -1645,7 +1646,7 @@ static bool _teleport_player(bool allow_control, bool new_abyss_area, bool wizar
         while (true)
         {
             level_pos lpos;
-            show_map(lpos, false, true);
+            bool chose = show_map(lpos, false, true, false);
             pos = lpos.pos;
             redraw_screen();
 
@@ -1664,7 +1665,7 @@ static bool _teleport_player(bool allow_control, bool new_abyss_area, bool wizar
 
             dprf("Target square (%d,%d)", pos.x, pos.y );
 
-            if (pos == you.pos() || pos == coord_def(-1,-1))
+            if (!chose || pos == you.pos())
             {
                 if (!wizard_tele)
                 {
@@ -1799,7 +1800,7 @@ static bool _teleport_player(bool allow_control, bool new_abyss_area, bool wizar
     return (!is_controlled);
 }
 
-bool you_teleport_to (const coord_def where_to, bool move_monsters)
+bool you_teleport_to(const coord_def where_to, bool move_monsters)
 {
     // Attempts to teleport the player from their current location to 'where'.
     // Follows this line of reasoning:
@@ -1889,7 +1890,8 @@ void you_teleport_now(bool allow_control, bool new_abyss_area, bool wizard_tele)
     }
 }
 
-bool entomb(int powc)
+static bool _do_imprison(const int power, const coord_def& where,
+                         bool force_alone, bool force_full)
 {
     // power guidelines:
     // powc is roughly 50 at Evoc 10 with no godly assistance, ranging
@@ -1901,15 +1903,25 @@ bool entomb(int powc)
         DNGN_SHALLOW_WATER, DNGN_FLOOR, DNGN_FLOOR_SPECIAL, DNGN_OPEN_DOOR
     };
 
-    for (adjacent_iterator ai(you.pos()); ai; ++ai)
+    for (adjacent_iterator ai(where); ai; ++ai)
     {
-        // The tile is occupied by a monster.
-        if (monster_at(*ai))
-            continue;
+        // The tile is occupied.
+        if (actor_at(*ai))
+        {
+            if (force_alone)
+                return (false);
+            else
+                continue;
+        }
 
         // This is where power comes in.
-        if (one_chance_in(powc / 5))
-            continue;
+        if (one_chance_in(power / 5))
+        {
+            if (force_full)
+                return (false);
+            else
+                continue;
+        }
 
         // Make sure we have a legitimate tile.
         bool proceed = false;
@@ -1921,7 +1933,7 @@ bool entomb(int powc)
         {
             // All items are moved inside.
             if (igrd(*ai) != NON_ITEM)
-                move_items(*ai, you.pos());
+                move_items(*ai, where);
 
             // All clouds are destroyed.
             if (env.cgrid(*ai) != EMPTY_CLOUD)
@@ -1947,6 +1959,23 @@ bool entomb(int powc)
         canned_msg(MSG_NOTHING_HAPPENS);
 
     return (number_built > 0);
+}
+
+bool entomb(const int power)
+{
+    return (_do_imprison(power, you.pos(), false, false));
+}
+
+bool cast_imprison(const int power, monsters *monster)
+{
+    if (_do_imprison(power, monster->pos(), true, true))
+    {
+        monster->add_ench(mon_enchant(ENCH_ENTOMBED, 0, KC_YOU,
+                                      power * 10));
+        return (true);
+    }
+
+    return (false);
 }
 
 bool cast_sanctuary(const int power)
@@ -1986,16 +2015,20 @@ bool project_noise(void)
     coord_def pos(1, 0);
     level_pos lpos;
 
-    mpr( "Choose the noise's source (press '.' or delete to select)." );
+    mpr("Choose the noise's source (press '.' or delete to select).");
     more();
-    show_map(lpos, false);
+
+    // Might abort with SIG_HUP despite !allow_esc.
+    if (!show_map(lpos, false, false, false))
+        lpos = level_pos::current();
     pos = lpos.pos;
+    ASSERT(map_bounds(pos));
 
     redraw_screen();
 
-    dprf("Target square (%d,%d)", pos.x, pos.y );
+    dprf("Target square (%d,%d)", pos.x, pos.y);
 
-    if (!silenced( pos ))
+    if (!silenced(pos))
     {
         if (in_bounds(pos) && !feat_is_solid(grd(pos)))
         {

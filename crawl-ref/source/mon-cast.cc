@@ -708,7 +708,7 @@ bolt mons_spells( monsters *mons, spell_type spell_cast, int power,
         beam.colour   = ETC_HOLY;
         beam.name     = "ray of light";
         beam.damage   = dice_def( 3, 7 + (power / 12) );
-        beam.hit      = 5 + power / 50; // VERY lousy accuracy, but ignores RMsl
+        beam.hit      = 10 + power / 25; // lousy accuracy, but ignores RMsl
         beam.flavour  = BEAM_LIGHT;
         break;
 
@@ -865,6 +865,7 @@ bool setup_mons_cast(monsters *monster, bolt &pbolt, spell_type spell_cast,
     case SPELL_CALL_TIDE:
     case SPELL_INK_CLOUD:
     case SPELL_SILENCE:
+    case SPELL_AWAKEN_FOREST:
         return (true);
     default:
         if (check_validity)
@@ -2349,9 +2350,13 @@ void mons_cast(monsters *monster, bolt &pbolt, spell_type spell_cast,
 
         for (adjacent_iterator ai(monster->pos()); ai; ++ai)
         {
+            const actor* act = actor_at(*ai);
+
             // We can blink away the crowd, but only our allies.
-            if (monster_at(*ai)
-                && monster_at(*ai)->attitude != monster->attitude)
+            if (act
+                && (act->atype() == ACT_PLAYER
+                    || (act->atype() == ACT_MONSTER
+                        && act->as_monster()->attitude != monster->attitude)))
             {
                 sumcount++;
             }
@@ -2366,12 +2371,6 @@ void mons_cast(monsters *monster, bolt &pbolt, spell_type spell_cast,
                 sumcount++;
         }
 
-        if (abs(you.pos().x - monster->pos().x) <= 1
-            && abs(you.pos().y - monster->pos().y) <= 1)
-        {
-            sumcount++;
-        }
-
         if (sumcount)
         {
             monster->blink();
@@ -2381,7 +2380,7 @@ void mons_cast(monsters *monster, bolt &pbolt, spell_type spell_cast,
         sumcount = 0;
         for (adjacent_iterator ai(monster->pos()); ai; ++ai)
         {
-            if (monster_at(*ai) && monster_at(*ai) != monster)
+            if (monster_at(*ai))
             {
                 monster_at(*ai)->blink();
                 if (monster_at(*ai))
@@ -2420,14 +2419,17 @@ void mons_cast(monsters *monster, bolt &pbolt, spell_type spell_cast,
         }
 
         if (sumcount)
+        {
             mpr("Walls emerge from the floor!");
 
-        // XXX: Assume that the entombed monster can regenerate.  Also,
-        // base the regeneration rate on HD to avoid randomness.
-        const int tomb_duration =
-            hp_lost * std::max(1, monster->hit_dice / 3);
-        monster->add_ench(mon_enchant(ENCH_ENTOMBED, 0, KC_OTHER,
-                          tomb_duration * 10));
+            // XXX: Assume that the entombed monster can regenerate.
+            // Also, base the regeneration rate on HD to avoid
+            // randomness.
+            const int tomb_duration =
+                hp_lost * std::max(1, monster->hit_dice / 3);
+            monster->add_ench(mon_enchant(ENCH_ENTOMBED, 0, KC_OTHER,
+                                          tomb_duration * 10));
+        }
         return;
     }
     case SPELL_CHAIN_LIGHTNING:
@@ -2474,6 +2476,16 @@ void mons_cast(monsters *monster, bolt &pbolt, spell_type spell_cast,
         return;
     case SPELL_IOOD:
         cast_iood(monster, 6 * monster->hit_dice, &pbolt);
+        return;
+    case SPELL_AWAKEN_FOREST:
+        duration = 50 + random2(monster->hit_dice * 20);
+
+        monster->add_ench(mon_enchant(ENCH_AWAKEN_FOREST, 0, KC_OTHER, duration));
+        // Actually, it's a boolean marker... save for a sanity check.
+        env.forest_awoken_until = you.elapsed_time + duration;
+
+        // You may be unable to see the monster, but notice an affected tree.
+        forest_message(monster->pos(), "The forest starts to sway and rumble!");
         return;
     }
 

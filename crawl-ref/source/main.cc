@@ -122,11 +122,12 @@
 #include "traps.h"
 #include "travel.h"
 #include "hints.h"
-#include "view.h"
 #include "shout.h"
+#include "stash.h"
+#include "view.h"
 #include "viewchar.h"
 #include "viewgeom.h"
-#include "stash.h"
+#include "viewmap.h"
 #include "wiz-dgn.h"
 #include "wiz-fsim.h"
 #include "wiz-item.h"
@@ -1467,8 +1468,10 @@ static void _do_rest()
 
     if (i_feel_safe())
     {
-        if ((you.hp == you.hp_max || you.species == SP_VAMPIRE
-             && you.hunger_state == HS_STARVING)
+        if ((you.hp == you.hp_max
+                || player_mutation_level(MUT_SLOW_HEALING) == 3
+                || (you.species == SP_VAMPIRE
+                    && you.hunger_state == HS_STARVING))
             && you.magic_points == you.max_magic_points)
         {
             mpr("You start searching.");
@@ -1512,13 +1515,13 @@ static void _do_display_map()
 #endif
 
     level_pos pos;
-    show_map(pos, true);
+    const bool travel = show_map(pos, true, true, true);
     redraw_screen();
 
 #ifdef USE_TILE
     mpr("Returning to the game...");
 #endif
-    if (pos.pos.x > 0)
+    if (travel)
         start_translevel_travel(pos);
 }
 

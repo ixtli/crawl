@@ -864,6 +864,28 @@ static bool _physiology_mutation_conflict(mutation_type mutat)
         return (true);
     }
 
+    equipment_type eq_type = EQ_NONE;
+
+    // Mutations of the same slot conflict
+    if (is_body_facet(mutat))
+    {
+        // Find equipment slot of attempted mutation
+        for (unsigned i = 0; i < ARRAYSZ(_body_facets); i++)
+            if (mutat == _body_facets[i].mut)
+                eq_type = _body_facets[i].eq;
+
+        if (eq_type != EQ_NONE) {
+            for (unsigned i = 0; i < ARRAYSZ(_body_facets); i++) {
+                if (eq_type == _body_facets[i].eq
+                    && mutat != _body_facets[i].mut
+                    && player_mutation_level(_body_facets[i].mut))
+                {
+                    return (true);
+                }
+            }
+        }
+    }
+
     return (false);
 }
 
@@ -1480,8 +1502,6 @@ static const facet_def _demon_facets[] =
       { 1, 1, 1 } },
     { { MUT_BREATHE_FLAMES, MUT_BREATHE_FLAMES, MUT_BREATHE_FLAMES },
       { 1, 1, 1 } },
-    { { MUT_REGENERATION, MUT_REGENERATION, MUT_REGENERATION },
-      { 1, 1, 1 } },
     // Scale mutations
     { { MUT_DISTORTION_FIELD, MUT_DISTORTION_FIELD, MUT_DISTORTION_FIELD },
       { 1, 1, 1 } },
@@ -1671,7 +1691,7 @@ try_again:
     if (slots_lost != 1)
         goto try_again;
 
-    if (breath_weapons > 1)
+    if (breath_weapons > 3)
         goto try_again;
 
     if (elemental > 1)
