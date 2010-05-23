@@ -35,5 +35,6 @@
 @property (nonatomic, assign) IBOutlet RootViewController *rootViewController;
 
 - (IBAction)insertNewObject:(id)sender;
+- (void)crawlMainDidExit:(id)arg;
 
 @end

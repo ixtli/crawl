@@ -34,6 +34,10 @@ CTWrapper::CTWrapper()
     // Set the currently active DCSSController as ours.
     controller = [DCSSController currentlyActiveController];
     [controller retain];
+
+    // Tell the controller it can give up the little initializiation hack
+    // we have going on here
+    [controller resignCurrentlyActive];
 }
 
 CTWrapper::~CTWrapper()

@@ -23,6 +23,11 @@
 
 @synthesize toolbar, popoverController, detailItem, detailDescriptionLabel, rootViewController, dcss;
 
+- (void)crawlMainDidExit:(id)arg
+{
+	[[dcss.view view] removeFromSuperview];
+	detailDescriptionLabel.text = [NSString stringWithFormat:@"crawl_main exited with status: %i", (int)arg];
+}
 
 #pragma mark -
 #pragma mark Object insertion
@@ -32,15 +37,15 @@
 	//[rootViewController insertNewObject:sender];
 	
 	dcss = [[DCSSController alloc] init];
+	dcss.detailView = self;
 	
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:1.0];
 	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:[self view] cache:YES];
-	[self.view addSubview:[[dcss view] view]];
+	[self.view addSubview:[dcss.view view]];
 	[UIView commitAnimations];
-	[[dcss view] startAnimating];
 	
-	//[dcss launchGameThread];
+	[dcss launchGameThread];
 }
 
 

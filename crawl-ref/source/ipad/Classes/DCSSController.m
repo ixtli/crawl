@@ -6,12 +6,15 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import "DetailViewController.h"
 #import "DCSSController.h"
 #import "DCSSViewController.h"
 
 #include "main.h"
 
-// Currently active DCSS controller
+// Currently active DCSS controller.
+// This is a bit of a hack to simplify telling *-ctouch.mm modules what object
+// they should be messaging without having to change a lot of crawl-ref/master
 DCSSController *current = nil;
 
 @interface DCSSController (PrivateMethods)
@@ -20,7 +23,7 @@ DCSSController *current = nil;
 
 @implementation DCSSController
 
-@synthesize view, gameThread;
+@synthesize view, gameThread, vinfo, detailView;
 
 + (DCSSController *)currentlyActiveController
 {
@@ -48,6 +51,8 @@ DCSSController *current = nil;
 		NSLog(@"Attempted to start a second instance of DCSS.");
 	}
 	
+	// Set us as the currently active controller
+	
 	gameThread = [[NSThread alloc] initWithTarget:self selector:@selector(startGame) object:nil];
 	[gameThread start];
 
@@ -59,17 +64,29 @@ DCSSController *current = nil;
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
+	// Start up
+	[view startAnimating];
+	
 	// Run the game
 	char *a = "ipad";
-	int ret = crawl_main(1, &a);
+	int returnValue = crawl_main(1, &a);
+	NSLog(@"crawl_main returned status: %i", returnValue);
 	
 	// Clean up
-	NSLog(@"Crawl finished with code %i", ret);
+	[view stopAnimating];
+	// TODO: This should really be called on the main thread.
+	[detailView crawlMainDidExit:(id)returnValue];
 	[pool release];
 }
 
 #pragma mark -
 #pragma mark Application State Handlers
+
+- (void)resignCurrentlyActive
+{
+	if (current == self)
+		current = nil;
+}
 
 - (void)halt
 {
@@ -101,14 +118,9 @@ DCSSController *current = nil;
 	return 0;
 }
 
-- (void)crawlShutown
+- (void)crawlShutdown
 {
 	NSLog(@"CTWrapper destructor called.");
-}
-
-- (const video_info *)videoInfo
-{
-	return &vinfo;
 }
 
 #pragma mark -
@@ -118,6 +130,7 @@ DCSSController *current = nil;
 {
 	[view release];
 	[gameThread release];
+	[detailView release];
 	
 	[super dealloc];
 }

@@ -1,6 +1,9 @@
 #include "AppHdr.h"
 
 #ifdef USE_TILE
+
+#include "debug.h"
+
 #ifdef USE_GLES
 
 #include "glwrapper-es.h"
@@ -8,8 +11,6 @@
 // How do we get access to the GL calls?
 // If other UI types use the -ogl wrapper they should
 // include more conditional includes here.
-
-#include "debug.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // Static functions from GLStateManager

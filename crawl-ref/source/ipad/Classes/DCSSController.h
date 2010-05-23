@@ -15,12 +15,14 @@ typedef struct
 	size_t current_w, current_h;
 } video_info;
 
+@class DetailViewController;
 @class EAGLView;
 @class DCSSViewController;
 
 @interface DCSSController : NSObject {
 @private
 	DCSSViewController *view;
+	DetailViewController *detailView;
 	NSThread *gameThread;
 	video_info vinfo;
 }
@@ -28,11 +30,13 @@ typedef struct
 @property (readonly, nonatomic, retain) NSThread *gameThread;
 @property (nonatomic, retain) DCSSViewController *view;
 @property (readonly, nonatomic) video_info vinfo;
+@property (nonatomic, retain) DetailViewController *detailView;
 
 + (DCSSController *)currentlyActiveController;
 
 - (int)launchGameThread;
 
+- (void)resignCurrentlyActive;
 - (void)halt;
 - (void)applicationHasLowMemory;
 
