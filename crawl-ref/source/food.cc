@@ -897,10 +897,10 @@ bool food_change(bool suppress_message)
             less_hungry = true;
 
         you.hunger_state = newstate;
-        set_redraw_status( REDRAW_HUNGER );
+        set_redraw_status(REDRAW_HUNGER);
 
         if (newstate < HS_SATIATED)
-            interrupt_activity( AI_HUNGRY );
+            interrupt_activity(AI_HUNGRY);
 
         if (you.species == SP_VAMPIRE)
         {
@@ -2840,7 +2840,7 @@ int you_max_hunger()
     if (you.is_undead == US_UNDEAD)
         return (6000);
 
-    // Take care of ghouls - they can never be 'full'.
+    // Ghouls can never be full or above.
     if (you.species == SP_GHOUL)
         return (6999);
 
@@ -2853,8 +2853,8 @@ int you_min_hunger()
     if (you.is_undead == US_UNDEAD)
         return (6000);
 
-    // Vampires can never starve to death.
-    if (you.species == SP_VAMPIRE)
+    // Vampires can never starve to death.  Ghouls will just rot much faster.
+    if (you.is_undead)
         return (701);
 
     return (0);
@@ -2881,4 +2881,3 @@ void handle_starvation()
         }
     }
 }
-

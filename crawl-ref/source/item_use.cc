@@ -182,9 +182,8 @@ bool can_wield(item_def *weapon, bool say_reason,
 
     if (!ignore_temporary_disability
         && you.hunger_state < HS_FULL
-        && you.hunger < you_max_hunger() - 500 // ghouls
         && get_weapon_brand(*weapon) == SPWPN_VAMPIRICISM
-        && you.species != SP_VAMPIRE && you.is_undead != US_UNDEAD)
+        && !you.is_undead)
     {
         if (say_reason)
         {
@@ -1521,6 +1520,12 @@ static bool _dispersal_hit_victim(bolt& beam, actor* victim, int dmg,
 
     if (beam.is_tracer)
         return (true);
+
+    if (victim->atype() == ACT_PLAYER && item_blocks_teleport(true, true))
+    {
+        canned_msg(MSG_STRANGE_STASIS);
+        return (false);
+    }
 
     const bool was_seen = you.can_see(victim);
     const bool no_sanct = victim->kill_alignment() == KC_OTHER;
@@ -3092,13 +3097,13 @@ bool thrown_object_destroyed(item_def *item, const coord_def& where)
 {
     ASSERT(item != NULL);
 
-    int chance = 0;
-
     std::string name = item->name(DESC_PLAIN, false, true, false);
 
     // Exploding missiles are always destroyed.
     if (name.find("explod") != std::string::npos)
         return (true);
+
+    int chance = 0;
 
     if (item->base_type == OBJ_MISSILES)
     {
@@ -3154,7 +3159,7 @@ bool thrown_object_destroyed(item_def *item, const coord_def& where)
     bool destroyed = (chance == 0) ? false : (one_chance_in(chance)
                                               && x_chance_in_y(3, item->plus + 3));
 
-    return destroyed;
+    return (destroyed);
 }
 
 static int _prompt_ring_to_remove(int new_ring)

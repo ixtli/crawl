@@ -1769,7 +1769,7 @@ void handle_monster_move(monsters *monster)
                 if (monster->type == MONS_NO_MONSTER)
                 {
                     monster->speed_increment -= entry->energy_usage.move;
-                    break;  // problem with vortices
+                    break; // problem with vortices
                 }
             }
 
@@ -2639,7 +2639,7 @@ static void _mons_open_door(monsters* monster, const coord_def &pos)
         if (was_secret)
         {
             mprf("%s was actually a secret door!",
-                 feature_description(grid, NUM_TRAPS, false,
+                 feature_description(grid, NUM_TRAPS, "",
                                      DESC_CAP_THE, false).c_str());
             learned_something_new(HINT_FOUND_SECRET_DOOR, pos);
         }

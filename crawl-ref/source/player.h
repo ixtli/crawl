@@ -97,7 +97,6 @@ public:
   bool redraw_evasion;
 
   unsigned char flash_colour;
-  unsigned char mold_colour;
 
   unsigned char hit_points_regeneration;
   unsigned char magic_points_regeneration;
@@ -220,8 +219,6 @@ public:
 
   std::vector<demon_trait> demonic_traits;
 
-  bool active_demonic_guardian;
-  bool disable_demonic_guardian;
   std::vector<item_def> powered_by_death_corpses;
 
   unsigned char magic_contamination;

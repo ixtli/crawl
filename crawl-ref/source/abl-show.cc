@@ -186,10 +186,6 @@ static const ability_def Ability_List[] =
     { ABIL_HELLFIRE, "Hellfire", 0, 350, 200, 0, ABFLAG_NONE },
     { ABIL_THROW_FLAME, "Throw Flame", 0, 20, 50, 0, ABFLAG_NONE },
     { ABIL_THROW_FROST, "Throw Frost", 0, 20, 50, 0, ABFLAG_NONE },
-    { ABIL_ENABLE_DEMONIC_GUARDIAN, "Enable Demonic Guardian",
-      0, 0, 0, 0, ABFLAG_NONE },
-    { ABIL_DISABLE_DEMONIC_GUARDIAN, "Disable Demonic Guardian",
-      0, 0, 0, 0, ABFLAG_NONE },
 
     // FLY_II used to have ABFLAG_EXHAUSTION, but that's somewhat meaningless
     // as exhaustion's only (and designed) effect is preventing Berserk. - bwr
@@ -971,7 +967,7 @@ static bool _check_ability_possible(const ability_def& abil,
 {
     // Don't insta-starve the player.
     // (Happens at 100, losing consciousness possible from 500 downward.)
-    if (hungerCheck && you.species != SP_VAMPIRE)
+    if (hungerCheck && !you.is_undead)
     {
         const int expected_hunger = you.hunger - abil.food_cost * 2;
         dprf("hunger: %d, max. food_cost: %d, expected hunger: %d",
@@ -1451,14 +1447,6 @@ static bool _do_ability(const ability_def& abil)
         break;
 
     // DEMONIC POWERS:
-    case ABIL_ENABLE_DEMONIC_GUARDIAN:
-        you.disable_demonic_guardian = false;
-        break;
-
-    case ABIL_DISABLE_DEMONIC_GUARDIAN:
-        you.disable_demonic_guardian = true;
-        break;
-
     case ABIL_HELLFIRE:
         if (your_spells(SPELL_HELLFIRE_BURST,
                         you.experience_level * 5, false) == SPRET_ABORT)
@@ -2087,6 +2075,9 @@ static bool _do_ability(const ability_def& abil)
     case ABIL_NON_ABILITY:
         mpr("Sorry, you can't do that.");
         break;
+
+    default:
+        ASSERT("invalid ability");
     }
 
     return (true);
@@ -2321,13 +2312,7 @@ std::vector<talent> your_talents(bool check_confused)
         }
     }
 
-    // Mutations.
-    if (player_mutation_level(MUT_DEMONIC_GUARDIAN))
-        if(!you.disable_demonic_guardian)
-            _add_talent(talents, ABIL_DISABLE_DEMONIC_GUARDIAN, check_confused);
-        else
-            _add_talent(talents, ABIL_ENABLE_DEMONIC_GUARDIAN, check_confused);
-
+    // Mutations
     if (player_mutation_level(MUT_HURL_HELLFIRE))
         _add_talent(talents, ABIL_HELLFIRE, check_confused);
 

@@ -35,8 +35,10 @@ enum ability_type
     ABIL_EVOKE_TELEPORTATION,
     ABIL_EVOKE_BLINK,
     ABIL_RECHARGING,                   //   20
+#if TAG_MAJOR_VERSION == 22
     ABIL_ENABLE_DEMONIC_GUARDIAN,
     ABIL_DISABLE_DEMONIC_GUARDIAN,
+#endif
     // 23 - 50 unused
     ABIL_EVOKE_TURN_INVISIBLE = 51,    //   51
     ABIL_EVOKE_TURN_VISIBLE,
@@ -1204,7 +1206,9 @@ enum duration_type
     DUR_PHASE_SHIFT,
     DUR_SEE_INVISIBLE,
     DUR_WEAPON_BRAND,                  // general "branding" spell counter
+#if TAG_MAJOR_VERSION == 22
     DUR_DEMONIC_GUARDIAN,              // demonic guardian timeout
+#endif
     DUR_POWERED_BY_DEATH,
     DUR_SILENCE,
     DUR_CONDENSATION_SHIELD,
@@ -1283,6 +1287,7 @@ enum enchant_type
     ENCH_SILENCE,
     ENCH_ENTOMBED,
     ENCH_AWAKEN_FOREST,
+    ENCH_EXPLODING,
 
     // Update enchantment names in monster.cc when adding or removing
     // enchantments.
@@ -1871,8 +1876,10 @@ enum monster_type                      // (int) menv[].type
     MONS_MERFOLK_JAVELINEER,
 
     MONS_SNAPPING_TURTLE,
-    MONS_ALLIGATOR_SNAPPING_TURTLE,
+    MONS_ALLIGATOR_SNAPPING_TURTLE,    //  205
     MONS_SEA_SNAKE,
+
+    MONS_HYPERACTIVE_BALLISTOMYCETE,
 
     //jmf: end new monsters
     MONS_WHITE_IMP = 220,              //  220
@@ -2247,9 +2254,8 @@ enum monster_flag_type
     MF_NAME_DEFINITE      = 0x4000000,// give this monster the definite "the"
                                       // article, instead of the indefinite "a"
                                       // article.
-    MF_INTERLEVEL_FOLLOWER = 0x8000000,// will travel with the player regardless
+    MF_INTERLEVEL_FOLLOWER = 0x8000000// will travel with the player regardless
                                        // of where the monster is at on the level
-    MF_DEMONIC_GUARDIAN   = 0x10000000 // monster is a demonic guardian
 };
 
 // Adding slots breaks saves. YHBW.
