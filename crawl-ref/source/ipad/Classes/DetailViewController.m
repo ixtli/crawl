@@ -27,6 +27,7 @@
 {
 	[[dcss.view view] removeFromSuperview];
 	detailDescriptionLabel.text = [NSString stringWithFormat:@"crawl_main exited with status: %i", (int)arg];
+	[dcss resignCurrentlyActive];
 }
 
 #pragma mark -
@@ -37,6 +38,8 @@
 	//[rootViewController insertNewObject:sender];
 	
 	dcss = [[DCSSController alloc] init];
+	if (![dcss makeCurrentlyActive])
+		return;
 	dcss.detailView = self;
 	
 	[UIView beginAnimations:nil context:NULL];

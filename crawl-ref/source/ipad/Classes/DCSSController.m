@@ -25,20 +25,29 @@ DCSSController *current = nil;
 
 @synthesize view, gameThread, vinfo, detailView;
 
+#pragma mark -
+#pragma mark Set and get currently active DCSSController
+
 + (DCSSController *)currentlyActiveController
 {
 	return current;
 }
 
-- (id)init
+- (BOOL)makeCurrentlyActive
 {
-	if (self = [super init])
+	if (!current)
 	{
-		view = [[DCSSViewController alloc] init];
-		view.dcss = self;
+		current = self;
+		return TRUE;
 	}
 	
-	return self;
+	return FALSE;
+}
+
+- (void)resignCurrentlyActive
+{
+	if (current == self)
+		current = nil;
 }
 
 #pragma mark -
@@ -46,9 +55,17 @@ DCSSController *current = nil;
 
 - (int)launchGameThread
 {
+	// For now, only allow one DCSS thread to exist at a time
+	if (current != self)
+	{
+		NSLog(@"Attempted to start a DCSS thread without being current.");
+		return -1;
+	}
+	
 	if ([gameThread isExecuting])
 	{
 		NSLog(@"Attempted to start a second instance of DCSS.");
+		return -1;
 	}
 	
 	// Set us as the currently active controller
@@ -82,12 +99,6 @@ DCSSController *current = nil;
 #pragma mark -
 #pragma mark Application State Handlers
 
-- (void)resignCurrentlyActive
-{
-	if (current == self)
-		current = nil;
-}
-
 - (void)halt
 {
 	// Handle emminant application closure
@@ -115,7 +126,7 @@ DCSSController *current = nil;
 	vinfo.current_w = 768;
 	vinfo.current_h = 1024;
 	
-	return 0;
+	return TRUE;
 }
 
 - (void)crawlShutdown
@@ -125,6 +136,17 @@ DCSSController *current = nil;
 
 #pragma mark -
 #pragma mark Memory Management
+
+- (id)init
+{
+	if (self = [super init])
+	{
+		view = [[DCSSViewController alloc] init];
+		view.dcss = self;
+	}
+	
+	return self;
+}
 
 - (void)dealloc
 {

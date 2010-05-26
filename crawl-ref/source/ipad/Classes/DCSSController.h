@@ -32,11 +32,13 @@ typedef struct
 @property (readonly, nonatomic) video_info vinfo;
 @property (nonatomic, retain) DetailViewController *detailView;
 
+// TODO: Make the following threadsafe
 + (DCSSController *)currentlyActiveController;
+- (BOOL)makeCurrentlyActive;
+- (void)resignCurrentlyActive;
 
 - (int)launchGameThread;
 
-- (void)resignCurrentlyActive;
 - (void)halt;
 - (void)applicationHasLowMemory;
 

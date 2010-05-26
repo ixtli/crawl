@@ -130,6 +130,17 @@
 	}
 }
 
+#pragma mark -
+#pragma mark OpenGL helper functions
+
+- (void)textureFromImage:(UIImage *)img textureName:(GLuint *)texName
+{
+	
+}
+
+#pragma mark -
+#pragma mark Memory Allocation
+
 - (void)dealloc
 {
 	[renderer release];

@@ -35,4 +35,6 @@
 - (void)stopAnimation;
 - (void)drawView:(id)sender;
 
+- (void)textureFromImage:(CGImageRef *)img textureName:(GLuint *)texName;
+
 @end

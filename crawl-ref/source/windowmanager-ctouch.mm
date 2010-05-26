@@ -1,5 +1,7 @@
 #include "AppHdr.h"
 
+#include <string.h>
+
 #include "cio.h"
 #include "files.h"
 #include "options.h"
@@ -34,10 +36,6 @@ CTWrapper::CTWrapper()
     // Set the currently active DCSSController as ours.
     controller = [DCSSController currentlyActiveController];
     [controller retain];
-
-    // Tell the controller it can give up the little initializiation hack
-    // we have going on here
-    [controller resignCurrentlyActive];
 }
 
 CTWrapper::~CTWrapper()
@@ -121,8 +119,14 @@ bool CTWrapper::load_texture(GenericTexture *tex, const char *filename,
                               MipMapOptions mip_opt, unsigned int &orig_width,
                               unsigned int &orig_height, tex_proc_func proc,
                               bool force_power_of_two)
-{
-    return (true);
+{	
+	NSString *path = @"dat/tiles";
+	NSString *name = [NSString stringWithCString:filename encoding:[NSString defaultCStringEncoding]];
+	NSString *fullPath = [[NSBundle mainBundle] pathForResource:name ofType:nil inDirectory: path];
+	
+	NSLog(@"Loading texture: %s", filename);
+	
+	return (true);
 }
 
 int CTWrapper::byte_order()

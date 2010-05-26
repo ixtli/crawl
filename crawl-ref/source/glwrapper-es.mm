@@ -6,6 +6,7 @@
 
 #ifdef USE_GLES
 
+#import "./ipad/Classes/ES2Renderer.h"
 #include "glwrapper-es.h"
 
 // How do we get access to the GL calls?
@@ -45,6 +46,9 @@ GLShapeBuffer *GLShapeBuffer::create(bool texture, bool colour,
 
 GLESStateManager::GLESStateManager()
 {
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glClearColor(0.0, 0.0, 0.0, 1.0f);
+    glDepthFunc(GL_LEQUAL);
 }
 
 void GLESStateManager::set(const GLState& state)
@@ -54,38 +58,66 @@ void GLESStateManager::set(const GLState& state)
 
 void GLESStateManager::set_transform(const GLW_3VF &trans, const GLW_3VF &scale)
 {
+    
 }
 
 void GLESStateManager::reset_view_for_resize(const coord_def &m_windowsz)
 {
+    
 }
 
 void GLESStateManager::reset_transform()
 {
+    
 }
 
 void GLESStateManager::pixelstore_unpack_alignment(unsigned int bpp)
 {
+    glPixelStorei(GL_UNPACK_ALIGNMENT, bpp);
 }
 
 void GLESStateManager::delete_textures(size_t count, unsigned int *textures)
 {
+    glDeleteTextures(count, (GLuint*)textures);
 }
 
 void GLESStateManager::generate_textures(size_t count, unsigned int *textures)
 {
+    glGenTextures(count, (GLuint*)textures);
 }
 
 void GLESStateManager::bind_texture(unsigned int texture)
 {
+    glBindTexture(GL_TEXTURE_2D, texture);
 }
 
 void GLESStateManager::load_texture(unsigned char *pixels, unsigned int width,
                                    unsigned int height, MipMapOptions mip_opt)
 {
     // Assumptions...
-    // const unsigned int bpp = 4;
+    const unsigned int bpp = 4;
+    const GLenum texture_format = GL_RGBA;
+    const GLenum format = GL_UNSIGNED_BYTE;
     // Also assume that the texture is already bound using bind_texture
+
+     // TODO: glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    if (mip_opt == MIPMAP_CREATE)
+    {
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
+                        GL_LINEAR_MIPMAP_NEAREST);
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else
+    {
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+        glTexImage2D(GL_TEXTURE_2D, 0, bpp, width, height, 0,
+                     texture_format, format, pixels);
+    }
 }
 
 void GLESStateManager::reset_view_for_redraw(float x, float y)
