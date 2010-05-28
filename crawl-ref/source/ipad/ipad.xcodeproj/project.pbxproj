@@ -18,6 +18,8 @@
 		2819300E112F7FA900ECF9B4 /* ipad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2819300D112F7FA900ECF9B4 /* ipad.xcdatamodeld */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		A316797411B01161002A8437 /* tilereg-mon.cc in Sources */ = {isa = PBXBuildFile; fileRef = A316797211B01161002A8437 /* tilereg-mon.cc */; };
+		A316797E11B011CD002A8437 /* tiledgnbuf.cc in Sources */ = {isa = PBXBuildFile; fileRef = A316797C11B011CD002A8437 /* tiledgnbuf.cc */; };
 		A323BB1611A0F69500AE8468 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F1BD9A119EF5DD0017F016 /* liblua.a */; };
 		A323BB2B11A0FA5600AE8468 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BB2A11A0FA5600AE8468 /* libsqlite3.0.dylib */; };
 		A323BB4511A0FB1800AE8468 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BB4411A0FB1800AE8468 /* OpenGLES.framework */; };
@@ -376,6 +378,10 @@
 		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ipad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ipad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A316797211B01161002A8437 /* tilereg-mon.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "tilereg-mon.cc"; path = "../tilereg-mon.cc"; sourceTree = SOURCE_ROOT; };
+		A316797311B01161002A8437 /* tilereg-mon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tilereg-mon.h"; path = "../tilereg-mon.h"; sourceTree = SOURCE_ROOT; };
+		A316797C11B011CD002A8437 /* tiledgnbuf.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tiledgnbuf.cc; path = ../tiledgnbuf.cc; sourceTree = SOURCE_ROOT; };
+		A316797D11B011CD002A8437 /* tiledgnbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiledgnbuf.h; path = ../tiledgnbuf.h; sourceTree = SOURCE_ROOT; };
 		A323BB2A11A0FA5600AE8468 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		A323BB4411A0FB1800AE8468 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A323BB4611A0FB1800AE8468 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -1074,6 +1080,10 @@
 		A3ACC2C8119FC5B1000FE789 /* Crawl */ = {
 			isa = PBXGroup;
 			children = (
+				A316797C11B011CD002A8437 /* tiledgnbuf.cc */,
+				A316797D11B011CD002A8437 /* tiledgnbuf.h */,
+				A316797211B01161002A8437 /* tilereg-mon.cc */,
+				A316797311B01161002A8437 /* tilereg-mon.h */,
 				A34E1B3011A85E9500D7D53A /* glwrapper-es.mm */,
 				A34E1B3211A85E9E00D7D53A /* fontwrapper-ctouch.mm */,
 				A34E1B0111A8551300D7D53A /* windowmanager-ctouch.mm */,
@@ -2029,6 +2039,8 @@
 				A34E1B0211A8551300D7D53A /* windowmanager-ctouch.mm in Sources */,
 				A34E1B3111A85E9500D7D53A /* glwrapper-es.mm in Sources */,
 				A34E1B3311A85E9E00D7D53A /* fontwrapper-ctouch.mm in Sources */,
+				A316797411B01161002A8437 /* tilereg-mon.cc in Sources */,
+				A316797E11B011CD002A8437 /* tiledgnbuf.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import <OpenGLES/ES2/gl.h>
 
 #import "ESRenderer.h"
 

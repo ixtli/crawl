@@ -133,7 +133,7 @@
 #pragma mark -
 #pragma mark OpenGL helper functions
 
-- (void)textureFromImage:(UIImage *)img textureName:(GLuint *)texName
+- (void)textureFromImage:(CGImageRef *)img textureName:(GLuint *)texName
 {
 	
 }
