@@ -221,6 +221,7 @@ tilereg-inv.o \
 tilereg-map.o \
 tilereg-mem.o \
 tilereg-menu.o \
+tilereg-mon.o \
 tilereg-msg.o \
 tilereg-spl.o \
 tilereg-stat.o \

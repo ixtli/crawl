@@ -13,6 +13,7 @@ Unsorted:
 * Track the source of poison for death messages.
 * Remove Death Knights and Thieves.
 * Ghouls can no longer starve; they just rot faster.
+* New tiles monster list tab.
 
 Interface:
 * New starting menus, mouse-operable in tiles builds.
@@ -33,6 +34,7 @@ Game:
 * Fix old player ghost speech, and add player ghost speech
   fitting the ghost.
 * Monster equipment can be corroded by acid.
+* Lost stats are now recovered one point at a time.
 
 Gods:
 * Zin no longer objects to deaths of non-sentient allies, and
@@ -45,6 +47,9 @@ Gods:
   ballistomycetes.
 * Jiyva now paralyses fellow slimes under prayer instead of
   creating a jelly shield.
+* Jiyva's royal jelly effect now produces temporary friendly
+  slimes instead of permanent neutral ones.
+* Jiyva can now give the player unique slime-related mutations.
 
 Items:
 * Scrolls of holy word do more damage to susceptible monsters.
@@ -52,6 +57,7 @@ Items:
   scrolls of enchant weapon II no longer work on them.
 
 Monsters:
+* Anacondas are now amphibious.
 * Skeletal dragons are renamed to bone dragons.
 * Manes are now iron imps, with stat tweaks.
 * Imps lose see invisible while shadow imps gain it, and white
